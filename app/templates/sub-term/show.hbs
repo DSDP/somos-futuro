@@ -21,8 +21,9 @@
 
 <div class="chapters-container">
 <ul>
-	{{#each model.subterms as |term|}}
-		<li>{{#link-to 'sub-term.show' term.id}} {{{term.name}}} {{/link-to}}</li>
+	{{#each model.posts as |post|}}
+		<li>{{#link-to 'post.show' post.id}} {{{post.title}}} {{/link-to}}</li>
+		{{{post.excerpt}}}
 	{{/each}}
 </ul>
 </div>
