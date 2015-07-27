@@ -1,0 +1,29 @@
+<div class="projects-container -half">
+	<ul>
+		<li class="cd-single-project">
+			<div class="cd-title">
+				<h2>
+				
+				{{model.term.name}}
+				</h2>
+				<p>
+					{{#link-to 'index'}}
+					Indice
+				{{/link-to}}
+				</p>
+
+			</div> <!-- .cd-title -->
+		</li>
+
+		
+	</ul>
+</div> <!-- .project-container -->
+
+<div class="chapters-container">
+<ul>
+	{{#each model.posts as |post|}}
+		<li>{{#link-to 'post.show' post.id}} {{{post.title}}} {{/link-to}}</li>
+		{{{post.excerpt}}}
+	{{/each}}
+</ul>
+</div>
