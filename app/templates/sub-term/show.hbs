@@ -22,8 +22,7 @@
 <div class="chapters-container">
 <ul>
 	{{#each model.posts as |post|}}
-		<li>{{#link-to 'post.show' post.id}} {{{post.title}}} {{/link-to}}</li>
-		{{{post.excerpt}}}
+		{{post-brief post=post}}
 	{{/each}}
 </ul>
 </div>
