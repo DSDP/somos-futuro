@@ -1,8 +1,9 @@
 
 
 <div class="projects-container -half">
-	<ul>
+	<ul style="margin: 0;">
 		<li class="cd-single-project">
+			<img {{bind-attr src=featured_image.source}} height="100%" style="width: auto; opacity: 0.5;" >
 			<div class="cd-title">
 				<small>{{{model.term}}}</small>
 				<h1>{{{model.title}}}</h1>
@@ -10,8 +11,6 @@
 
 			</div> <!-- .cd-title -->
 		</li>
-
-		
 	</ul>
 </div> <!-- .project-container -->
 

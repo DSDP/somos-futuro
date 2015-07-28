@@ -46,6 +46,16 @@ article.type-system-slab {
   	text-align: center;
   }
 
+  blockquote {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    text-align: center;
+    margin: 80px 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
   .type {
     border-bottom: 1px solid;
     display: inline-block;

@@ -1,4 +1,6 @@
+@import "plugins/plugins";
 @import "articles";
+@import "cards";
 
 body {
 	background: #f1f1f1;
@@ -7,6 +9,14 @@ body {
 	h2 {
 		text-align: center;
 	}
+}
+
+.smart-back {
+	    position: fixed;
+    top: 25px;
+    left: 25px;
+    z-index: 9999;
+    cursor: pointer;
 }
 
 // breakpoints
@@ -376,7 +386,7 @@ Main Components
 }
 
 .-half {
-		    width: 47vw;
+		    width: 50vw;
     float: left;
 
     .cd-single-project {
@@ -466,4 +476,6 @@ width: 50vw;
 .no-touch .project-is-open .cd-scroll:hover {
 	
 }
+
+
 

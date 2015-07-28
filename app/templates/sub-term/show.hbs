@@ -20,9 +20,17 @@
 </div> <!-- .project-container -->
 
 <div class="chapters-container">
-<ul>
+<ul class="cards">
 	{{#each model.posts as |post|}}
-		{{post-brief post=post}}
+		
+		<div class="card">
+    <div class="card-image">
+      <img {{bind-attr src=post.featured_image.source}}  >
+    </div>
+    <div class="card-copy">
+     {{post-brief post=post}}
+    </div>
+  </div>
 	{{/each}}
 </ul>
 </div>

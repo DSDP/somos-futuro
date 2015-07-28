@@ -19,7 +19,7 @@ module.exports = function(environment) {
     },
 
     pace: {
-      color: 'white',
+      color: 'blue',
       theme: 'minimal',
       catchupTime: 50,
       initialRate: .01,
