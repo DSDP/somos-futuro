@@ -1,0 +1,15 @@
+{{input type="text" value=query}}
+{{#if searching}}
+	<p>Buscando</p>
+{{/if}}
+{{#if searched}}
+	{{#if posts}}
+		<ul>	
+			{{#each posts as |post|}}
+				{{post-brief post=post}}
+			{{/each}}
+		</ul>
+	{{else}}
+		<p>No se han encontrado resultados.</p>
+	{{/if}}
+{{/if}}
