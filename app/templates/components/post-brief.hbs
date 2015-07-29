@@ -1,3 +1,7 @@
-<li>{{#link-to 'post.show' post.id}} {{{post.title}}} {{/link-to}}</li>
+<li><a {{action 'showPost' post.id}}>{{{post.title}}}</a></li>
 {{{excerptSafe}}}
-<a {{action 'post.show' post.id}}>Seguir Leyendo...</a>
+{{#if showCategory}}
+	<a {{action 'showTerm' category.id}}>{{category.name}}</a>
+{{/if}}
+<a {{action 'showPost' post.id}}>Seguir leyendo</a>
+

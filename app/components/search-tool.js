@@ -6,6 +6,17 @@ export default Ember.Component.extend({
 	searching: false,
 	searched: false,
 	interval: null,
+	show: false,
+
+	actions: {
+		open: function () {
+			this.set('show', true);
+		},
+
+		close: function () {
+			this.set('show', false);
+		},		
+	},
 
 	searchChanged: function () {
 		var _this = this;

@@ -1,4 +1,7 @@
+{{#if show}}
+
 {{input type="text" value=query}}
+<a {{action 'close'}}>close</a>
 {{#if searching}}
 	<p>Buscando</p>
 {{/if}}
@@ -6,10 +9,13 @@
 	{{#if posts}}
 		<ul>	
 			{{#each posts as |post|}}
-				{{post-brief post=post}}
+				{{post-brief post=post showCategory=true action='close'}}
 			{{/each}}
 		</ul>
 	{{else}}
 		<p>No se han encontrado resultados.</p>
 	{{/if}}
+{{/if}}
+{{else}}
+	<a {{action 'open'}}>Open</a>
 {{/if}}
