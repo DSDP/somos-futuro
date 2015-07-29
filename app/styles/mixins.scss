@@ -1,0 +1,11 @@
+@mixin title-upper-dash()
+{
+	&:before
+	{
+		content: '';
+		position: absolute;
+		top: 0;
+		height: 4px;
+		width: 20px;
+	}
+};
