@@ -14,10 +14,135 @@ body {
 .smart-back {
 	    position: fixed;
     top: 25px;
-    left: 25px;
-    z-index: 9999;
+    right: 25px;
+    z-index: 1000;
     cursor: pointer;
 }
+
+.smart-search {
+	    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+
+    .search {
+
+	    -webkit-transition: all .4s cubic-bezier(0.7,0,.3,1);
+    -moz-transition: all .4s cubic-bezier(0.7,0,.3,1);
+    transition: all .4s cubic-bezier(0.7,0,.3,1);
+position: fixed;
+    	top: 15px;
+    left: 15px;
+    width: 35px;
+    height: 35px;
+
+  
+    text-align: center;
+    line-height: 33px;
+    color: #333;
+
+    .eḿpry-data {
+    	    margin: 95px;
+    }
+
+    fieldset {
+    	border: none;
+    	width: 100%;
+
+    	a {
+    		float: right;
+    		display: block;
+    	}
+    }
+
+    	a {
+    		cursor: pointer;
+    	}
+
+    	p {
+    		display: none;
+    	}
+    
+
+    	input {
+    		opacity: 0;
+    		-webkit-transition: all .4s cubic-bezier(0.7,0,.3,1);
+    -moz-transition: all .4s cubic-bezier(0.7,0,.3,1);
+    transition: all .4s cubic-bezier(0.7,0,.3,1);
+    float: left;
+    width: 80%;
+    display: block;
+    
+    	}
+
+		&.show {
+
+			background: #f9f9f9;
+
+			input {
+	    		opacity: 1;
+	    	}
+			
+			height: 100%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+   padding: 15px;
+    border-radius: 0;
+    text-align: left;
+    line-height: initial;
+	    	
+
+
+
+		}
+	}
+}
+
+
+.loading {
+	text-align: center;
+	    margin: 95px;
+}
+
+.empty-data {
+
+	text-align: center;
+
+	.fa {
+		display: block;
+		font-size: 25px;
+		margin-bottom: 10px;
+	}
+}
+
+.justicial_social {
+	background: lighten(#101524, 5%);
+}
+
+.independencia_economica {
+	background: #101524
+}
+
+.soberania_politica {
+	background: darken(#101524, 2%);
+}
+
+.tenemos_futuro {
+	background: darken(#101524, 9%);
+}
+
+.home-intro {
+	    position: fixed;
+    font-size: 11px;
+    text-align: center;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+}
+
+
 
 // breakpoints
    
@@ -103,6 +228,22 @@ Main Components
 	position: relative;
 	overflow-x: hidden;
 	-webkit-overflow-scrolling: touch;
+
+	&.justicia_social {
+		background: lighten(#101524, 5%);
+	}
+
+	&.independencia_economica {
+		background: #101524
+	}
+
+	&.soberania_politica {
+		background: darken(#101524, 2%);
+	}
+
+	&.tenemos_futuro {
+		background: darken(#101524, 9%);
+	}
 
 	&::before {
 		/* never visible - this is used in jQuery to check the current MQ */
@@ -331,7 +472,7 @@ Main Components
 		font-family: $secondary-font;
 		font-style: italic;
 		line-height: 1.2;
-		padding: .4em 2em;
+		padding: .4em 0;
 		display: none;
 		opacity: .6;
 	}
@@ -396,6 +537,13 @@ Main Components
     .cd-title {
     	width: 100%;
     	    top: 12.5vh;
+    	        padding: 0 240px 0 60px;
+    text-align: left;
+
+    h1 {
+    	font-size: 3em;
+    	line-height: 1.2em;
+    }
 
 		a {
 			

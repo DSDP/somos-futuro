@@ -13,6 +13,13 @@ export default function(){
 		this.reverse('toRight',  {duration: 800, delay: 400, easing: [ 0.7,0,0.3,1 ]})
 	);
 
+	this.transition(
+		this.fromRoute('index'),
+		this.toRoute('sub-term.show'),
+		this.use('fade',  {duration: 800, delay: 400, easing: [ 0.7,0,0.3,1 ]}),
+		this.reverse('fade',  {duration: 800, delay: 400, easing: [ 0.7,0,0.3,1 ]})
+	);
+
 
 	this.transition(
 		this.fromRoute('index'),

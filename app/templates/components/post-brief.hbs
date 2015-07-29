@@ -1,7 +1,11 @@
-<li><a {{action 'showPost' post.id}}>{{{post.title}}}</a></li>
-{{{excerptSafe}}}
-{{#if showCategory}}
-	<a {{action 'showTerm' category.id}}>{{category.name}}</a>
-{{/if}}
-<a {{action 'showPost' post.id}}>Seguir leyendo</a>
+
+<li>
+	{{#if showCategory}}
+		<small><a {{action 'showTerm' category.id}}>{{category.name}}</a></small><br>
+	{{/if}}
+	<a {{action 'showPost' post.id}}>{{{post.title}}}</a>
+	{{{excerptSafe}}}<br>
+	<a  class="btn" {{action 'showPost' post.id}}>Seguir leyendo</a>
+</li>
+
 

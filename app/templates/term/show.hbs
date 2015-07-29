@@ -1,16 +1,18 @@
-<div class="projects-container -half">
+<div {{bind-attr class=":projects-container :-half model.term.slug"}} >
 	<ul>
 		<li class="cd-single-project">
 			<div class="cd-title">
-				<h2>
-				
-				{{model.term.name}}
-				</h2>
 				<p>
 					{{#link-to 'index'}}
-					Indice
+					Volver al indice
 				{{/link-to}}
 				</p>
+				<small>Categoria</small>
+				<h1>
+					
+					{{model.term.name}}
+				</h1>
+				
 
 			</div> <!-- .cd-title -->
 		</li>

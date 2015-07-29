@@ -7,14 +7,19 @@ export default Ember.Component.extend({
 	searched: false,
 	interval: null,
 	show: false,
+	isShowMenu: false,
+
+
 
 	actions: {
 		open: function () {
 			this.set('show', true);
+			this.toggleProperty('isShowMenu', true);
 		},
 
 		close: function () {
 			this.set('show', false);
+			this.toggleProperty('isShowMenu', false);
 		},		
 	},
 

@@ -1,21 +1,35 @@
+<div {{bind-attr class=":search show:show"}}>
 {{#if show}}
-
-{{input type="text" value=query}}
-<a {{action 'close'}}>close</a>
-{{#if searching}}
-	<p>Buscando</p>
-{{/if}}
-{{#if searched}}
-	{{#if posts}}
-		<ul>	
-			{{#each posts as |post|}}
-				{{post-brief post=post showCategory=true action='close'}}
-			{{/each}}
-		</ul>
-	{{else}}
-		<p>No se han encontrado resultados.</p>
+	<fieldset>
+		
+	{{input type="text" value=query}}
+	
+	<a {{action 'close'}}>{{fa-icon 'times'}}</a>
+	</fieldset>
+	
+	{{#if searching}}
+		<div class="loading">
+			{{loading-spin color='#cccccc' size=50}}
+		</div>
 	{{/if}}
-{{/if}}
+	
+	{{#if searched}}
+		{{#if posts}}
+			<ul>	
+				{{#each posts as |post|}}
+					{{post-brief post=post showCategory=true action='close'}}
+				{{/each}}
+			</ul>
+		{{else}}
+			<div class="empty-data">
+				{{fa-icon 'search'}}
+				<i>No se han encontrado resultados.</i>
+			</div>
+		{{/if}}
+	{{/if}}
+
 {{else}}
-	<a {{action 'open'}}>Open</a>
+	<a {{action 'open'}}>{{fa-icon 'search'}}</a>
 {{/if}}
+
+</div>
