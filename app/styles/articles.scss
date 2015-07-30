@@ -1,16 +1,5 @@
 
 article.type-system-slab {
-  $base-border-radius: 3px !default;
-  $base-line-height: 1.5em !default;
-  $base-spacing: 1.5em !default;
-  $action-color: #477DCA !default;
-  $dark-gray: #333 !default;
-  $light-gray: #DDD !default;
-  $medium-screen: em(640) !default;
-  $base-font-color: $dark-gray !default;
-  $sans-serif: 'Open Sans', sans-serif;
-  $serif: 'Roboto Slab', serif;
-
 
   text-align: left;
   
@@ -29,6 +18,11 @@ article.type-system-slab {
   p {
     color: $base-font-color;
     line-height: $base-line-height;
+
+    em {
+      font-size: 1.6em;
+      font-family: PT Sans;      
+    }
   }
 
   a {
@@ -37,7 +31,7 @@ article.type-system-slab {
   }
 
   p img {
-      width: 100%;
+    width: 100%;
     height: auto;
     max-width: 600px;
     margin: 0 auto;
@@ -54,6 +48,12 @@ article.type-system-slab {
     margin: 80px 0;
     font-size: 18px;
     font-weight: 600;
+    font-style: italic;
+    font-family: $sans-serif;
+
+    p {
+      color: $color-1;
+    }
   }
 
   .type {
@@ -73,7 +73,6 @@ article.type-system-slab {
     font-size: 1.6em;
     font-weight: 400;
     margin-bottom: 0.6em;
-
     
   }
 

@@ -1,19 +1,51 @@
+
+@import "variables";
 @import "plugins/plugins";
 @import "articles";
 @import "cards";
 @import "landing";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,800,700);
 
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+
+*, *::after, *::before 
+{
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html 
+{
+	font-size: 62.5%;
+}
 body 
 {
-	background: #f1f1f1;
+	font: 
+	{
+		size: $base-font;
+		family: $sans-serif; // variables inside partials > _variables.scss
+	}
+	color: $color-1;
+	background-color: $color-3;
 	margin: 0;
 
 	h2 
 	{
 		text-align: center;
 	}
+
 }
+
+a 
+{
+	color: #0083ff;
+	text-decoration: none;
+}
+
 .smart-back 
 {
 	position: fixed;
@@ -117,19 +149,20 @@ body
 }
 .justicial_social 
 {
-	background: lighten(#101524, 5%);
+	/*background: lighten(#101524, 5%);*/
+	background: $color-1;
 }
 .independencia_economica 
 {
-	background: #101524
+	background: $color-3;
 }
 .soberania_politica 
 {
-	background: darken(#101524, 2%);
+	background: $color-2;
 }
 .tenemos_futuro 
 {
-	background: darken(#101524, 9%);
+	background: $color-4;
 }
 .home-intro 
 {
@@ -185,29 +218,6 @@ Antialiasing mode font rendering
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-/* -------------------------------- 
-
-Colors
-
--------------------------------- */
-
-$color-1: #ffffff; // White
-$color-2: #9e1c51; // Disco
-$color-3: #101524; // Ebony
-
-
-/* -------------------------------- 
-
-Fonts
-
--------------------------------- */
-
-$primary-font: 'PT Sans', sans-serif;
-$secondary-font: 'Merriweather', serif;
-$title-font: 'Open Sans', sans-serif;
-
-
 /* -------------------------------- 
 
 Number of projects
@@ -217,37 +227,6 @@ Number of projects
 $items: 4;
 
 
-/* -------------------------------- 
-
-Primary style
-
--------------------------------- */
-
-*, *::after, *::before 
-{
-	-webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-html 
-{
-	font-size: 62.5%;
-}
-body 
-{
-	font: 
-	{
-		size: 1.6rem;
-		family: $primary-font; // variables inside partials > _variables.scss
-	}
-	color: $color-1;
-	background-color: $color-3;
-}
-a 
-{
-	color: #0083ff;
-	text-decoration: none;
-}
 
 
 /* -------------------------------- 
@@ -264,13 +243,13 @@ Main Components
 	overflow-x: hidden;
 	-webkit-overflow-scrolling: touch;
 
-	&.justicia_social 
+/*	&.justicia_social 
 	{
-		background: lighten(#101524, 5%);
+		background: $color-3;
 	}
 	&.independencia_economica 
 	{
-		background: #101524
+		background: $color-2;
 	}
 	&.soberania_politica 
 	{
@@ -279,7 +258,7 @@ Main Components
 	&.tenemos_futuro 
 	{
 		background: darken(#101524, 9%);
-	}
+	}*/
 	&::before 
 	{
 		/* never visible - this is used in jQuery to check the current MQ */
@@ -495,7 +474,7 @@ Main Components
 	}
 	> * 
 	{
-		text-shadow: 0 1px 4px rgba(#000, .2);
+		/*text-shadow: 0 1px 4px rgba(#000, .2);*/
 	}
 	h2 
 	{
@@ -506,7 +485,7 @@ Main Components
 	p 
 	{
 		font-size: 1.4rem;
-		font-family: $secondary-font;
+		font-family: $serif;
 		font-style: italic;
 		line-height: 1.2;
 		padding: .4em 0;
