@@ -8,7 +8,8 @@ $color-1: #005FA2; // Soberia Politica
 $color-2: #29C4F3; // Independencia Economica
 $color-3: #00A2E0; // Justicia Social
 $color-4: #009ABE; // Desafios
-$color-5: #E4E4E6; // Gris
+$color-5: #E4E4E6; // Gray
+$color-6: #FFFFFF; // White
 
 /* -------------------------------- 
 
@@ -17,7 +18,7 @@ Fonts
 -------------------------------- */
 
 $title-font: 'PT Sans', sans-serif;
-$article-font: 'Merriweather', serif;
+$article-font: 'Roboto Slab', serif;
 $sans-serif: $title-font;
 $serif: $article-font;
 /*$primary-font: 'PT Sans', sans-serif;
@@ -30,8 +31,17 @@ Font Sizes
 
 -------------------------------- */
 
-$base-font: 18px;
-$base-font-1: $base-font * 2;
+$font-size-base: 				16px;								// 16px
+$font-size-1:					$font-size-base * 2.5;				// 40px
+$font-size-2:					$font-size-base * 2.25;				// 36px
+$font-size-3:					$font-size-base * 2;				// 32px
+$font-size-4:					$font-size-base * 1.75;				// 28px
+$font-size-5:					$font-size-base * 1.5;				// 24px
+$font-size-6:					$font-size-base * 1.3125; 			// 21px
+$font-size-7:					$font-size-base * 1.125;			// 18px
+$font-size-small:				$font-size-base * 0.875; 			// 14px
+$font-size-xsmall:				$font-size-base * 0.75;			// 12px
+
 
 /* -------------------------------- 
 
@@ -39,8 +49,11 @@ Article Styles
 
 -------------------------------- */
 
+$line-height-base:				1.6em;
+$line-height-5:					$line-height-base * 1.5;
+
+
 $base-border-radius: 3px !default;
-$base-line-height: 1.4em !default;
 $base-spacing: 1.5em !default;
 $action-color: #477DCA !default;
 $dark-gray: #666 !default;
