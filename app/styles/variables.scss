@@ -17,10 +17,8 @@ Fonts
 
 -------------------------------- */
 
-$title-font: 'PT Sans', sans-serif;
-$article-font: 'Roboto Slab', serif;
-$sans-serif: $title-font;
-$serif: $article-font;
+$title-font: 'Source Sans Pro', sans-serif;
+$article-font: 'Merriweather Sans', serif;
 /*$primary-font: 'PT Sans', sans-serif;
 $secondary-font: 'Roboto Slab', serif;
 $secondary-font: 'Merriweather', serif;*/
@@ -31,16 +29,16 @@ Font Sizes
 
 -------------------------------- */
 
-$font-size-base: 				16px;								// 16px
-$font-size-1:					$font-size-base * 2.5;				// 40px
-$font-size-2:					$font-size-base * 2.25;				// 36px
-$font-size-3:					$font-size-base * 2;				// 32px
-$font-size-4:					$font-size-base * 1.75;				// 28px
-$font-size-5:					$font-size-base * 1.5;				// 24px
-$font-size-6:					$font-size-base * 1.3125; 			// 21px
-$font-size-7:					$font-size-base * 1.125;			// 18px
-$font-size-small:				$font-size-base * 0.875; 			// 14px
-$font-size-xsmall:				$font-size-base * 0.75;			// 12px
+$font-size-base: 				15px;							// 15px
+$font-size-1:					$font-size-base * 2.666;		// 40px
+$font-size-2:					$font-size-base * 2.4;			// 36px
+$font-size-3:					$font-size-base * 2.13;			// 32px
+$font-size-4:					$font-size-base * 1.75;			// 28px
+$font-size-5:					$font-size-base * 1.6;			// 24px
+$font-size-6:					$font-size-base * 1.4; 			// 21px
+$font-size-7:					$font-size-base * 1.2;			// 18px
+$font-size-8:					$font-size-base * 1.066;		// 16px
+$font-size-xsmall:				$font-size-base * 0.8;			// 12px
 
 
 /* -------------------------------- 
@@ -49,15 +47,16 @@ Article Styles
 
 -------------------------------- */
 
-$line-height-base:				1.6em;
-$line-height-5:					$line-height-base * 1.5;
+$line-height-base:				24px;
+$line-height-1:					$line-height-base * 1.666;
+$line-height-5:					$line-height-base * 1.25;
 
 
 $base-border-radius: 3px !default;
 $base-spacing: 1.5em !default;
 $action-color: #477DCA !default;
-$dark-gray: #666 !default;
-$light-gray: #DDD !default;
+$dark-gray: #666666 !default;
+$light-gray: #DDDDDD !default;
 $medium-screen: em(640) !default;
 $base-font-color: $dark-gray !default;
 
