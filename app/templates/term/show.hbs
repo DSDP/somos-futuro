@@ -1,24 +1,24 @@
 <div {{bind-attr class=":projects-container :-half model.term.slug"}} >
-	<ul>
-		<li class="cd-single-project">
-			<div class="cd-title">
-				<div class="term">
-				<p>
-					{{#link-to 'index'}}
-					Volver al indice
-				{{/link-to}}
-				</p>
-				<div>Categoria</div>
-				<h1>					
-					{{model.term.name}}
-				</h1>
-				</div>
 
-			</div> <!-- .cd-title -->
-		</li>
+	<div class="cd-single-project">
+		<div class="cd-title">
+			<div class="term">
+				<ul>
+					<li><p>
+						{{#link-to 'index'}}
+						Volver al indice
+					{{/link-to}}
+					</p></li>
+					<li>Categoria</li>
+					<li><h1>					
+						{{model.term.name}}
+					</h1></li>
+				</ul>	
+			</div>
 
-		
-	</ul>
+		</div> <!-- .cd-title -->
+	</div>
+
 </div> <!-- .project-container -->
 
 <!-- ORIGINAL

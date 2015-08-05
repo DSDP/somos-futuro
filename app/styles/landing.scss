@@ -1,11 +1,70 @@
 #landing {
-	.heading-primary 	{
-		color: white;
-		font-size: $font-size-1;
-		text-align: left;
+
+	height: 100vh;
+    width: 100%;
+	background-image: url("http://somosfuturo.com.ar/contenido/wp-content/uploads/2015/07/500.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: $color-1;
+
+	/*figure
+	{
+		height: 100vh;
+		width: 100vw;
+		margin: 0;
+
+		img
+		{
+			width: 100%;
+			height: auto;
+		}
+	}*/
+	ul {
+		margin: 0;
+
+		li {
+			border-right: 1px dotted #ADC1CE;
+			
+			&:last-child {
+				border-right: none;
+			}
+		}
+	
+	}
+
+
+	.home-intro {
+		position: fixed;
+		left: 42.5%;
+		bottom: 15px;
+		z-index: 500;
+		width: 15%;
+		text-align: center;
+
+
+	    a {
+	    	display: block;
+	    	background-color: transparentize($color-1, 0.2);
+	    	font-size: $font-size-7;
+	    	font-weight: 400;
+	    	color: $color-6;
+	    	opacity: 0.8;
+	    	border-radius: 5px;
+	    	padding: 10px 10px;
+	    	text-align: center;
+
+	    }
+	    a:hover {
+	    	background-color: $color-1;
+	    	opacity: 1;
+	    }
+	}
+
+	.heading-primary {
+		font-size: $font-size-2;
 		padding: 0 5%;
-		line-height: $line-height-1;
-		text-transform: uppercase;
+
 		
 		&:before {
 			background-color: white;
@@ -16,14 +75,5 @@
 			color: white;
 		}
 	}
-	.introduccion {
-		
-		background-color: rgba($color-1, 0.8);
 
-		h1 {
-			font-size: $font-size-7;
-			color: white;	
-		}
-
-	}
 }

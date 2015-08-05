@@ -1,0 +1,30 @@
+#term {
+
+    	.term {
+    		background-color: white;
+    		padding: 0px 10%;
+    		width: 75%;
+    	}
+
+	    h1 {
+	    	font-size: $font-size-1;
+	    	font-family: $title-font;
+	    	color: $color-6;
+	    	
+	    	text-transform: uppercase;
+	    	line-height: $line-height-1;
+	    	/*background: transparentize($color-1, 0.2);*/
+
+	    	&:before {
+				background-color: white;
+				content: "";
+				position: absolute;
+				top: 0px;
+				height: 4px;
+				width: 20px;
+			}
+	    }
+		a {
+			color: #fff;
+		}
+}
