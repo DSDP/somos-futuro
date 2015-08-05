@@ -14,6 +14,13 @@
 			</div> <!-- .cd-title -->
 		</li>
 	</ul>
+
+	<ul>
+		{{#each model.posts as |post|}}
+			<li>{{#link-to 'post.show' post.id}} {{{post.title}}} {{/link-to}} 
+			</li>
+		{{/each}}
+	</ul>
 </div> <!-- .project-container -->
 
 <!-- ORIGINAL
@@ -35,11 +42,19 @@
 </div> -->
 
 
-<div class="chapters-container">
-<ul>
-	{{#each model.posts as |post|}}
-		<li>{{#link-to 'post.show' post.id}} {{{post.title}}} {{/link-to}} 
-		</li>
-	{{/each}}
-</ul>
-</div> 
+<div class="article-container">
+
+	<article class="type-system-slab ">
+
+	 {{{model.post.content}}}
+
+	 <div class="post-nav">
+	 	{{#if prevPost}}
+		  aca boton para el anterior
+		{{/if}}
+		{{#if nextPost }}
+		  aca boton para el siguiente
+		{{/if}}
+	 </div>
+	</article>
+</div>
