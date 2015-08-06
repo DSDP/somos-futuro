@@ -1,0 +1,37 @@
+#term {
+
+	padding: 0px 80px;
+	width: 100%;
+
+	.cd-title {
+
+		.heading-primary {
+			color: $color-1;
+			padding: 15px 80px 0;
+			/*background: transparentize($color-1, 0.2);*/
+
+
+			&:before {
+				background-color: $color-1;
+				content: "";
+				position: absolute;
+				top: 0px;
+				height: 4px;
+				width: 20px;
+			}
+		}
+		a {
+			color: #fff;
+		}
+
+		.title {
+			background-color: $color-6;
+			padding: 10px 0;
+			position: absolute;
+			top: 400px;
+			width: 75%;
+		}		
+	}
+
+
+}

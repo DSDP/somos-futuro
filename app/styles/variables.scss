@@ -7,7 +7,7 @@ Colors
 $color-1: #005FA2; // Soberia Politica
 $color-2: #29C4F3; // Independencia Economica
 $color-3: #00A2E0; // Justicia Social
-$color-4: #009ABE; // Desafios
+$color-4: #009ABE; // Tenemos futuro
 $color-5: #E4E4E6; // Gray
 $color-6: #FFFFFF; // White
 
@@ -38,6 +38,7 @@ $font-size-5:					$font-size-base * 1.6;			// 24px
 $font-size-6:					$font-size-base * 1.4; 			// 21px
 $font-size-7:					$font-size-base * 1.2;			// 18px
 $font-size-8:					$font-size-base * 1.066;		// 16px
+$font-size-small:				$font-size-base * 0.866;		// 13px
 $font-size-xsmall:				$font-size-base * 0.8;			// 12px
 
 
@@ -48,8 +49,9 @@ Article Styles
 -------------------------------- */
 
 $line-height-base:				24px;
-$line-height-1:					$line-height-base * 1.666;
-$line-height-5:					$line-height-base * 1.25;
+$line-height-1:					$line-height-base * 2;			// 48px
+$line-height-5:					$line-height-base * 1.25;		// 30px
+$line-height-7:					$line-height-base * 0.75;		// 18px
 
 
 $base-border-radius: 3px !default;

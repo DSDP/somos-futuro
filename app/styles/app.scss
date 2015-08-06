@@ -1,6 +1,9 @@
 
 @import "variables";
 @import "plugins/plugins";
+@import "term";
+@import "sub-term";
+@import "post";
 @import "articles";
 @import "cards";
 @import "landing";
@@ -25,16 +28,20 @@ html
 }
 body 
 {
+
 	font: 
 	{
+		 // variables inside partials > _variables.scss
 		size: $font-size-base;
-		family: $article-font; // variables inside partials > _variables.scss
-		color:$dark-gray;
+		family: $article-font;
 	}
-	color: $color-1;
-	background-color: $color-3;
+	
+	color: $dark-gray;
+	line-height: $line-height-base;
+	font-weight: 300;
 	margin: 0;
-
+	background-color: $color-3;
+	
 	h2 
 	{
 		text-align: center;
@@ -149,36 +156,7 @@ a
 		margin-bottom: 10px;
 	}
 }
-.justicial_social 
-{
-	/*background: lighten(#101524, 5%);*/
-	background: $color-1;
-}
-.independencia_economica 
-{
-	background: $color-3;
-}
-.soberania_politica 
-{
-	background: $color-2;
-}
-.tenemos_futuro 
-{
-	background: $color-4;
-}
-.home-intro 
-{
-	position: fixed;
-    text-align: center;
-    bottom: 15px;
-    left: 0;
-    right: 0;
-    z-index: 500;
 
-    h1 {
-
-    }
-}
 
 
 /* -------------------------------- 
@@ -452,8 +430,8 @@ Main Components
 			height:100%; 
 			width: auto; 
 			opacity: 1; 
-			position: relative; 
-			top: -20px;
+			position: relative;
+			//top: -20px;
 		}
 	}
 	.cd-single-project::after 
@@ -556,34 +534,17 @@ Main Components
     	top: 12.5vh;
     	text-align: left;
 
-    	.term {
-    		background-color: white;
-    		padding: 0px 10%;
-    		width: 75%;
+    	ul {
+    		list-style: none;
+    		padding: 0 80px;
+    		line-height: $line-height-5;
+
+    		&:first-child 
+    		{
+    			line-height: $line-height-base;
+    		}
     	}
-
-	    h1 {
-	    	font-size: $font-size-1;
-	    	font-family: $title-font;
-	    	color: $color-6;
-	    	
-	    	text-transform: uppercase;
-	    	line-height: $line-height-1;
-	    	/*background: transparentize($color-1, 0.2);*/
-
-	    	&:before {
-				background-color: white;
-				content: "";
-				position: absolute;
-				top: 0px;
-				height: 4px;
-				width: 20px;
-			}
-	    }
-		a {
-			color: #fff;
-		}
-	}
+    }
 }
 .chapters-container, 
 .article-container 
@@ -594,7 +555,7 @@ Main Components
     -webkit-overflow-scrolling: touch;
     float: right;
     background: #fff;
-    padding: 265px 80px 40px 80px;
+    padding: 200px 80px 40px 80px;
     height: 100vh;
 }
 .projects-container .cd-close, 
@@ -644,6 +605,49 @@ Main Components
 {
 }
 
+/* -------------------------------- 
+
+Colors
+
+-------------------------------- */
+
+#landing
+{
+	.soberania_politica {
+		background-color: transparent;
+	}
+	.independencia_economica {
+		background-color: transparent;
+	}
+	.justicial_social {
+		background-color: transparent;
+	}
+	.tenemos_futuro {
+		background-color: transparent;
+	}
+}
+.soberania_politica {
+	background: $color-1;
+
+	section
+	{
+		> .article-items
+		{
+			> .heading-secondary 	{
+				color: $color-1;
+			}
+		}
+	}
+}
+.independencia_economica {
+	background: $color-2;
+}
+.justicial_social {
+	background: $color-3;
+}
+.tenemos_futuro {
+	background: $color-4;
+}
 
 /* -------------------------------- 
 
@@ -655,9 +659,16 @@ Headings
 {
 	font-family: $title-font;
 }
+
+.heading-primary, .heading-article, .heading-sub-article, .heading-secondary {
+	text-align: left;
+}
+
 .heading-primary
 {
-	font-weight: 300;
+	font-size: $font-size-1;
+	line-height: $line-height-1;
+	text-transform: uppercase;	
 	position: relative;
 	padding: 15px 0;
 
@@ -668,5 +679,69 @@ Headings
 		top: 0;
 		height: 4px;
 		width: 20px;
+	}
+}
+
+.heading-article {
+	font-size: $font-size-5;
+	font-weight: 700;
+	line-height: $line-height-5;
+	font-style: italic;
+	margin-bottom: 1.2em;
+
+}
+
+.heading-sub-article {
+	font-size: $font-size-7;
+	font-weight: 700;
+	font-style: italic;
+	font-family: $article-font;
+}
+
+.heading-secondary {
+	color: $color-1;
+	font-family: $title-font;
+	font-size: $font-size-base;
+	text-transform: uppercase;
+	font-weight: 700;
+	line-height: $line-height-7;
+}
+
+.heading-term {
+	font-family: $article-font;
+	font-style: italic;
+	font-size: $font-size-base;
+	color: $color-6;
+	opacity: 0.8;
+
+	a {
+		color: #fff;
+	}
+}	
+
+.heading-sub-term {
+	font-family: $article-font;
+	font-style: italic;
+	font-weight: 700;
+	font-size: $font-size-7;
+	color: $color-6;
+
+	a {
+		color: #fff;
+	}
+}
+
+/* -------------------------------- 
+
+Galeria
+
+-------------------------------- */
+
+.gallery-item {
+	margin: 0px;
+
+	img {
+		width: 100%;
+		height: auto;
 	}
 }

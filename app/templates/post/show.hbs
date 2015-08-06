@@ -1,19 +1,24 @@
+<div {{bind-attr class=":projects-container :-half"}}>
+	<div id="-post" class="cd-single-project">
+		<img {{bind-attr src=post.featured_image.source}} >
+		<div class="cd-title">
+			<ul>
+			<li class="heading-term">
+				{{#link-to 'index'}}
+					Volver al indice
+				{{/link-to}}</li>
+			<li class="heading-sub-term">Categoría</li>
+			</ul>
+			<small>{{#link-to 'term.show' model.term.ID}} {{{model.term.name}}} {{/link-to}}</small>
+			<small>{{#link-to 'sub-term.show' model.subterm.ID}} {{{model.subterm.name}}} {{/link-to}}</small>
+			<h1 class="heading-primary">{{{model.post.title}}}</h1>
+		</div>
+	</div>	
 
-
-<div class="projects-container -half">
-	<ul style="margin: 0;">
-		<li class="cd-single-project">
-			<img {{bind-attr src=post.featured_image.source}} >
-			<div class="cd-title">
-				<small>{{#link-to 'term.show' model.term.ID}} {{{model.term.name}}} {{/link-to}}</small>
-				<small>{{#link-to 'sub-term.show' model.subterm.ID}} {{{model.subterm.name}}} {{/link-to}}</small>
-				<h1>{{{model.post.title}}}</h1>
-			</div> <!-- .cd-title -->
-		</li>
-	</ul>
 </div> <!-- .project-container -->
 
-<div class="article-container">
+<div {{bind-attr class=":article-container"}}>
+
 <article class="type-system-slab ">
 
  {{{model.post.content}}}

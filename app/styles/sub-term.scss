@@ -1,0 +1,37 @@
+#sub-term {
+
+	padding: 0px 80px;
+	width: 100%;
+
+	.cd-title {
+
+		.fa 
+		{
+			color: $color-6;
+			opacity: 0.6;
+		}
+		.heading-primary {
+			color: $color-6;
+			padding: 15px 80px 0;
+			margin-top: 100px;
+			width: 95%;
+			/*background: transparentize($color-1, 0.2);*/
+
+
+			&:before {
+				background-color: $color-6;
+				content: "";
+				position: absolute;
+				top: 0px;
+				height: 4px;
+				width: 20px;
+			}
+		}
+		a {
+			color: #fff;
+		}
+	
+	}
+
+
+}
