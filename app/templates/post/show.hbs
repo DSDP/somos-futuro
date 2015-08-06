@@ -1,5 +1,3 @@
-
-
 <div {{bind-attr class=":projects-container :-half"}}>
 	<div id="-post" class="cd-single-project">
 		<img {{bind-attr src=featured_image.source}} >
@@ -21,7 +19,7 @@
 
 <article class="type-system-slab ">
 
- {{{model.content}}}
+ {{{model.post.content}}}
 
  <div class="post-nav">
  	{{#if prevPost}}
@@ -30,6 +28,7 @@
 	{{#if nextPost }}
 	  aca boton para el siguiente
 	{{/if}}
+
  </div>
 </article>
 </div>
