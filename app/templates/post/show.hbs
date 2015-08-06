@@ -1,7 +1,7 @@
 <div {{bind-attr class=":projects-container :-half"}}>
-	<div id="-post" class="cd-single-project">
-		<img {{bind-attr src=featured_image.source}} >
-			<div class="cd-title">
+	<div id="-post" class="cd-single-project" style="background-image:url({{post.featured_image.source}})">
+		<!--img {{bind-attr src=post.featured_image.source}} -->
+			<div class="cd-title opacity">
 				<ul>
 				<li class="heading-term">
 					{{#link-to 'index'}}
@@ -10,7 +10,7 @@
 				<li class="heading-sub-term">Categoría</li>
 			</ul>
 				<!--<small>{{{model.term}}}</small>-->
-			<h1 class="heading-primary">{{{model.title}}}</h1>
+			<h1 class="heading-primary">{{{model.post.title}}}</h1>
 		</div> <!-- .cd-title -->
 	</div>	
 </div> <!-- .project-container -->
