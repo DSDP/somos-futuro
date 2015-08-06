@@ -2,6 +2,8 @@
 @import "variables";
 @import "plugins/plugins";
 @import "term";
+@import "sub-term";
+@import "post";
 @import "articles";
 @import "cards";
 @import "landing";
@@ -428,8 +430,8 @@ Main Components
 			height:100%; 
 			width: auto; 
 			opacity: 1; 
-			position: relative; 
-			top: -20px;
+			position: relative;
+			//top: -20px;
 		}
 	}
 	.cd-single-project::after 
@@ -531,7 +533,18 @@ Main Components
     	width: 100%;
     	top: 12.5vh;
     	text-align: left;
-	}
+
+    	ul {
+    		list-style: none;
+    		padding: 0 80px;
+    		line-height: $line-height-5;
+
+    		&:first-child 
+    		{
+    			line-height: $line-height-base;
+    		}
+    	}
+    }
 }
 .chapters-container, 
 .article-container 
@@ -542,7 +555,7 @@ Main Components
     -webkit-overflow-scrolling: touch;
     float: right;
     background: #fff;
-    padding: 265px 80px 40px 80px;
+    padding: 200px 80px 40px 80px;
     height: 100vh;
 }
 .projects-container .cd-close, 
@@ -692,7 +705,31 @@ Headings
 	text-transform: uppercase;
 	font-weight: 700;
 	line-height: $line-height-7;
+}
+
+.heading-term {
+	font-family: $article-font;
+	font-style: italic;
+	font-size: $font-size-base;
+	color: $color-6;
+	opacity: 0.8;
+
+	a {
+		color: #fff;
+	}
 }	
+
+.heading-sub-term {
+	font-family: $article-font;
+	font-style: italic;
+	font-weight: 700;
+	font-size: $font-size-7;
+	color: $color-6;
+
+	a {
+		color: #fff;
+	}
+}
 
 /* -------------------------------- 
 

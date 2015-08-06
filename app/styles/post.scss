@@ -1,18 +1,17 @@
-#term {
-
-	padding: 0px 80px;
-	width: 100%;
+#-post{
 
 	.cd-title {
 
 		.heading-primary {
-			color: $color-1;
+			color: $color-6;
 			padding: 15px 80px 0;
+			margin-top: 100px;
+			width: 95%;
 			/*background: transparentize($color-1, 0.2);*/
 
 
 			&:before {
-				background-color: $color-1;
+				background-color: $color-6;
 				content: "";
 				position: absolute;
 				top: 0px;
@@ -23,14 +22,7 @@
 		a {
 			color: #fff;
 		}
-
-		.title {
-			background-color: $color-6;
-			padding: 10px 0;
-			position: absolute;
-			top: 400px;
-			width: 75%;
-		}		
+	
 	}
 
 
