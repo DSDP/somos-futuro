@@ -3,20 +3,20 @@
 <div class="projects-container -half">
 	<ul style="margin: 0;">
 		<li class="cd-single-project">
-			<img {{bind-attr src=featured_image.source}} >
+			<img {{bind-attr src=post.featured_image.source}} >
 			<div class="cd-title">
-				<small>{{{model.term}}}</small>
-				<h1>{{{model.title}}}</h1>
+				<small>{{#link-to 'term.show' model.term.id}} {{{model.term.name}}} {{/link-to}}</small>
+				<small>{{#link-to 'sub-term.show' model.subterm.id}} {{{model.subterm.name}}} {{/link-to}}</small>
+				<h1>{{{model.post.title}}}</h1>
 			</div> <!-- .cd-title -->
 		</li>
 	</ul>
 </div> <!-- .project-container -->
 
 <div class="article-container">
-
 <article class="type-system-slab ">
 
- {{{model.content}}}
+ {{{model.post.content}}}
 
  <div class="post-nav">
  	{{#if prevPost}}
@@ -25,6 +25,7 @@
 	{{#if nextPost }}
 	  aca boton para el siguiente
 	{{/if}}
+
  </div>
 </article>
 </div>

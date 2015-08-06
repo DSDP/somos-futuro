@@ -30,20 +30,19 @@
 </ul>
 </div> -->
 
-
 <div class="chapters-container">
 <ul class="cards">
-	{{#each model.subterms as |term|}}
-
-		{{#link-to 'sub-term.show' term.id class="card"}} {{{term.name}}} 
-		
+	{{#each model.subterms as |post|}}
+	
+		{{#link-to 'post.show' post.id class="card"}}
 		<div class="card-image">
-			<img {{bind-attr src=sub-term.featured_image.source}}  >
+			<img {{bind-attr src=post.featured_image.source}}  >
 		</div>
-
-
-		{{/link-to}} 
-
+		<div class="card-copy">
+			{{post-brief post=post}}
+		</div>
+		{{/link-to}}
+	
 	{{/each}}
 </ul>
 </div>
