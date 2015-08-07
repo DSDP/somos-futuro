@@ -7,7 +7,7 @@
 					{{#link-to 'index'}}
 					Volver al indice
 				{{/link-to}}</li>
-				<li class="heading-sub-term">Categoría</li>
+				<li class="heading-sub-term">{{#link-to 'term.show' model.term.parent.ID}} {{model.term.parent.name}}{{/link-to}}</li>
 			</ul>
 
 			<h1 class="heading-primary">{{model.term.name}}</h1>
@@ -25,38 +25,10 @@
 
 </div> <!-- .project-container -->
 
-<!-- ORIGINAL
-<div class="chapters-container">
-<ul class="cards">
-	{{#each model.posts as |post|}}
-	
-		{{#link-to 'post.show' post.id class="card"}}
-		<div class="card-image">
-			<img {{bind-attr src=post.featured_image.source}}  >
-		</div>
-		<div class="card-copy">
-			{{post-brief post=post}}
-		</div>
-		{{/link-to}}
-	
-	{{/each}}
-</ul>
-</div> -->
-
-
 <div class="article-container">
-
 	<article class="type-system-slab ">
-
 	 {{{model.post.content}}}
-
 	 <div class="post-nav">
-	 	{{#if prevPost}}
-		  aca boton para el anterior
-		{{/if}}
-		{{#if nextPost }}
-		  aca boton para el siguiente
-		{{/if}}
 	 </div>
 	</article>
 </div>

@@ -1,11 +1,12 @@
-
-<li>
-	{{#if showCategory}}
-		<small><a {{action 'showTerm' category.id}}>{{category.name}}</a></small><br>
-	{{/if}}
-	<a {{action 'showPost' post.id}}>{{{post.title}}}</a>
-	{{{excerptSafe}}}<br>
-	<a  class="btn" {{action 'showPost' post.id}}>Seguir leyendo</a>
-</li>
-
-
+{{#link-to 'sub-term.show' subterm.id class="card"}}
+<div class="card-image">
+	<img {{bind-attr src=post.featured_image.source}}>
+</div>
+<div class="card-copy">
+	<li>
+		<a {{action 'showSubTerm' subterm.id}}>{{subterm.name}}</a>
+		{{{excerptSafe}}}<br>
+		<a  class="btn" {{action 'showSubTerm' subterm.id}}>Seguir leyendo</a>
+	</li>
+</div>
+{{/link-to}}
