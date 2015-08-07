@@ -1,19 +1,21 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+	showCategory: false,
 	actions: {
-		showSubTerm: function (termId) {
+		showPost: function (postId) {
+			this.sendAction();
+			this.get('router').transitionTo('post.show', postId);
+		},
+
+		showTerm: function (termId) {
 			this.sendAction();
 			this.get('router').transitionTo('sub-term.show', termId);
-		}
+		},		
 	},
 
-	subterm: Ember.computed('post.categories.@each', function () {
-		if(this.get('post').get('categories').objectAt(0).get("parent") !== null){
-			return this.get('post').get('categories').objectAt(0);
-		}else{
-			return this.get('post').get('categories').objectAt(1);
-		}
+	category: Ember.computed('post.categories.@each', function () {
+		return this.get('post').get('categories').objectAt(0);
 	}),
 
 	excerptSafe: Ember.computed('post.excerpt', function () {
