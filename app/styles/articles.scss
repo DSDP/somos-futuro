@@ -135,7 +135,18 @@ article.type-system-slab
           margin-top: 5px;
         }
       }
-    }
+      
+      em 
+      {
+
+        &.highlight 
+        {
+          background-color: $color-highlight;  
+          padding: 10px;
+          display: block;  
+        }  
+      }
+    }  
     ul 
     {
       list-style-type:disc;

@@ -57,9 +57,13 @@ a
 
 .smart-back 
 {
+	color: $color-6;
+	font-size: $font-size-small;
+	font-family: inherit;
+	text-shadow: 1px 1px 2px rgba(0,0,0, 0.4);
 	position: fixed;
     top: 25px;
-    right: 25px;
+    left: 80px;
     z-index: 1000;
     cursor: pointer;
 }
@@ -72,21 +76,26 @@ a
 
     .search 
     {
-	    color: #333;
+	    color: $color-7;
 	    line-height: 33px;
 	    text-align: center;
 	    height: 35px;
 	    width: 35px;
 		position: fixed;
-	    top: 15px;
-	    left: 15px;
+	    top: 10px;
+	    right: 80px;
 
 		-webkit-transition: all .4s cubic-bezier(0.7,0,.3,1);
 	    -moz-transition: all .4s cubic-bezier(0.7,0,.3,1);
 	    transition: all .4s cubic-bezier(0.7,0,.3,1);
 
 	    a {
-	    	color: #fff;
+	    	color: $color-7;
+
+	    	&:hover 
+	    	{
+				color: $color-1;	    		
+	    	}
 	    }
   
 	    .empty-data 
@@ -667,11 +676,11 @@ Colors
 }
 
 #independencia_economica {
-	background-image: url("http://somosfuturo.com.ar/contenido/wp-content/uploads/2015/07/342.jpg");
+	background-image: url("http://somosfuturo.com.ar/contenido/wp-content/uploads/2015/07/independecnia-economica_caratula.jpg");
 }
 
 #justicia_social {
-	background-image: url("http://somosfuturo.com.ar/contenido/wp-content/uploads/2015/07/186-copia.jpg");
+	background-image: url("http://somosfuturo.com.ar/contenido/wp-content/uploads/2015/07/justicia-social_caratula.jpg");
 }
 
 #tenemos_futuro 
@@ -808,4 +817,43 @@ Galeria
 		width: 100%;
 		height: auto;
 	}
+}
+
+#search 
+{
+	list-style: none;
+
+	small
+	{
+		a 
+		{
+		font-size: $font-size-small;
+		color: $color-7;
+
+			&:hover 
+			{
+				color: $color-1;
+			}
+		}
+	}	
+	a 
+	{
+		&.title 
+		{
+		color: $color-1;
+		font-size: $font-size-base;
+		}
+	}	
+	a 
+    {
+      color: $color-1;
+      text-decoration: none;
+      cursor: pointer;
+
+      &.btn 
+      {
+        font-size: $font-size-xsmall;
+        color: $color-1;
+      }
+    } 
 }
