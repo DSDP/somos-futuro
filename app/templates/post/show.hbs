@@ -1,4 +1,4 @@
-<div {{bind-attr class=":projects-container :-half"}}>
+<div {{bind-attr class=":projects-container :-half model.post.slug"}}>
 	<div id="-post" class="cd-single-project" style="background-image:url({{post.featured_image.source}})">
 		<!--img {{bind-attr src=post.featured_image.source}} -->
 			<div class="cd-title opacity">
@@ -19,8 +19,9 @@
 
 <div {{bind-attr class=":article-container"}}>
 
-<article class="type-system-slab ">
 
+<article class="type-system-slab ">
+ 
  {{{model.post.content}}}
 
 </article>

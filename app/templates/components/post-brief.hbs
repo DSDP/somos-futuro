@@ -1,6 +1,6 @@
 {{#link-to 'sub-term.show' subterm.id class="card"}}
 <div class="card-image">
-	<img {{bind-attr src=post.featured_image.source}}>
+	<img {{bind-attr src=post.featured_image.attachment_meta.sizes.post-thumbnail.url}}  >
 </div>
 <div class="card-copy">
 	<li>
