@@ -1,7 +1,7 @@
 <div {{bind-attr class=":projects-container :-half model.term.slug"}}>
 
-	<div id="sub-term" class="cd-single-project">
-		<div class="cd-title">
+	<div id="sub-term" class="cd-single-project" style="background-image:url({{post.featured_image.source}})">
+		<div class="cd-title opacity">
 			<ul>
 				<li class="heading-term">
 					{{#link-to 'index'}}

@@ -173,6 +173,16 @@ article.type-system-slab
       {
         font-size: $font-size-7;
         display: block;
+        padding-left: 15px;
+
+          &:before
+          {
+            content: url("http://somosfuturo.com.ar/contenido/wp-content/uploads/2015/07/parliament1.jpg");
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-top: -10px;            
+          }
       }
     }
     .list-date 
