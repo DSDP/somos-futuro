@@ -674,7 +674,24 @@ Colors
 	background-image: url("http://somosfuturo.com.ar/contenido/wp-content/uploads/2015/07/186-copia.jpg");
 }
 
-#tenemos_futuro {	background-image: url("http://somosfuturo.com.ar/contenido/wp-content/uploads/2015/07/342.jpg");
+#tenemos_futuro 
+{	
+	background-image: url("http://somosfuturo.com.ar/contenido/wp-content/uploads/2015/07/342.jpg");
+
+    .cd-title 
+    {
+    	width: 100%;
+    	text-align: left;
+    	top:0;
+
+    	ul
+    	{
+    		&:first-child {
+    			visibility: hidden;	
+    		}
+    		
+    	}
+    }				
 }
 
 /* -------------------------------- 
