@@ -68,6 +68,15 @@
 
     p {
       margin: 0 0 ($base-spacing / 2);
+      color: #333;
+    }
+
+    ul, li {
+      list-style-type: none;
+
+      a {
+        
+      }
     }
 
     li

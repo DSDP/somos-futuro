@@ -84,6 +84,10 @@ a
 		-webkit-transition: all .4s cubic-bezier(0.7,0,.3,1);
 	    -moz-transition: all .4s cubic-bezier(0.7,0,.3,1);
 	    transition: all .4s cubic-bezier(0.7,0,.3,1);
+
+	    a {
+	    	color: #fff;
+	    }
   
 	    .empty-data 
 	    {
@@ -137,6 +141,10 @@ a
 		    border-radius: 0;
 		    text-align: left;
 		    line-height: initial;
+
+		    a {
+		    	color: #333;
+		    }
 		}
 	}
 }
@@ -272,7 +280,6 @@ Main Components
 	    	left: 0;
 	    	height: 100vh/$items;
 	    	width: 100%;
-	    	background-image: url('../img/img-1-small.jpg');
 			background-repeat: no-repeat;
 			background-position: center center;
 			background-size: cover; 
@@ -281,7 +288,6 @@ Main Components
 	    &::before 
 	    {
 	    	/* never visible - this is used in jQuery to detect if the background image has been loaded  */
-			content: 'img/img-1-small.jpg';
 			display: none;
 	    }
 		&:nth-of-type(2) 
@@ -290,11 +296,9 @@ Main Components
 			
 			&::after 
 			{
-				background-image: url('../img/img-2-small.jpg'); 
 			}
 			&::before 
 			{
-				content: 'img/img-2-small.jpg';
 			}
 		}
 		&:nth-of-type(3) 
@@ -303,11 +307,9 @@ Main Components
 
 			&::after 
 			{
-				background-image: url('../img/img-3-small.jpg'); 
 			}
 
 			&::before {
-				content: 'img/img-3-small.jpg';
 			}
 		}
 
@@ -316,12 +318,10 @@ Main Components
 
 			&::after 
 			{
-				background-image: url('../img/img-4-small.jpg'); 
 			} 
 
 			&::before 
 			{
-				content: 'img/img-4-small.jpg';
 			}
 		}
 		&.is-loaded 
@@ -356,11 +356,9 @@ Main Components
 
 		&:first-of-type::before 
 		{
-			content: 'img/img-1-large.jpg';
 		}
 		&:first-of-type::after 
 		{
-			background-image: url('../img/img-1-large.jpg'); 
 		}
 		&:nth-of-type(2) 
 		{
@@ -369,11 +367,9 @@ Main Components
 
 			&::before 
 			{
-				content: 'img/img-2-large.jpg';
 			}
 			&::after 
 			{
-				background-image: url('../img/img-2-large.jpg'); 
 			} 
 		}
 		&:nth-of-type(3) 
@@ -383,11 +379,9 @@ Main Components
 
 			&::before 
 			{
-				content: 'img/img-3-large.jpg';
 			} 
 			&::after 
 			{
-				background-image: url('../img/img-3-large.jpg'); 
 			}
 		}
 		&:nth-of-type(4) 
@@ -397,11 +391,9 @@ Main Components
 
 			&::before 
 			{
-				content: 'img/img-4-large.jpg';
 			} 
 			&::after 
 			{
-				background-image: url('../img/img-4-large.jpg'); 
 			}
 		}
 		&::after 
@@ -567,7 +559,7 @@ Main Components
     -webkit-overflow-scrolling: touch;
     float: right;
     background: #fff;
-    padding: 200px 80px 40px 80px;
+    padding: 100px 80px 40px 80px;
     height: 100vh;
 }
 .projects-container .cd-close, 
@@ -638,36 +630,15 @@ Colors
 		background-color: transparent;
 	}
 }
-
-#soberania_politica, #independencia_economica, #justicial_social, #tenemos_futuro 
-{
-	background-size: cover;
-	background-position: center;	
-}
-
-#soberania_politica {
-	background-image: url("http://somosfuturo.com.ar/contenido/wp-content/uploads/2015/07/186-copia.jpg");
-}
-
-#independencia_economica {
-	background-image: url("http://somosfuturo.com.ar/contenido/wp-content/uploads/2015/07/342.jpg");
-}
-
-#justicia_social {
-	background-image: url("http://somosfuturo.com.ar/contenido/wp-content/uploads/2015/07/186-copia.jpg");
-}
-
-#tenemos_futuro {	background-image: url("http://somosfuturo.com.ar/contenido/wp-content/uploads/2015/07/342.jpg");
-}
-
 .soberania_politica {
-	background-color: $color-1;
+	background: $color-1;
+	//background-image: url("http://somosfuturo.com.ar/contenido/wp-content/uploads/2015/07/500.jpg");
+
 	section
 	{
 		> .article-items
 		{
-			> .heading-secondary 
-			{
+			> .heading-secondary 	{
 				color: $color-1;
 			}
 		}
@@ -760,9 +731,8 @@ Headings
 	font-size: $font-size-7;
 	color: $color-6;
 
-	&:hover {
-		color: $color-5;
-		cursor:pointer;
+	a {
+		color: #fff;
 	}
 }
 

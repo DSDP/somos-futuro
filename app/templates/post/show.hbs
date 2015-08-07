@@ -1,34 +1,28 @@
-<div {{bind-attr class=":projects-container :-half"}}>
+<div {{bind-attr class=":projects-container :-half model.post.slug"}}>
 	<div id="-post" class="cd-single-project" style="background-image:url({{post.featured_image.source}})">
 		<!--img {{bind-attr src=post.featured_image.source}} -->
 			<div class="cd-title opacity">
 				<ul>
-				<li class="heading-term">
-					{{#link-to 'index'}}
-					Volver al indice
-				{{/link-to}}</li>
-				<li class="heading-sub-term">Categoría</li>
-			</ul>
-				<!--<small>{{{model.term}}}</small>-->
+					<li class="heading-term">
+						{{#link-to 'index'}}
+						Volver al indice
+					{{/link-to}}</li>
+					
+					{{show-terms post=model.post}}
+
+				</ul>
 			<h1 class="heading-primary">{{{model.post.title}}}</h1>
 		</div> <!-- .cd-title -->
 	</div>	
+
 </div> <!-- .project-container -->
 
 <div {{bind-attr class=":article-container"}}>
 
-<article class="type-system-slab ">
 
+<article class="type-system-slab ">
+ 
  {{{model.post.content}}}
 
- <div class="post-nav">
- 	{{#if prevPost}}
-	  aca boton para el anterior
-	{{/if}}
-	{{#if nextPost }}
-	  aca boton para el siguiente
-	{{/if}}
-
- </div>
 </article>
 </div>
