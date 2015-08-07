@@ -21,9 +21,7 @@
 
 <div class="chapters-container">
 <ul class="cards">
-	{{#each model.subterms as |post|}}
-		<li class="card">{{post-brief post=post}}</li>
-	{{/each}}
+	{{term-list terms=model.subterms}}
 </ul>
 </div>
 
