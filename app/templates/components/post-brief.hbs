@@ -1,9 +1,8 @@
-
-	<div class="card-image">
-		<img {{bind-attr src=post.featured_image.attachment_meta.sizes.post-thumbnail.url}}  >
-	</div>
-	<div class="card-copy">
-			<div class="title"><a {{action 'showSubTerm' subterm.id}}>{{subterm.name}}</a></div>
-			{{{excerptSafe}}}
-			<a  class="btn" {{action 'showSubTerm' subterm.id}}>Continuar leyendo <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-	</div>
+<li>
+	{{#if showCategory}}
+		<small><a {{action 'showTerm' category.id}}>{{category.name}}</a></small><br>
+	{{/if}}
+	<a {{action 'showPost' post.id}}>{{{post.title}}}</a>
+	{{{excerptSafe}}}<br>
+	<a  class="btn" {{action 'showPost' post.id}}>Seguir leyendo</a>
+</li>
