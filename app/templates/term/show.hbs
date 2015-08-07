@@ -3,34 +3,26 @@
 	<div id="term" class="cd-single-project">
 		<div class="cd-title">
 			<ul>
-				<li class="heading-term">
+				<li class="heading-index">
 					{{#link-to 'index'}}
-					Volver al indice
+					Tenemos proyecto
 					{{/link-to}}</li>
 				<!--<li class="heading-sub-term">Categoría</li>-->
 			</ul>	
 
 			<div class="title"><h1 class="heading-primary">{{model.term.name}}</h1>
-			<span>{{model.term.description}}</span>
+			<!--<span>{{model.term.description}}</span>-->
 			</div>
 		</div> <!-- .cd-title -->
 	</div>
 
 </div> <!-- .project-container -->
 
-<!-- ORIGINAL
-<div class="chapters-container">
-<ul>
-	{{#each model.subterms as |term|}}
-		<li>{{#link-to 'sub-term.show' term.id}} {{{term.name}}} {{/link-to}} ({{{term.count}}})</li>
-	{{/each}}
-</ul>
-</div> -->
 
 <div class="chapters-container">
 <ul class="cards">
 	{{#each model.subterms as |post|}}
-		{{post-brief post=post}}
+		<li class="card">{{post-brief post=post}}</li>
 	{{/each}}
 </ul>
 </div>
