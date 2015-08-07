@@ -1,5 +1,6 @@
 .cards {
   padding: 0;
+  width: 50%;
 }
 
 .card {
@@ -33,12 +34,15 @@
 
   .card-image {
     overflow: hidden;
-    height: 150px;
-    max-height: 150px;
-    background-color: $card-image-hover-color;
+    /*height: 200px;
+    max-height: 150px;*/
+    height: auto;
+    max-height: 180px;
+    //background-color: $card-image-hover-color;
+    background-color: $color-1;
 
     img {
-      @include transition (all 0.2s ease-in-out);
+      //@include transition (all 0.2s ease-in-out);
       border-top-left-radius: $base-border-radius;
       border-top-right-radius: $base-border-radius;
       width: 100%;
@@ -57,12 +61,27 @@
   }
 
   .card-copy {
-    font-size: 0.9em;
-    line-height: 1.5em;
+    font-size: $font-size-base;
+    color: $dark-gray;
+    line-height: $line-height-base;
     padding: ($base-spacing / 2) ($base-spacing / 2);
 
     p {
       margin: 0 0 ($base-spacing / 2);
+    }
+
+    li
+    {  
+      list-style: none;
+      
+        a 
+        {
+          font-size: $font-size-base;
+          text-transform: uppercase;
+          font-weight: 700;
+          color: $color-1;
+          text-decoration: none;
+        }
     }
   }
 

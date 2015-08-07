@@ -1,4 +1,4 @@
-<div {{bind-attr class=":projects-container :-half model.term.slug"}} >
+<div {{bind-attr id="model.term.slug" class=":projects-container :-half model.term.slug"}} >
 
 	<div id="term" class="cd-single-project">
 		<div class="cd-title">
@@ -27,7 +27,7 @@
 
 <div class="chapters-container">
 <ul class="cards">
-	{{#each model.subterms as |post|}}
+		{{#each model.subterms as |post|}}
 	
 		{{#link-to 'post.show' post.id class="card"}}
 		<div class="card-image">
