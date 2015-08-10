@@ -1,8 +1,8 @@
 <li id="search">
 	{{#if showCategory}}
-		<small><a {{action 'showTerm' category.id}}>{{category.name}}</a></small><br>
+		<small><a {{action 'showTerm' category.id}}>{{category.name}}</a></small>
 	{{/if}}
 	<a class="title" {{action 'showPost' post.id}}>{{{post.title}}}</a>
-	{{{excerptSafe}}}<br>
-	<a  class="btn" {{action 'showPost' post.id}}>Seguir leyendo</a>
+	{{{excerptSafe}}}
+	<!--<a class="btn" {{action 'showPost' post.id}}>Seguir leyendo</a>-->
 </li>

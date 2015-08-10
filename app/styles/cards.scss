@@ -74,7 +74,6 @@
       font-size: $font-size-small;
       line-height: 1.5;
       margin: 0 0 ($base-spacing / 2);
-      color: #333;
     }
     a 
     {
@@ -86,7 +85,8 @@
       {
         font-size: $font-size-xsmall;
         color: $color-1;
-        
+        bottom: 20px;
+        position: absolute;
       }
     }
     .title 

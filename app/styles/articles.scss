@@ -81,7 +81,7 @@ article.type-system-slab
     }
     a 
     {
-     img 
+      img 
       {
         width: 100%;
         height: auto;
@@ -89,11 +89,18 @@ article.type-system-slab
         margin: 0 auto;
       }
     }
+    p 
+    {
+      > br {
+        display: none;
+      }
+    }
   }
 
   .article-items 
   {
-    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-bottom: 35px;
 
     &:first-child 
     {
@@ -144,6 +151,10 @@ article.type-system-slab
           background-color: $color-highlight;  
           padding: 10px;
           display: block;  
+
+          & ~ br {
+            display: none;
+          }
         }  
       }
     }  
@@ -164,7 +175,6 @@ article.type-system-slab
         }
       }
     } 
-    
     .heading-secondary 
     {
       position: relative;

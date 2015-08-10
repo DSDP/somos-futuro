@@ -7,7 +7,7 @@
     background-size: cover;
     background-position: center;
     background-color: $color-1;
-
+    
 	/*figure
 	{
 		height: 100vh;
@@ -30,10 +30,7 @@
 				border-right: none;
 			}
 		}
-	
 	}
-
-
 	.home-intro {
 		position: fixed;
 		left: 42.5%;
@@ -41,7 +38,6 @@
 		z-index: 500;
 		width: 15%;
 		text-align: center;
-
 
 	    a {
 	    	display: block;
@@ -53,19 +49,16 @@
 	    	border-radius: 5px;
 	    	padding: 10px 10px;
 	    	text-align: center;
-
 	    }
 	    a:hover {
 	    	background-color: $color-1;
 	    	opacity: 1;
 	    }
 	}
-
 	.heading-primary {
 		font-size: $font-size-2;
 		padding: 0 5%;
 		line-height: $line-height-1;
-
 		
 		&:before {
 			background-color: white;
