@@ -22,7 +22,7 @@ article.type-system-slab
   {
     font-size: $font-size-base;
     color: $dark-gray;
-    line-height: $line-height-base; //no me toma la variable
+    line-height: $line-height-text; //no me toma la variable
   }
   a 
   {
@@ -91,7 +91,8 @@ article.type-system-slab
     }
     p 
     {
-      > br {
+      > br 
+      {
         display: none;
       }
     }

@@ -51,11 +51,11 @@ Article Styles
 
 -------------------------------- */
 
-$line-height-base:				24px;
-$line-height-1:					$line-height-base * 2;			// 48px
-$line-height-5:					$line-height-base * 1.25;		// 30px
-$line-height-7:					$line-height-base * 0.75;		// 18px
+$line-height-base:				1;
 $line-height-small:				$line-height-base * 0.55;		// 13px
+$line-height-text:				$line-height-base * 1.6;
+$line-height-subtitle:			$line-height-base * 1.4;
+$line-height-title:				$line-height-base * 1.2;
 
 
 $base-border-radius: 3px !default;

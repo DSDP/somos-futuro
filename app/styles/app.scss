@@ -37,7 +37,7 @@ body
 	}
 	
 	color: $dark-gray;
-	line-height: $line-height-base;
+	line-height: $line-height-text;
 	font-weight: 300;
 	margin: 0;
 	background-color: $color-3;
@@ -549,11 +549,11 @@ Main Components
     	ul {
     		list-style: none;
     		padding: 0 80px;
-    		line-height: $line-height-5;
+    		line-height: $line-height-text;
 
     		&:first-child 
     		{
-    			line-height: $line-height-base;
+    			line-height: $line-height-text;
     			padding-top:100px;
     		}
     		a 
@@ -725,7 +725,7 @@ Headings
 .heading-primary
 {
 	font-size: $font-size-1;
-	line-height: $line-height-1;
+	line-height: $line-height-title;
 	text-transform: uppercase;	
 	position: relative;
 	padding: 15px 0;
@@ -743,7 +743,7 @@ Headings
 .heading-article {
 	font-size: $font-size-5;
 	font-weight: 700;
-	line-height: $line-height-5;
+	line-height: $line-height-subtitle;
 	font-style: italic;
 	margin-bottom: 1.2em;
 
@@ -762,13 +762,13 @@ Headings
 	font-size: $font-size-base;
 	text-transform: uppercase;
 	font-weight: 700;
-	line-height: $line-height-7;
+	//line-height: $line-height-7;
 }
 
 .heading-index {
 	font-family: $article-font;
 	font-style: italic;
-	font-size: $font-size-base;
+	font-size: $font-size-small;
 	color: $color-6;
 	opacity: 0.8;
 	text-shadow: 1px 1px 2px rgba(0,0,0, 0.4);
