@@ -12,16 +12,16 @@
 
 				</ul>
 			<h1 class="heading-primary">{{{model.post.title}}}</h1>
+			{{post-navigate post=model.post posts=model.posts}}
 		</div> <!-- .cd-title -->
 	</div>	
-
 </div> <!-- .project-container -->
 
 <div {{bind-attr class=":article-container"}}>
 
 
 <article class="type-system-slab ">
- 
+
  {{{model.post.content}}}
 
 </article>

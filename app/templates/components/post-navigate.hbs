@@ -1,0 +1,6 @@
+{{#if postBefore}}
+	{{#link-to 'post.show' postBefore.id}} {{postBefore.title}}{{/link-to}}
+{{/if}}
+{{#if postAfter}}
+	{{#link-to 'post.show' postAfter.id}} {{postAfter.title}}{{/link-to}}
+{{/if}}
