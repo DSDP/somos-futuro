@@ -31,6 +31,11 @@
 		}
 		a {
 			color: #fff;
+
+			&:hover 
+			{
+				opacity: 0.5;
+			}
 		}
 	
 	}
