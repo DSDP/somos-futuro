@@ -1,18 +1,21 @@
 <div {{bind-attr class=":projects-container :-half model.post.slug"}}>
 	<div id="-post" class="cd-single-project" style="background-image:url({{post.featured_image.source}})">
 		<!--img {{bind-attr src=post.featured_image.source}} -->
-			<div class="cd-title opacity">
+		<div class="cd-title opacity">
+			<nav>
 				<ul>
 					<li class="heading-index">
 						{{#link-to 'index'}}
 						Tenemos Proyecto
-					{{/link-to}}</li>
+						{{/link-to}}</li>
 					
-					{{show-terms post=model.post}}
-
+					<li>{{show-terms post=model.post}}</li>
 				</ul>
-			<h1 class="heading-primary">{{{model.post.title}}}</h1>
-			{{post-navigate post=model.post posts=model.posts}}
+			</nav>	
+		<h1 class="heading-primary">{{{model.post.title}}}</h1>			
+		
+		<ul class="navigation">{{post-navigate post=model.post posts=model.posts}}</ul>
+
 		</div> <!-- .cd-title -->
 	</div>	
 </div> <!-- .project-container -->

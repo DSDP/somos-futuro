@@ -15,6 +15,7 @@
     "moment": "~2.8.1",
     "fontawesome": "~4.2.0",
     "ember-cli-moment-shim": "~0.1.0",
-    "qunit": "~1.17.1"
+    "qunit": "~1.17.1",
+    "font-awesome": "~4.4.0"
   }
 }

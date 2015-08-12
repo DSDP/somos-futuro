@@ -43,6 +43,11 @@ export default function(){
 	);
 
 	this.transition(
+	  this.withinRoute('post.show'),
+	  this.use('fade', { duration: 3000 })
+	);
+
+	this.transition(
 	  this.withinRoute('term.show'),
 	  this.use('fade', { duration: 3000 })
 	);

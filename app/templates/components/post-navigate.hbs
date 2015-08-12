@@ -1,6 +1,6 @@
 {{#if postBefore}}
-	{{#link-to 'post.show' postBefore.id}} {{postBefore.title}}{{/link-to}}
+	<li class="item-prev">{{#link-to 'post.show' postBefore.id}} {{postBefore.title}}{{/link-to}} </li>
 {{/if}}
 {{#if postAfter}}
-	{{#link-to 'post.show' postAfter.id}} {{postAfter.title}}{{/link-to}}
+	<li class="item-next">{{#link-to 'post.show' postAfter.id}} {{postAfter.title}}{{/link-to}}</li>
 {{/if}}
