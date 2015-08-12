@@ -53,7 +53,14 @@ a
 {
 	//color: #0083ff;
 	text-decoration: none;
+	
+		&:hover, &:active, &:focus 
+		{
+			outline: 0;
+		}
 }
+
+
 
 .smart-back 
 {
@@ -246,6 +253,11 @@ Main Components
 	position: relative;
 	overflow-x: hidden;
 	-webkit-overflow-scrolling: touch;
+
+	@media (max-width: $screen-md-min)
+	{
+		overflow-y: scroll;
+	} 
 
 
 /*	&.justicia_social 
@@ -528,6 +540,21 @@ Main Components
 {
 	width: 50vw;
     float: left;
+
+    @media (min-width: $screen-xs-min) 
+	and (max-width: $screen-md-min) 
+	{
+		width: 100vw;
+		height: 35vh;
+		overflow-y: hidden;
+	} 
+
+    @media (max-width: $screen-xs-min) 
+	{
+		width: 100vw;
+		height: 55vh;
+		overflow-y: hidden;
+	} 	
     
     .cd-single-project 
     {
@@ -575,6 +602,11 @@ Main Components
     padding: 5% 3%;
     //padding: 100px 80px 40px 80px;
     height: 100vh;
+
+    @media (max-width: $screen-md-min)
+	{
+		width: 100vw;
+	} 
 }
 .projects-container .cd-close, 
 .projects-container .cd-scroll 
