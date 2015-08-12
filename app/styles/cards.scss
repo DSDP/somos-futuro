@@ -6,10 +6,10 @@
   {
     padding: 0 15%;
   }
-  @media (max-width: $screen-xs-min) 
+  @media (max-width: $screen-sm-max) 
   {
     padding: 0px 10%;
-  }
+  } 
 
   .card {
     $base-border-color: gainsboro !default;
@@ -44,17 +44,17 @@
     list-style: none;
     min-height: 580px;
 
-    @media (min-width: $screen-md-min) 
+    @media (min-width: $screen-sm-min)
     and (max-width: $screen-md-max)
     {
       width: 100%;
-      margin: 0px 0px 6.5% 0;
-      min-height: 0;
+      //min-height: 600px;
     }
 
     @media (max-width: $screen-sm-max) 
     {
       width: 45%;
+      min-height: 600px;
     } 
 
     @media (max-width: $screen-xs-max) 
@@ -103,15 +103,10 @@
         line-height: 1.5;
         margin: 0 0 ($base-spacing / 2);
 
-          @media (min-width: $screen-md-min) 
-          and (max-width: $screen-lg-min) 
+          @media (max-width: $screen-sm-max)
           {
             margin-bottom: 15%; 
           }
-          @media (max-width: $screen-xs-min) 
-          {
-            margin-bottom: 15%;  
-          }  
       }
       a 
       {
