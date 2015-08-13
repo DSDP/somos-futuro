@@ -11,6 +11,11 @@
 			font-size: $font-size-3;
 			/*background: transparentize($color-1, 0.2);*/
 
+			@media (max-width: $screen-sm-max)
+			{
+				font-size: $font-size-4;
+			}
+
 
 			&:before {
 				background-color: $color-6;
@@ -31,6 +36,14 @@
 			position: absolute;
 			top: 550px;
 			width: 75%;
+
+				@media (max-width: $screen-sm-max)
+					{
+						position: relative;
+						background-color: transparent;
+						top: 0;
+						padding-bottom: 8%;
+					}
 		}		
 	}
 

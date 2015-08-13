@@ -13,11 +13,17 @@
 		}
 		.heading-primary {
 			color: $color-6;
-			padding: 15px 80px 0;
+			padding: 2% 10%;
 			margin-top: 100px;
-			width: 95%;
+			width: 100%;
 			/*background: transparentize($color-1, 0.2);*/
-
+			
+			@media (max-width: $screen-sm-max)
+			{
+				font-size: $font-size-4;
+				padding: 3% 10%;
+				margin-top: 0;
+			}
 
 			&:before {
 				background-color: $color-6;
