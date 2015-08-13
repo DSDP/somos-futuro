@@ -74,6 +74,11 @@ a
     left: 80px;
     z-index: 1000;
     cursor: pointer;
+
+	@media (max-width: $screen-sm-max) 
+    {
+		left: 5%;
+    }
 }
 .smart-search 
 {
@@ -98,6 +103,8 @@ a
 		position: fixed;
 	    top: 10px;
 	    right: 80px;
+	    background-color: rgba(255, 255, 255, 0.8);
+		border-radius: 20px;
 	    //overflow-y: scroll;
 
 		-webkit-transition: all .4s cubic-bezier(0.7,0,.3,1);
@@ -167,6 +174,10 @@ a
 		    	color: #333;
 		    }
 		}
+		@media (max-width: $screen-sm-max) 
+	    {
+			right: 5%;
+	    }
 	}
 }
 .loading 
