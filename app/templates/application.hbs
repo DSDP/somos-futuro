@@ -1,7 +1,9 @@
-<a {{action 'smartGoBack'}} class="smart-back">
-	{{fa-icon 'long-arrow-left'}}
-	Volver	
-</a>
+{{#unless isHome}}
+	<a {{action 'smartGoBack'}} class="smart-back">
+		{{fa-icon 'long-arrow-left'}}
+		Volver	
+	</a>
+{{/unless}}
 
 {{search-tool class="smart-search"}}
 

@@ -1,5 +1,5 @@
 <div {{bind-attr class=":projects-container :-half model.post.slug"}}>
-	<div id="-post" class="cd-single-project" style="background-image:url({{post.featured_image.source}})">
+	<div id="-post" class="cd-single-project" style="background-image:url({{post.featured_image.attachment_meta.sizes.large.url}})">
 		<!--img {{bind-attr src=post.featured_image.source}} -->
 		<div class="cd-title opacity">
 			<nav>
@@ -22,7 +22,7 @@
 
 <div {{bind-attr class=":article-container"}}>
 
-
+ 
 <article class="type-system-slab ">
 
  {{{model.post.content}}}

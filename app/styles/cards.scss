@@ -42,7 +42,7 @@
     width: 45%;
     float: left;
     list-style: none;
-    min-height: 580px;
+    //min-height: 580px;
 
     @media (min-width: $screen-sm-min)
     and (max-width: $screen-md-max)
@@ -54,7 +54,7 @@
     @media (max-width: $screen-sm-max) 
     {
       width: 45%;
-      min-height: 600px;
+      //min-height: 600px;
     } 
 
     @media (max-width: $screen-xs-max) 
@@ -95,7 +95,7 @@
     .card-copy 
     {
       color: $dark-gray;
-      padding: ($base-spacing / 1) ($base-spacing / 1);
+      padding: ($base-spacing / 1) ($base-spacing / 1) ($base-spacing * 2) ($base-spacing / 1);
 
       p 
       {
