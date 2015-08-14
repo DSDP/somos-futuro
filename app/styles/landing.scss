@@ -8,6 +8,11 @@
     background-position: center;
     background-color: $color-1;
 
+	ul 
+	{
+		margin: 0;
+			padding: 0;
+	}
 	.home-intro {
 		position: fixed;
 		left: 42.5%;
