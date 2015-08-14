@@ -12,8 +12,8 @@
 					<li>{{show-terms post=model.post}}</li>
 				</ul>
 			</nav>	
-		<h1 class="heading-primary">{{{model.post.title}}}</h1>			
-		
+		<h1 class="heading-primary">{{{model.post.title}}}</h1>		
+
 		<ul class="navigation">{{post-navigate post=model.post posts=model.posts}}</ul>
 
 		</div> <!-- .cd-title -->
@@ -22,10 +22,12 @@
 
 <div {{bind-attr class=":article-container"}}>
 
-
 <article class="type-system-slab ">
 
  {{{model.post.content}}}
 
 </article>
+
+<ul class="navigation">{{post-navigate post=model.post posts=model.posts}}</ul>
+
 </div>

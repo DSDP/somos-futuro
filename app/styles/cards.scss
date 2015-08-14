@@ -42,7 +42,7 @@
     width: 45%;
     float: left;
     list-style: none;
-    min-height: 580px;
+    min-height: 400px;
 
     @media (min-width: $screen-sm-min)
     and (max-width: $screen-md-max)
@@ -108,20 +108,6 @@
             margin-bottom: 15%; 
           }
       }
-      a 
-      {
-        color: $color-1;
-        text-decoration: none;
-        cursor: pointer;
-
-        &.btn 
-        {
-          font-size: $font-size-xsmall;
-          color: $color-1;
-          bottom: 20px;
-          position: absolute;
-        }
-      }
       .title 
       {
         font-size: $font-size-8;
@@ -130,9 +116,20 @@
         text-transform: uppercase;
         margin-bottom: 10px;
         color: $color-1;
-      }
-     
 
+        a 
+        {
+        color: $color-1;
+        text-decoration: none;
+        cursor: pointer;
+        @include transition;
+          
+          &:hover
+          {
+            color: $color-2;
+          }
+        }
+      }
     }
 
     &:active {

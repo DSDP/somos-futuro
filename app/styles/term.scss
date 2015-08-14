@@ -3,49 +3,47 @@
 	//padding: 0px 80px;
 	width: 100%;
 
-	.cd-title {
+	.cd-title 
+	{
 
-		.heading-primary {
-			color: $color-6;
-			padding: 15px 80px 0;
+		nav 
+	    {
+    		ul 
+    		{	
+    			@media (max-width: $screen-sm-max)
+				{
+					padding: 15% 8% 5%;
+				}
+    		}
+    	}
+
+		.heading-primary 
+		{
 			font-size: $font-size-3;
 			/*background: transparentize($color-1, 0.2);*/
 
-			@media (max-width: $screen-sm-max)
+			/*@media (max-width: $screen-sm-max)
 			{
 				font-size: $font-size-4;
-			}
+				padding: 2% 10%;
+			}*/
+		}	
 
-
-			&:before {
-				background-color: $color-6;
-				content: "";
-				position: absolute;
-				top: 0px;
-				height: 4px;
-				width: 20px;
-			}
-		}
-		a {
-			color: #fff;
-		}
-
-		.title {
+		.title 
+		{
 			background-color: $color-1;
 			padding: 5px 0 0 0;
 			position: absolute;
 			top: 550px;
 			width: 75%;
 
-				@media (max-width: $screen-sm-max)
-					{
-						position: relative;
-						background-color: transparent;
-						top: 0;
-						padding-bottom: 8%;
-					}
+			@media (max-width: $screen-sm-max)
+			{	
+				position: relative;
+				background-color: transparent;
+				top: 0;
+				padding-bottom: 8%;
+			}
 		}		
 	}
-
-
 }
