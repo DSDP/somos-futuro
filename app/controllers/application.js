@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
 	getCurrentURL: function () {
 		this.set('isHome', false);
 
-		if (RegExp('index').test(this.get('currentPath')) || RegExp('festa').test(this.get('currentPath'))) {
+		if (RegExp('index').test(this.get('currentPath'))) {
 			this.set('isHome', true);
 		}
 		

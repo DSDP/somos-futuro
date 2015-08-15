@@ -1,6 +1,6 @@
 <div {{bind-attr id="model.term.slug" class=":projects-container :-half model.term.slug"}}>
 
-	<div id="sub-term" class="cd-single-project opacity">
+	<div id="sub-term" class="cd-single-project">
 		<div class="cd-title">
 			<nav>
 				<ul>
@@ -14,7 +14,7 @@
 
 			<h1 class="heading-primary">{{model.term.name}}</h1>
 
-			<ul>
+			<ul class="indice-subpolitica">
 				{{post-list posts=model.posts rootPost=model.post}}
 			</ul>
 

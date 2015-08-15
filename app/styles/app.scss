@@ -7,6 +7,7 @@
 @import "articles";
 @import "cards";
 @import "landing";
+@import "introduccion";
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,700,700italic);
 @import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300italic,300,700,400italic,700italic);
 
@@ -71,8 +72,6 @@ a
 		}
 }
 
-
-
 .smart-back 
 {
 	color: $color-6;
@@ -81,9 +80,15 @@ a
 	text-shadow: 1px 1px 2px rgba(0,0,0, 0.4);
 	position: fixed;
     top: 25px;
-    left: 80px;
+    left: 25px;
     z-index: 1000;
     cursor: pointer;
+
+	@media (max-width: $screen-sm-max) 
+    {
+		left: 5%;
+		//top: 6%;
+    }
 }
 .smart-search 
 {
@@ -103,11 +108,13 @@ a
     	
 	    line-height: 33px;
 	    text-align: center;
-	    height: 35px;
-	    width: 35px;
-		position: fixed;
-	    top: 10px;
-	    right: 80px;
+	    height: 40px;
+	    width: 40px;
+	    position: fixed;
+	    top: 15px;
+	    right: 2%;
+	    background-color: rgba(255, 255, 255, 0.92);
+		border-radius: 20px;
 	    //overflow-y: scroll;
 
 		-webkit-transition: all .4s cubic-bezier(0.7,0,.3,1);
@@ -118,10 +125,17 @@ a
 	    {
 	    	margin: 95px;
 	    }
+
+	    ul {
+	    	padding: 0;
+	    }
 	    fieldset 
 	    {
-	    	border: none;
-	    	width: 100%;
+			border: none;
+			width: 100%;
+			padding: 0;
+			height: 70px;
+
 
 	    	a 
 	    	{
@@ -133,7 +147,7 @@ a
 	    		color: $color-7;
 	    		float: left;
 				padding-top: 5px;
-				margin-right: 15px;
+				margin-right: 10px;
 	    	}
 	    }
     	a 
@@ -141,26 +155,46 @@ a
     		cursor: pointer;
     	}
 
+
+    	.close-search {
+			width: 40px;
+			height: 40px;
+			display: block;
+			font-size: 17px;
+			line-height: 38px;
+			position: fixed;
+			top: 15px;
+			right: 2%;
+    	}
+
+    	.open-search {
+			width: 40px;
+			height: 40px;
+			display: block;
+			font-size: 17px;
+			line-height: 38px;
+    	}
+
     	input 
     	{
     		opacity: 0;
 		    float: left;
 		    width: 90%;
-		    display: block;
-    
+			display: block;
+			border: none;
+			border-bottom: 1px solid #999;
+			font-size: 20px;
+			padding: 2px 0 4px 15px;
+			height: 41px;
+			background: none;
+			outline: none;
     		-webkit-transition: all .4s cubic-bezier(0.7,0,.3,1);
 		    -moz-transition: all .4s cubic-bezier(0.7,0,.3,1);
 		    transition: all .4s cubic-bezier(0.7,0,.3,1);
     	}
 		&.show 
 		{
-			background: #E8E8E8;
 			overflow-y: scroll;
-
-			input 
-			{
-	    		opacity: 1;
-	    	}
 			height: 100%;
 		    //width: 100%;
 		    width: 50%;
@@ -172,15 +206,50 @@ a
 		    text-align: left;
 		    line-height: initial;
 
+
 		    @media (max-width: $screen-sm-max) 
 			    { 
 			    width: 100%;
 			}
 
+
+			input 
+			{
+	    		opacity: 1;
+	    	}
+
 		    a 
 		    {
 		    	color: #333;
 		    }
+	   		@media (max-width: $screen-xs-max) 
+		    {
+				width: 100%;
+				padding: 5%;
+				ul
+				{
+					margin: 0;
+					padding: 0;
+				}
+				input
+				{
+					width: 85%;
+				}
+		    }
+		    @media (max-width: $screen-sm-max) 
+		    {
+				width: 100%;
+				padding: 5%;
+				ul
+				{
+					margin: 0;
+					padding: 0;
+				}
+				input
+				{
+					width: 85%;
+				}
+		    }	
 		}
 	}
 }
@@ -252,6 +321,7 @@ Number of projects
 -------------------------------- */
 
 $items: 4;
+$-items: 5;
 
 
 
@@ -268,7 +338,7 @@ Main Components
 	{
 		@media (max-width: $screen-sm-max) 
 	    {
-			overflow-y: scroll;
+			//overflow-y: scroll;
 			height: 100%;
 	    } 
 	}    
@@ -276,6 +346,13 @@ Main Components
 
 .-half 
 {
+
+	ul 
+	{
+		list-style: none;
+		margin: 0;
+	}
+
 	width: 50vw;
     float: left;
 
@@ -283,6 +360,12 @@ Main Components
     {
     	width: 100%;
     	height: 100%;
+    	height: 100vh;
+  
+    		@media (max-width: $screen-sm-max)
+			{
+				height: 100%;
+			}
     }
     /*.opacity 
     {
@@ -300,11 +383,14 @@ Main Components
     	nav 
     	{
     		ul 
-    		{
-	    		list-style: none;
-    			padding-top:100px;
+    		{	
     			line-height: $line-height-text;
+    			padding: 18% 10% 5%;
 
+	   			li
+    			{
+    				padding-bottom: 0;
+    			}    			
 	    		a 
 	    		{
 	    			color: $color-5;
@@ -313,22 +399,55 @@ Main Components
     	}
 
     	ul
-    	{	
-    		font-size: $font-size-small;
-    		position: relative;
-			list-style: none;
-			line-height: $line-height-ul;
-			padding: 20px 80px;	
-			margin: 0;
+    	{
+
+    		&.indice-subpolitica 
+    		{	
+	    		font-size: $font-size-small;
+	    		line-height: $line-height-ul;
+	    		padding: 2% 10% 10%;
+	    		width: 100%;
+
+				@media (max-width: $screen-xs-max)
+				{
+					padding: 0;
+					background-color: rgba(0, 0, 0, 0.1); 
+				}
+
+				li 
+				{
+					@media (max-width: $screen-xs-max)
+					{
+						padding: 5% 10%; 
+						border-bottom: 1px dotted rgba(255, 255, 255, 0.4);
+
+						&:first-child
+						{
+							border-top: 1px dotted rgba(255, 255, 255, 0.4);
+						}
+
+						&:last-child 
+						{
+							border-bottom: 0;
+						}
+						&.fa 
+						{
+						display: none;
+						}
+					}
+				}
+			}	
 
     		&.navigation
     		{
+    			list-style: none;
 				border-top: 1px dotted $color-6;
 				background-color: rgba(0, 0, 0, 0.3);
 				position: absolute;
 				bottom: 0;
 				width: 100%;
 				height: 12vh;
+				padding: 4% 10%;
 
 				li
 				{
@@ -370,9 +489,41 @@ Main Components
 		    		{
 		    			display: block;
 		    		}*/	
-				}				
+				}
+
+				@media (max-width: $screen-md-max)
+				{
+					display: none;
+				}		
     		}
-		}   	
+		}
+		.heading-primary
+		{
+			color: $color-6;
+			padding: 2% 10%;
+			width: 100%;
+			margin-top: 5%;
+
+			&:before 
+			{
+			background-color: $color-6;
+			content: "";
+			position: absolute;
+			top: 0px;
+			height: 4px;
+			width: 20px;
+			}
+			@media (max-width: $screen-sm-max)
+			{
+				font-size: $font-size-4;
+				padding: 3% 10%;
+				margin-top: 0;
+			}
+
+		}
+		a {
+			color: #fff;
+		}
     }
 }
 .projects-container 
@@ -409,9 +560,6 @@ Main Components
 	}*/
 	ul 
 	{
-		margin: 0;
-		padding: 0;
-
 		li
 		{
 			&.cd-single-project
@@ -506,6 +654,11 @@ Main Components
 					    	{
 								font-size: $font-size-5;
 					    	}
+
+					    	@media (max-width: $screen-sm-max) 
+    						{
+    							font-size: $font-size-7;
+    						}	
 							&:before 
 							{
 								background-color: white;
@@ -541,22 +694,27 @@ Main Components
 			    	border-right: 0;
 					border-bottom: 1px dotted #ADC1CE;
 					width: 100%;
-					height: 25vh;
-
+					height: 100vh/$-items;
+					
+					&:nth-of-type(1)
+					{
+						left: 0;
+						top: 100vh/$-items;
+					}
 					&:nth-of-type(2)
 					{
 						left: 0;
-						top: 100vh/$items;
+						top: 100vh*2/$-items;
 					}
 					&:nth-of-type(3)
 					{
 						left: 0;
-						top: 100vh*2/$items;
+						top: 100vh*3/$-items;
 					}
 					&:nth-of-type(4)
 					{
 						left: 0;
-						top: 100vh*3/$items;
+						top: 100vh*4/$-items;
 					}
 				}
 			}
@@ -616,6 +774,78 @@ Main Components
 }
 .article-container
 {
+	ul
+	{
+		&.navigation
+		{
+			list-style: none;
+			border-top: 1px solid $color-5;
+			bottom: 0;
+			width: 100%;
+			padding: 2% 0;
+			left: 0;
+			margin-bottom: 0;
+			font-size: $font-size-small;
+
+			li
+			{
+				&.item-prev 
+				{
+					float: left;
+					width: 45%;
+					position: relative;
+					padding-left: 25px;
+					line-height: $line-height-subtitle;
+
+					&:before 
+					{		
+					content: '\00AB';
+					position: absolute;
+			    	top: 50%;
+						left: 0;
+						margin-top: -10px;
+						color: $color-7;
+					}	
+				}
+				&.item-next 
+				{
+					float: right;
+					width: 45%;
+					position: relative;
+					padding-right: 25px;
+					line-height: $line-height-subtitle;
+
+					&:after
+					{		
+					content: '\00BB';
+					position: absolute;
+			    	top: 50%;
+						right: 0;
+						margin-top: -10px;
+						color: $color-7;
+					}
+				}
+				a
+				{
+					color: #333;
+
+					&:hover
+					{
+						color: $color-1;
+					}
+				}
+			}			        		
+				/*a 
+				{
+					display: block;
+				}*/	
+			@media (min-width: $screen-md-min)
+			{
+				display: none;
+			}	
+		}
+	}
+
 	@media (max-width: $screen-sm-max)
 	{
 		padding: 5% 8%;

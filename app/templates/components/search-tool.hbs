@@ -5,7 +5,7 @@
 	{{fa-icon 'search'}}	
 	{{input type="text" value=query}}
 	
-	<a {{action 'close'}}>{{fa-icon 'times'}}</a>
+	<a {{action 'close'}} class="close-search">{{fa-icon 'times'}}</a>
 	</fieldset>
 	
 	{{#if searching}}
@@ -30,7 +30,7 @@
 	{{/if}}
 
 {{else}}
-	<a {{action 'open'}}>{{fa-icon 'search'}}</a>
+	<a {{action 'open'}} class="open-search">{{fa-icon 'search'}}</a>
 {{/if}}
 
 </div>
