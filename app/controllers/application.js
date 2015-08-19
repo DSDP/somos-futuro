@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 	isShowMenu: false,
+	isShowSearch: false,
 	isHome: false,
 
 	getCurrentURL: function () {

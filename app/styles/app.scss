@@ -8,6 +8,7 @@
 @import "cards";
 @import "landing";
 @import "introduccion";
+@import "menu";
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,700,700italic);
 @import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300italic,300,700,400italic,700italic);
 
@@ -75,13 +76,13 @@ a
 	text-shadow: 1px 1px 2px rgba(0,0,0, 0.4);
 	position: fixed;
     top: 25px;
-    left: 25px;
+    left: 43%;
     z-index: 1000;
     cursor: pointer;
 
 	@media (max-width: $screen-sm-max) 
     {
-		left: 5%;
+		left: 80%;
 		//top: 6%;
     }
 }
