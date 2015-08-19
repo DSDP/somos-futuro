@@ -1,0 +1,41 @@
+.menu {
+ 	position: fixed;
+ 	top: 0;
+ 	left: 0;
+	width: 0;
+	height: 0;
+	opacity: 0;
+			-webkit-transition: all .4s cubic-bezier(0.7,0,.3,1);
+	    -moz-transition: all .4s cubic-bezier(0.7,0,.3,1);
+	    transition: all .4s cubic-bezier(0.7,0,.3,1);
+ color: #fff;
+
+ 	&.show {
+    width: 50%;
+    background: #3d6070;
+    height: 100%;
+    z-index: 1;
+    opacity: 1;
+    padding-top: 70px;
+    padding-left: 60px;
+ 	}
+}
+
+.menu-wp {
+    position: fixed;
+    z-index: 1;
+    color: #fff;
+
+    .tcon {
+	    position: relative;
+	    z-index: 3;
+
+	    .tcon-menu__lines,
+	    .tcon-menu__lines::after,
+	    .tcon-menu__lines::before {
+	    	background: #fff;
+	    }
+
+	}
+}
+

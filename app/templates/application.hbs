@@ -5,6 +5,8 @@
 	</a>
 {{/unless}}
 
-{{search-tool class="smart-search"}}
+{{wp-menu items=model.items show=isShowMenu iShowMenu=isShowMenu}}
+
+{{search-tool class="smart-search" show=isShowSearch iShowMenu=isShowSearch}}
 
 {{liquid-outlet class="container"}}

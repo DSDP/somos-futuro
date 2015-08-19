@@ -1,5 +1,11 @@
+{{t-menu a="arrow-left" action="toggle" is-open=show}}
+
+<div {{bind-attr class=":menu show:show"}}>
+
 {{#each items as |menuItem|}}
 	{{#unless menuItem.parent}}
 		{{wp-menu-item item=menuItem}}
 	{{/unless}}
 {{/each}}
+
+</div>
