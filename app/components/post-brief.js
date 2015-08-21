@@ -28,7 +28,7 @@ export default Ember.Component.extend({
 	  this._super();
 	  if (this.get('highlighting') === true) { 
 	      //Aca usar Jquery para hightlightear cualquier elemento
-	      // EJ this.$("p").highlight(this.get('query'));
+	      this.$().highlight(this.get('query'));
 	  } 
 	}
 });

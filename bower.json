@@ -15,5 +15,8 @@
     "fontawesome": "~4.2.0",
     "ember-qunit-notifications": "0.0.7",
     "qunit": "~1.17.1"
+  },
+  "devDependencies": {
+    "jquery-highlight": "~3.3.0"
   }
 }
