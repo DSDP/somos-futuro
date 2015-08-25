@@ -23,6 +23,15 @@ export default Ember.Component.extend({
 		},		
 	},
 
+	visibilityChanged: function () {
+		if (this.get('show') === false) {
+			this.set('post', []);
+			this.set('query', '');
+			this.set('searching', false);
+			this.set('searched', false);
+		}
+	}.observes('show'),
+
 	searchChanged: function () {
 		var _this = this;
 		if (this.get('interval')) {

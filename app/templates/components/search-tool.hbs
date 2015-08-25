@@ -19,7 +19,7 @@
 		{{#if posts}}
 			<ul>	
 				{{#each posts as |post|}}
-					{{post-brief post=post showCategory=true action='close'}}
+					{{post-brief post=post showCategory=true action='close' query=query highlighting=true}}
 				{{/each}}
 			</ul>
 		{{else}}
