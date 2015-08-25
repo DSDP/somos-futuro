@@ -1,21 +1,21 @@
 {{#cp-panel}}
-  {{#cp-panel-toggle}}
-
 	{{#if isCustom}}
 		<a {{bind-attr href=item.url }} target="_blank">{{item.title}}</a>
 	{{else}}
 		{{#link-to link item.object_id}} {{item.title}} {{/link-to}}
 	{{/if}}
-  {{/cp-panel-toggle}}
-  {{#cp-panel-body}}
 
 	{{#if item.subItems}}
-		<ul>
-		{{#each item.subItems as |menuItem|}}
-			{{wp-menu-item item=menuItem}}
-		{{/each}}
-		</ul>
-	{{/if}}
+		{{#cp-panel-toggle}}
+			{{t-add animation="minus"}}
+		{{/cp-panel-toggle}}
 
-  {{/cp-panel-body}}
+		{{#cp-panel-body}}
+				<ul>
+				{{#each item.subItems as |menuItem|}}
+					{{wp-menu-item item=menuItem}}
+				{{/each}}
+				</ul>
+		{{/cp-panel-body}}
+	{{/if}}
 {{/cp-panel}}

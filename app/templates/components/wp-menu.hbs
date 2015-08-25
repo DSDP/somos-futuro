@@ -6,15 +6,15 @@
 		{{t-menu a="x-cross" action="toggle" is-open=show}}
 
 		<div {{bind-attr class=":menu show:show"}}>
-
-		<nav>
-		{{#each items as |menuItem|}}
-			{{#unless menuItem.parent}}
-				{{wp-menu-item item=menuItem}}
-			{{/unless}}
-		{{/each}}
-		</nav>	
-
+		{{#if show}}
+			<nav>
+			{{#each items as |menuItem|}}
+				{{#unless menuItem.parent}}
+					{{wp-menu-item item=menuItem}}
+				{{/unless}}
+			{{/each}}
+			</nav>	
+		{{/if}}
 		</div>
 	</div>
 </header>
