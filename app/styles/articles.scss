@@ -103,6 +103,29 @@ article.type-system-slab
     }
   }
 
+  #constr-pol-economica, #constr-pol-estado, #igualdad-social
+  {
+    .heading-post
+    {
+    font-size: $font-size-3;
+    line-height: $line-height-title;
+    text-transform: uppercase;  
+    position: relative;
+    padding: 15px 0;
+    color: $color-1;
+
+      &:before
+      {
+        content: '';
+        position: absolute;
+        top: 0;
+        height: 4px;
+        width: 20px;
+        color: $color-1;
+      }
+    }
+  }
+
   .article-items 
   {
     margin-top: 40px;

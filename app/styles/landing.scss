@@ -8,133 +8,212 @@
     background-position: center;
     background-color: $color-1;
 
-
 	ul 
 	{
-		&.bandera-menu
+		li
 		{
-			list-style: none;
-			opacity: 0;
-		}
-	}
-	figure
-	{
-		padding: 5%;
-		margin: 0;
-
-		&.effect-sadie
-		{
-			&:hover
+			.fa
 			{
-				figure {
-				
-					&:before
+				opacity: 0.5;
+			}
+			/*&.soberania_politica ,
+			&.independencia_economica,
+			&.justicial_social
+			{
+				&:hover
+				{
+					width: 50vw;
+
+					& ~ li.cd-single-project
 					{
-						background-color:rgba(0, 0, 0, 0);
-						transition: all 0.4s ease-in-out;
+						width: 25vw;
 					}
-				}	
-				h2
-				{
-					color: $color-6;
-					-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
-					transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
 				}
-				ul
-				{
-					opacity: 1;
-					-webkit-transform: translate3d(0,0,0);
-					transform: translate3d(0,0,0);
-				}
-			}
-			figcaption
+			}			
+			&.soberania_politica 
 			{
-				&:before
+				&:hover
 				{
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					background-color:rgba(0, 0, 0, 0.3);
-					content: '';
+					width: 50vw;
+
+					& ~ .independencia_economica
+					{
+						left: 50vw;
+					}
+					& ~ .justicial_social
+					{
+						left: 75vw;
+					}
 				}
 			}
-			h2 
+			&.independencia_economica
 			{
-				position: absolute;
-				top: 50%;
-				padding: 0px;
-				-webkit-transition: -webkit-transform 0.35s, color 0.35s;
-				transition: transform 0.35s, color 0.35s;
-				-webkit-transform: translate3d(0,-50%,0);
-				transform: translate3d(0,-50%,0);
+				&:hover
+				{
+					width: 50vw;
+					left: 25vw;
+
+					& ~ .soberania_politica
+					{
+						left: 0;
+					}
+					& ~ .justicial_social
+					{
+						left: 75vw;
+					}
+				}
 			}
-			ul
+			&.justicial_social
 			{
-				font-size: $font-size-small;
-	    		line-height: $line-height-ul;
-	    		color: $color-6;
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				padding: 2em;
-				width: 100%;
-				opacity: 0;
-				-webkit-transform: translate3d(0,10px,0);
-				transform: translate3d(0,10px,0);
+				&:hover
+				{
+					width: 50vw;
+					left: 50vw;
+
+					& ~ .soberania_politica
+					{
+						left: 0;
+					}
+					& ~ .independencia_economica
+					{
+						left: 25vw;
+					}
+				}
+			}*/
+			figure
+			{
+				padding: 5%;
+				margin: 0;
+
+				&.effect
+				{
+					&:hover
+					{
+						figcaption {
+						
+							&:before
+							{
+								opacity: 1;
+								//-webkit-transform: translate3d(0,0,0);
+								//transform: translate3d(0,0,0);
+							    -webkit-transform: scaleY(0);
+							    transform: scaleY(1);
+							        -webkit-transform-origin: 50%;
+							    transform-origin: 50%;
+							    -webkit-transition-property: transform;
+							    transition-property: transform;
+							    -webkit-transition-duration: 0.3s;
+							    transition-duration: 0.3s;
+							    -webkit-transition-timing-function: ease-out;
+							    transition-timing-function: ease-out;
+							}
+							h2
+							{
+								&.heading-primary 
+								{
+									-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+									transform: translate3d(0, -100%, 0) translate3d(0, -100px, 0);
+								}
+							}
+						}	
+						ul
+						{
+							&.bandera-menu
+							{
+								opacity: 1;
+								-webkit-transform: translate3d(0,0,0);
+								transform: translate3d(0,0,0);
+							}	
+						}
+					}
+					figcaption
+					{
+						&:before
+						{
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							vertical-align: middle;
+							background-color: rgba(0, 95, 162, 0.9);
+							content: '';
+							opacity: 0;
+							-webkit-transition-property: color;
+						    transition-property: color;
+						    -webkit-transform: translateZ(0);
+						    transform: translateZ(0);
+						    -webkit-transform: scaleY(0);
+						    transform: scaleY(0);
+						    //border-left: 2px solid #fff;
+						    //border-right: 2px solid #fff;
+						}
+						h2 
+						{	
+							&.heading-primary 
+							{
+							position: absolute;
+							top: 50%;
+							padding: 0px;
+							-webkit-transition: -webkit-transform 0.35s;
+							transition: transform 0.35s;
+							-webkit-transform: translate3d(0,-50%,0);
+							transform: translate3d(0,-50%,0);
+							}
+						}
+					}
+					ul
+					{
+						&.bandera-menu
+						{
+							list-style: none;
+							opacity: 0;
+							font-size: $font-size-small;
+				    		line-height: 2.3;
+				    		
+							position: absolute;
+							top: 40%;
+							left: 0;
+							padding: 2em;
+							width: 100%;
+							opacity: 0;
+							-webkit-transition: opacity 0.55s, -webkit-transform 0.35s;
+							transition: opacity 0.55s, transform 0.35s;
+							-webkit-transform: translate3d(100%,0,0);
+							transform: translate3d(100%,0,0);
+
+							li
+							{
+								a
+								{
+									color: $color-6;
+									transition: all 0.35s ease-in-out;
+									display: block;							
+									&:hover
+									{
+										opacity: 0.8;
+										padding-left: 15px;
+									}
+								}
+							}
+						}
+					}
+				}
 			}
-		}
+			figure.effect-sadie:hover figcaption::before ,
+			{
+				opacity: 1;
+				-webkit-transform: translate3d(0,0,0);
+				transform: translate3d(0,0,0);
+			}
 
+		}		
 	}
-
-/*figure.effect-sadie h2 {
-	position: absolute;
-	top: 50%;
-	left: 0;
-	width: 100%;
-	color: $color-6;
-	-webkit-transition: -webkit-transform 0.35s, color 0.35s;
-	transition: transform 0.35s, color 0.35s;
-	-webkit-transform: translate3d(0,-50%,0);
-	transform: translate3d(0,-50%,0);
-}*/
-
-/*figure.effect-sadie:hover h2 {
-	color: #fff;
-	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
-	transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
-}*/
-
-
-
-	/*figure.effect-sadie figcaption::before,
-	figure.effect-sadie p {
-		-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-		transition: opacity 0.35s, transform 0.35s;
-	}
-
-	figure.effect-sadie p {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		padding: 2em;
-		width: 100%;
-		opacity: 0;
-		-webkit-transform: translate3d(0,10px,0);
-		transform: translate3d(0,10px,0);
-	}*/ 
-	figure.effect-sadie:hover figcaption::before ,
-	figure.effect-sadie:hover p {
-		opacity: 1;
-		-webkit-transform: translate3d(0,0,0);
-		transform: translate3d(0,0,0);
-	}
-
+		
 	ul 
 	{
 		margin: 0;
-			padding: 0;
+		padding: 0;
 	}
 	.home-intro {
 		position: fixed;
@@ -173,7 +252,7 @@
 
 	    	&:hover 
 	    	{
-	    	background-color: $color-1;
+	    	background-color: $color-3;
 	    	color: $color-6;
 
 				@media (max-width: $screen-md-max) 

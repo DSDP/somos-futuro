@@ -1,11 +1,20 @@
-{{t-menu a="arrow-left" action="toggle" is-open=show}}
+<header id="header">
+	<div class="heading-book">TENEMOS PATRIA, TENEMOS PROYECTO, SOMOS FUTURO
+	</div>
 
-<div {{bind-attr class=":menu show:show"}}>
+	<div class="menu-gral">
+		{{t-menu a="x-cross" action="toggle" is-open=show}}
 
-{{#each items as |menuItem|}}
-	{{#unless menuItem.parent}}
-		{{wp-menu-item item=menuItem}}
-	{{/unless}}
-{{/each}}
+		<div {{bind-attr class=":menu show:show"}}>
 
-</div>
+		<nav>
+		{{#each items as |menuItem|}}
+			{{#unless menuItem.parent}}
+				{{wp-menu-item item=menuItem}}
+			{{/unless}}
+		{{/each}}
+		</nav>	
+
+		</div>
+	</div>
+</header>

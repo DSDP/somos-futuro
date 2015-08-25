@@ -8,16 +8,15 @@
 			-webkit-transition: all .4s cubic-bezier(0.7,0,.3,1);
 	    -moz-transition: all .4s cubic-bezier(0.7,0,.3,1);
 	    transition: all .4s cubic-bezier(0.7,0,.3,1);
- color: #fff;
+	color: #fff;
 
- 	&.show {
-    width: 50%;
-    background: #3d6070;
+ 	&.show 
+ 	{
+    background: rgba(0,0,0,0.5);
     height: 100%;
     z-index: 1;
     opacity: 1;
-    padding-top: 70px;
-    padding-left: 60px;
+    width: 100vw;
  	}
 }
 
@@ -34,8 +33,21 @@
 	    .tcon-menu__lines::after,
 	    .tcon-menu__lines::before {
 	    	background: #fff;
+	    	height: 2px;
+	    	width: 25px;
+	    	border-radius: 0.85px;
 	    }
-
+	    .tcon-menu__lines
+	    {
+	    	&::after
+	    	{
+	    		top: 6px;
+	    	}
+	    	&::before
+	    	{
+	    		top: -6px;
+	    	}
+	    }
 	}
 }
 
