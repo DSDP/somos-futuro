@@ -4,12 +4,7 @@
 		<div class="cd-title opacity">
 			<nav>
 				<ul>
-					<li class="heading-index">
-						{{#link-to 'index'}}
-						Tenemos Proyecto
-						{{/link-to}}</li>
-					
-					<li>{{show-terms post=model.post}}</li>
+					<li class="heading-term">Tenemos Patria, Tenemos Proyecto, Tenemos Futuro</li>
 				</ul>
 			</nav>	
 		<h1 class="heading-primary">{{{model.post.title}}}</h1>		
@@ -21,6 +16,12 @@
 </div> <!-- .project-container -->
 
 <div {{bind-attr class=":article-container model.post.slug"}}>
+	<nav class="breadcrumb">
+		<ul>
+			<li>{{#link-to 'index'}}{{fa-icon 'home'}}{{/link-to}}</li>
+			<li>{{show-terms post=model.post}}</li>
+		</ul>
+	</nav>	
 
 <article class="type-system-slab ">
 

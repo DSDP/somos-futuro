@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   tagName: 'li',
+  isOpen: false,
 
   isCustom: Ember.computed('item' , function() {
     if (this.get('item')) {

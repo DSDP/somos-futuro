@@ -1,143 +1,144 @@
 .cards {
-  padding: 0;
+    padding: 0;
+    margin-top: 12%;
 
-  @media (min-width: $screen-md-min) 
-  and (max-width: $screen-md-max) 
-  {
-    padding: 0 15%;
-  }
-  @media (max-width: $screen-sm-max) 
-  {
-    padding: 0px 10%;
-  } 
-
-  .card {
-    $base-border-color: gainsboro !default;
-    $base-border-radius: 3px !default;
-    $base-background-color: white !default;
-    $base-spacing: 1.5em !default;
-    $action-color: #477DCA !default;
-    $dark-gray: #333 !default;
-    $base-font-color: $dark-gray !default;
-    $card-border-color: $base-border-color;
-    $card-border: 1px solid $card-border-color;
-    $card-background: #F4F4F4;
-    $card-header-background: $card-background;
-    $card-margin: 1em;
-    $card-image-hover-opacity: 0.7;
-    $card-image-hover-color: #F8F2B4;
-
-    @include flex-basis(15em);
-    @include flex-grow(1);
-    @include transition (all 0.2s ease-in-out);
-    background-color: $card-background;
-    border-radius: $base-border-radius;
-    border: $card-border;
-    box-shadow: 0 2px 4px darken($base-background-color, 5%);
-    //cursor: pointer;
-    //margin: 0 $card-margin $base-spacing $card-margin;
-    margin: 0 2.5% 5% 2.5%;
-    position: relative;
-    display: block;
-    width: 45%;
-    float: left;
-    list-style: none;
-    //min-height: 580px;
-
-    @media (min-width: $screen-sm-min)
-    and (max-width: $screen-md-max)
+    @media (min-width: $screen-md-min) 
+    and (max-width: $screen-md-max) 
     {
-      width: 100%;
-      //min-height: 600px;
+      padding: 0 15%;
     }
-
     @media (max-width: $screen-sm-max) 
     {
-      width: 45%;
-      //min-height: 600px;
+      padding: 0px 10%;
     } 
 
-    @media (max-width: $screen-xs-max) 
-    {
-      width: 100%;
-      margin: 8% 0;
-      min-height: 0;
-    }
+    .card {
+      $base-border-color: gainsboro !default;
+      $base-border-radius: 3px !default;
+      $base-background-color: white !default;
+      $base-spacing: 1.5em !default;
+      $action-color: #477DCA !default;
+      $dark-gray: #333 !default;
+      $base-font-color: $dark-gray !default;
+      $card-border-color: $base-border-color;
+      $card-border: 1px solid $card-border-color;
+      $card-background: #F4F4F4;
+      $card-header-background: $card-background;
+      $card-margin: 1em;
+      $card-image-hover-opacity: 0.7;
+      $card-image-hover-color: #F8F2B4;
 
-    .card-image {
-      overflow: hidden;
-      /*height: 200px;
-      max-height: 150px;*/
-      height: 170px;
-      max-height: 200px;
-      //background-color: $card-image-hover-color;
-      background-color: $card-background;
-
-      img {
-        //@include transition (all 0.2s ease-in-out);
-        border-top-left-radius: $base-border-radius;
-        border-top-right-radius: $base-border-radius;
-        width: 100%;
-        opacity: 1;
-      }
-    }
-
-    .card-header 
-    {
+      @include flex-basis(15em);
+      @include flex-grow(1);
       @include transition (all 0.2s ease-in-out);
       background-color: $card-background;
-      border-bottom: $card-border;
-      border-radius: $base-border-radius $base-border-radius 0 0;
-      font-weight: bold;
-      line-height: 1.5em;
-      padding: ($base-spacing / 3) ($base-spacing / 2);
-    }
-    .card-copy 
-    {
-      color: $dark-gray;
-      padding: ($base-spacing / 1) ($base-spacing / 1) ($base-spacing * 2) ($base-spacing / 1);
+      border-radius: $base-border-radius;
+      border: $card-border;
+      box-shadow: 0 2px 4px darken($base-background-color, 5%);
+      //cursor: pointer;
+      //margin: 0 $card-margin $base-spacing $card-margin;
+      margin: 0 2.5% 5% 2.5%;
+      position: relative;
+      display: block;
+      width: 45%;
+      float: left;
+      list-style: none;
+      min-height: 450px;
 
-      p 
+      @media (min-width: $screen-sm-min)
+      and (max-width: $screen-md-max)
       {
-        font-size: $font-size-small;
-        line-height: 1.5;
-        margin: 0 0 ($base-spacing / 2);
-
-          @media (max-width: $screen-sm-max)
-          {
-            margin-bottom: 15%; 
-          }
+        width: 100%;
+        //min-height: 600px;
       }
-      .title 
-      {
-        font-size: $font-size-8;
-        line-height: $line-height-title;
-        font-weight: 700;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-        color: $color-1;
 
-        a 
+      @media (max-width: $screen-sm-max) 
+      {
+        width: 45%;
+        //min-height: 600px;
+      } 
+
+      @media (max-width: $screen-xs-max) 
+      {
+        width: 100%;
+        margin: 8% 0;
+        min-height: 0;
+      }
+
+      .card-image {
+        overflow: hidden;
+        /*height: 200px;
+        max-height: 150px;*/
+        height: 170px;
+        max-height: 200px;
+        //background-color: $card-image-hover-color;
+        background-color: $card-background;
+
+        img {
+          //@include transition (all 0.2s ease-in-out);
+          border-top-left-radius: $base-border-radius;
+          border-top-right-radius: $base-border-radius;
+          width: 100%;
+          opacity: 1;
+        }
+      }
+
+      .card-header 
+      {
+        @include transition (all 0.2s ease-in-out);
+        background-color: $card-background;
+        border-bottom: $card-border;
+        border-radius: $base-border-radius $base-border-radius 0 0;
+        font-weight: bold;
+        line-height: 1.5em;
+        padding: ($base-spacing / 3) ($base-spacing / 2);
+      }
+      .card-copy 
+      {
+        color: $dark-gray;
+        padding: ($base-spacing / 1) ($base-spacing / 1) ($base-spacing * 2) ($base-spacing / 1);
+
+        p 
         {
-        color: $color-1;
-        text-decoration: none;
-        cursor: pointer;
-        @include transition;
-          
-          &:hover
+          font-size: $font-size-small;
+          line-height: 1.5;
+          margin: 0 0 ($base-spacing / 2);
+
+            @media (max-width: $screen-sm-max)
+            {
+              margin-bottom: 15%; 
+            }
+        }
+        .title 
+        {
+          font-size: $font-size-8;
+          line-height: $line-height-title;
+          font-weight: 700;
+          text-transform: uppercase;
+          margin-bottom: 10px;
+          color: $color-1;
+
+          a 
           {
-            color: $color-2;
+          color: $color-1;
+          text-decoration: none;
+          cursor: pointer;
+          @include transition;
+            
+            &:hover
+            {
+              color: $color-2;
+            }
           }
         }
       }
-    }
 
-    &:active {
-      background-color: $card-background;
-
-      .card-header {
+      &:active {
         background-color: $card-background;
+
+        .card-header {
+          background-color: $card-background;
+        }
       }
     }
   }
-}
