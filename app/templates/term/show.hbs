@@ -2,16 +2,6 @@
 
 	<div id="term" class="cd-single-project opacity">
 		<div class="cd-title">
-			<nav>
-				<ul>
-					<li class="heading-index">
-						{{#link-to 'index'}}
-						Tenemos Proyecto
-						{{/link-to}}</li>
-					<!--<li class="heading-sub-term">Categoría</li>-->
-				</ul>
-			</nav>	
-
 			<div class="title"><h1 class="heading-primary">{{model.term.name}}</h1>
 			<!--<span>{{model.term.description}}</span>-->
 			</div>
@@ -22,8 +12,13 @@
 
 
 <div class="chapters-container">
-<ul class="cards">
-	{{term-list terms=model.subterms}}
-</ul>
+	<nav class="breadcrumb">
+		<ul>
+			<li>{{#link-to 'index'}}Tenemos Proyecto{{/link-to}}</li>
+		</ul>
+	</nav>	
+	<ul class="cards">
+		{{term-list terms=model.subterms}}
+	</ul>
 </div>
 

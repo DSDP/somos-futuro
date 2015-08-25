@@ -4,13 +4,9 @@
 		<div class="cd-title">
 			<nav>
 				<ul>
-					<li class="heading-index">
-						{{#link-to 'index'}}
-						Tenemos Proyecto
-					{{/link-to}}</li>
-					<li class="heading-sub-term">{{#link-to 'term.show' model.term.parent.ID}} {{model.term.parent.name}}{{/link-to}}</li>
+					<li class="heading-term">Tenemos Patria, Tenemos Proyecto, Tenemos Futuro</li>
 				</ul>
-			</nav>	
+			</nav>
 
 			<h1 class="heading-primary">{{model.term.name}}</h1>
 
@@ -25,6 +21,12 @@
 </div> <!-- .project-container -->
 
 <div class="article-container sub-term">
+	<nav class="breadcrumb">
+		<ul>
+			<li>{{#link-to 'index'}}{{fa-icon 'home'}}{{/link-to}}</li>
+			<li>{{fa-icon 'angle-right'}}{{#link-to 'term.show' model.term.parent.ID}}{{model.term.parent.name}}{{/link-to}}</li>
+		</ul>
+	</nav>	
 	<article class="type-system-slab ">
 	 {{{model.post.content}}}
 	 <div class="post-nav">

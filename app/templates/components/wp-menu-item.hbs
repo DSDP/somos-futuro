@@ -7,10 +7,11 @@
 		{{#link-to link item.object_id}} {{item.title}} {{/link-to}}
 	{{/if}}
   {{/cp-panel-toggle}}
+  {{fa-icon 'angle-down'}}
   {{#cp-panel-body}}
 
 	{{#if item.subItems}}
-		<ul>
+		<ul class="sub-politicas">
 		{{#each item.subItems as |menuItem|}}
 			{{wp-menu-item item=menuItem}}
 		{{/each}}

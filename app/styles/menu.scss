@@ -1,22 +1,114 @@
-.menu {
+.menu 
+{
  	position: fixed;
  	top: 0;
  	left: 0;
 	width: 0;
 	height: 0;
 	opacity: 0;
-			-webkit-transition: all .4s cubic-bezier(0.7,0,.3,1);
-	    -moz-transition: all .4s cubic-bezier(0.7,0,.3,1);
-	    transition: all .4s cubic-bezier(0.7,0,.3,1);
+	-webkit-transition: background 200ms ease-out;
+	-moz-transition: background 200ms ease-out;
+	-ms-transition: background 200ms ease-out;
+	-o-transition: background 200ms ease-out;
+	transition: background 200ms ease-out;
 	color: #fff;
+
+	nav
+	{
+		background-color: $color-1;
+		width: 0;
+		padding: 5% 3%;
+		-webkit-transition: width 500ms ease-out;
+		-moz-transition: width 500ms ease-out;
+		-ms-transition: width 500ms ease-out;
+		-o-transition: width 500ms ease-out;
+		transition: width 500ms ease-out;
+
+		ul
+		{
+			opacity: 0;
+			margin: 0;
+		    padding: 0;
+			-webkit-transition: all 200ms ease-out 0.5s;
+			-moz-transition: all 200ms ease-out 0.5s;
+			-ms-transition: all 200ms ease-out 0.5s;
+			-o-transition: all 200ms ease-out 0.5s;
+			transition: all 200ms ease-out 0.5s;
+		}
+	}
 
  	&.show 
  	{
-    background: rgba(0,0,0,0.5);
-    height: 100%;
-    z-index: 1;
-    opacity: 1;
-    width: 100vw;
+	    background: rgba(0,0,0,0.5);
+	    height: 100%;
+	    z-index: 1;
+	    opacity: 1;
+	    width: 100vw;
+
+    	nav
+		{
+    		width: 35vw;
+		    height: 100vh;
+
+		    ul 
+		    {	
+		    	&.politicas
+		    	{
+			    	opacity: 1;
+			    	list-style-type: none;
+			    	font-size: $font-size-8;
+			    	font-weight: 700;
+
+			    	> li
+			    	{
+			    		padding: 10px 0;
+			    		text-transform: uppercase;
+
+			    		.fa
+			    		{
+			    			float: right;
+			    			padding-top: 4px;
+			    		}
+
+			    		&:first-child
+			    		{
+			    			padding-top: 0px;
+			    		}
+			    		a
+				    	{
+				    		color: $color-6;
+				    		
+				    		&:hover
+				    		{
+				    			color: $color-2;
+				    		}
+				    	}
+
+			    		ul
+			    		{
+			    			&.sub-politicas
+			    			{
+			    				opacity: 1;
+			    				font-size: $font-size-small;
+			    				font-weight: normal;
+			    				padding-top: 10px;
+			    				text-transform: capitalize;
+
+			    				li
+			    				{
+			    					padding: 4px 0;
+
+			    					.fa
+			    					{
+			    						display: none;
+			    					}
+			    				}
+			    			}
+			    		}
+			    	}
+		    	}
+		    }
+		}
  	}
 }
 

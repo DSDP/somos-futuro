@@ -1,4 +1,4 @@
 {{#if subterm.parent}}
-<li class="heading-term">{{#link-to 'term.show' subterm.parent.ID}} {{subterm.parent.name}}{{/link-to}}</li>
+<li>{{fa-icon 'angle-right'}}{{#link-to 'term.show' subterm.parent.ID}} {{subterm.parent.name}}{{/link-to}}</li>
 {{/if}}
-<li class="heading-sub-term">{{#link-to 'sub-term.show' subterm.id}} {{subterm.name}}{{/link-to}}</li>
+<li>{{fa-icon 'angle-right'}}{{#link-to 'sub-term.show' subterm.id}} {{subterm.name}}{{/link-to}}</li>

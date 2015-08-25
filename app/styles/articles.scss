@@ -1,9 +1,8 @@
 
 article.type-system-slab 
 {
-
   text-align: left;
-  margin-bottom: 40px;
+  margin: 19% 0;
   
   h1, h2, h3, p 
   {
@@ -44,7 +43,7 @@ article.type-system-slab
   {
     /*border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;*/
-    padding: 15px 0 0 0;
+    //padding: 15px 0 0 0;
     margin: 50px 0; 
 
     @media (max-width: $screen-sm-max)

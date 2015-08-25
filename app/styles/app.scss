@@ -72,7 +72,7 @@ a
 
 #header
 {
-	background-color: #f1f1f1;
+	//background-color: #f1f1f1;
 	width: 100%;
 	height: 40px;
 	position: fixed;
@@ -88,14 +88,7 @@ a
 	}
 	.menu-gral
 	{
-		nav
-		{
-			background-color: #E4E4E6;
-			padding-top: 70px;
-    		padding-left: 60px;
-    		width: 40vw;
-    		height: 100vh
-		}
+
 	}
 }
 .overlay
@@ -111,9 +104,9 @@ a
 	font-family: inherit;
 	text-shadow: 1px 1px 2px rgba(0,0,0, 0.4);
 	position: fixed;
-    top: 25px;
-    left: 43%;
-    z-index: 1000;
+    top: 8%;
+    left: 5%;
+    //z-index: 1000;
     cursor: pointer;
 
 	@media (max-width: $screen-sm-max) 
@@ -146,11 +139,11 @@ a
 	    right: 2%;
 	    background-color: rgba(255, 255, 255, 0.8);
 		border-radius: 20px;
-	    //overflow-y: scroll;
-
-		-webkit-transition: all .4s cubic-bezier(0.7,0,.3,1);
-	    -moz-transition: all .4s cubic-bezier(0.7,0,.3,1);
-	    transition: all .4s cubic-bezier(0.7,0,.3,1);
+		-webkit-transition: width 500ms ease-out;
+		-moz-transition: width 500ms ease-out;
+		-ms-transition: width 500ms ease-out;
+		-o-transition: width 500ms ease-out;
+		transition: width 500ms ease-out;
  
 	    .empty-data 
 	    {
@@ -422,7 +415,7 @@ Main Components
     		ul 
     		{	
     			line-height: $line-height-text;
-    			padding: 18% 10% 5%;
+    			padding: 12% 10% 5%;
 
 	   			li
     			{
@@ -809,7 +802,7 @@ Main Components
     overflow-x: hidden;
     float: right;
     background: $color-6;
-    padding: 5% 3%;
+    padding: 4% 3% 5% 3%;
     //padding: 100px 80px 40px 80px;
     height: 100vh;
     -webkit-overflow-scrolling: touch;
@@ -818,6 +811,48 @@ Main Components
 	{
 		height: auto;
 		width: 100vw;		
+	}
+	nav
+	{
+		&.breadcrumb
+		{
+			ul
+			{
+				display: inline;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				li
+				{
+					display: inline;
+					font-family: $article-font;
+					font-size: $font-size-xsmall;
+					color: $color-7;
+
+					.fa
+					{
+						padding-right: 6px;
+					}
+					a 
+					{
+						color: $color-7;
+
+						&:hover
+						{
+							color: $color-2;
+						}
+					}
+					div
+					{
+						li
+						{
+							display: inline;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 .article-container
@@ -1081,7 +1116,7 @@ Headings
 }
 
 .heading-secondary {
-	color: $color-2;
+	color: $color-1;
 	font-family: $title-font;
 	font-size: $font-size-base;
 	text-transform: uppercase;
@@ -1091,21 +1126,23 @@ Headings
 
 .heading-index {
 	font-family: $article-font;
-	font-style: italic;
-	font-size: $font-size-small;
-	color: $color-6;
-	opacity: 0.8;
-	text-shadow: 1px 1px 2px rgba(0,0,0, 0.4);
-
+	font-size: $font-size-xsmall;
+	
 	a {
-		color: #fff;
+		color: $color-6;
+
+		&:hover
+		{
+			color: $color-2;
+		}
 	}
 }	
 
 .heading-term {
 	font-family: $article-font;
-	font-style: italic;
+	//font-style: italic;
 	font-size: $font-size-8;
+	font-weight: 700;
 	color: $color-6;
 	text-shadow: 1px 1px 2px rgba(0,0,0, 0.4);
 
@@ -1124,7 +1161,6 @@ Headings
 
 	a {
 		
-
 		&:hover 
 		{
 			color: $color-6;

@@ -1,4 +1,4 @@
 {{#each sorted as |post|}}
-	<li><i class="fa fa-angle-right" aria-hidden="true"></i>{{#link-to 'post.show' post.id}} {{{post.title}}} {{/link-to}} 
+	<li>{{#link-to 'post.show' post.id}} {{fa-icon 'long-arrow-right'}} {{{post.title}}} {{/link-to}} 
 	</li>
 {{/each}}
