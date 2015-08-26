@@ -11,11 +11,11 @@
 		{{/cp-panel-toggle}}
 
 		{{#cp-panel-body}}
-				<ul>
-				{{#each item.subItems as |menuItem|}}
-					{{wp-menu-item item=menuItem}}
-				{{/each}}
-				</ul>
+			<ul class="sub-politicas">
+			{{#each item.subItems as |menuItem|}}
+				{{wp-menu-item item=menuItem}}
+			{{/each}}
+			</ul>
 		{{/cp-panel-body}}
 	{{/if}}
 {{/cp-panel}}

@@ -1,5 +1,5 @@
-#landing {
-
+#landing 
+{
 	height: 100vh;
 	width: 100vw;
 	background-image: url("http://somosfuturo.com.ar/contenido/wp-content/uploads/2015/08/500-landing.jpg");
@@ -16,74 +16,12 @@
 			{
 				opacity: 0.5;
 			}
-			/*&.soberania_politica ,
-			&.independencia_economica,
-			&.justicial_social
-			{
-				&:hover
-				{
-					width: 50vw;
-
-					& ~ li.cd-single-project
-					{
-						width: 25vw;
-					}
-				}
-			}			
-			&.soberania_politica 
-			{
-				&:hover
-				{
-					width: 50vw;
-
-					& ~ .independencia_economica
-					{
-						left: 50vw;
-					}
-					& ~ .justicial_social
-					{
-						left: 75vw;
-					}
-				}
-			}
-			&.independencia_economica
-			{
-				&:hover
-				{
-					width: 50vw;
-					left: 25vw;
-
-					& ~ .soberania_politica
-					{
-						left: 0;
-					}
-					& ~ .justicial_social
-					{
-						left: 75vw;
-					}
-				}
-			}
-			&.justicial_social
-			{
-				&:hover
-				{
-					width: 50vw;
-					left: 50vw;
-
-					& ~ .soberania_politica
-					{
-						left: 0;
-					}
-					& ~ .independencia_economica
-					{
-						left: 25vw;
-					}
-				}
-			}*/
 			figure
 			{
 				padding: 5%;
 				margin: 0;
+				width: 100%;
+				height: 100%;
 
 				&.effect
 				{
@@ -97,15 +35,6 @@
 								//-webkit-transform: translate3d(0,0,0);
 								//transform: translate3d(0,0,0);
 							    -webkit-transform: scaleY(0);
-							    transform: scaleY(1);
-							        -webkit-transform-origin: 50%;
-							    transform-origin: 50%;
-							    -webkit-transition-property: transform;
-							    transition-property: transform;
-							    -webkit-transition-duration: 0.3s;
-							    transition-duration: 0.3s;
-							    -webkit-transition-timing-function: ease-out;
-							    transition-timing-function: ease-out;
 							}
 							h2
 							{
@@ -113,6 +42,15 @@
 								{
 									-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
 									transform: translate3d(0, -100%, 0) translate3d(0, -100px, 0);
+									a
+									{
+										transition: all 0.5s ease;
+
+										&:hover
+										{
+											opacity: 0.7;
+										}
+									}
 								}
 							}
 						}	
@@ -136,17 +74,8 @@
 							width: 100%;
 							height: 100%;
 							vertical-align: middle;
-							background-color: rgba(0, 95, 162, 0.9);
 							content: '';
 							opacity: 0;
-							-webkit-transition-property: color;
-						    transition-property: color;
-						    -webkit-transform: translateZ(0);
-						    transform: translateZ(0);
-						    -webkit-transform: scaleY(0);
-						    transform: scaleY(0);
-						    //border-left: 2px solid #fff;
-						    //border-right: 2px solid #fff;
 						}
 						h2 
 						{	
@@ -200,22 +129,141 @@
 					}
 				}
 			}
-			figure.effect-sadie:hover figcaption::before ,
+			figure.effect:hover figcaption::before ,
 			{
 				opacity: 1;
 				-webkit-transform: translate3d(0,0,0);
 				transform: translate3d(0,0,0);
 			}
-
+			&.soberania_politica
+			{
+				figure
+				{
+					&.effect
+					{
+						&:hover
+						{
+							figcaption 
+							{
+								&:before
+								{
+							    transform: scaleY(1);
+							    -webkit-transform-origin: 50% 0;
+							    transform-origin: 50% 0;
+							    -webkit-transition-property: transform;
+							    transition-property: transform;
+							    -webkit-transition-duration: 0.3s;
+							    transition-duration: 0.3s;
+							    -webkit-transition-timing-function: ease-out;
+							    transition-timing-function: ease-out;
+								}
+							}
+						}		
+						figcaption
+						{
+							&:before
+							{
+							background-color: $color-1;	
+							-webkit-transition-property: color;
+							transition-property: color;
+						    -webkit-transform: translateZ(0);
+						    transform: translateZ(0);
+						    -webkit-transform: scaleY(0);
+						    transform: scaleY(0);
+							}
+						}
+					}		
+				}
+			}
+			&.independencia_economica
+			{
+				figure
+				{
+					&.effect
+					{
+						&:hover
+						{
+							figcaption 
+							{
+								&:before
+								{
+							    transform: scaleY(1);
+							    -webkit-transform-origin: 50% 0;
+							    transform-origin: 50% 0;
+							    -webkit-transition-property: transform;
+							    transition-property: transform;
+							    -webkit-transition-duration: 0.3s;
+							    transition-duration: 0.3s;
+							    -webkit-transition-timing-function: ease-out;
+							    transition-timing-function: ease-out;
+								}
+							}
+						}		
+						figcaption
+						{
+							&:before
+							{
+							background-color: $color-2;	
+							-webkit-transition-property: color;
+							transition-property: color;
+						    -webkit-transform: translateZ(0);
+						    transform: translateZ(0);
+						    -webkit-transform: scaleY(0);
+						    transform: scaleY(0);
+							}
+						}
+					}		
+				}
+			}
+			&.justicial_social
+			{
+				figure
+				{
+					&.effect
+					{
+						&:hover
+						{
+							figcaption 
+							{
+								&:before
+								{
+							    transform: scaleY(1);
+							    -webkit-transform-origin: 50% 0;
+							    transform-origin: 50% 0;
+							    -webkit-transition-property: transform;
+							    transition-property: transform;
+							    -webkit-transition-duration: 0.3s;
+							    transition-duration: 0.3s;
+							    -webkit-transition-timing-function: ease-out;
+							    transition-timing-function: ease-out;
+								}
+							}
+						}		
+						figcaption
+						{
+							&:before
+							{
+							background-color: $color-3;	
+							-webkit-transition-property: color;
+							transition-property: color;
+						    -webkit-transform: translateZ(0);
+						    transform: translateZ(0);
+						    -webkit-transform: scaleY(0);
+						    transform: scaleY(0);
+							}
+						}
+					}		
+				}
+			}			
 		}		
-	}
-		
+	}	
 	ul 
 	{
 		margin: 0;
 		padding: 0;
 	}
-	.home-intro {
+	.home-intro 
+	{
 		position: fixed;
 		left: 42.5%;
 		bottom: 15px;

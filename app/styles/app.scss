@@ -45,7 +45,7 @@ body
 	line-height: $line-height-text;
 	font-weight: 300;
 	margin: 0;
-	background-color: $color-3;
+	background-color: $color-2;
 	
 	h2 
 	{
@@ -57,6 +57,10 @@ body
 		size: $font-size-base;
 		family: $article-font;
 	}
+	@media (min-width: $screen-md-min) 
+	{
+		overflow: hidden;
+	}	
 }
 a 
 {
@@ -68,11 +72,10 @@ a
 		outline: 0;
 	}
 }
-
-
 #header
 {
-	//background-color: #f1f1f1;
+	background-color: #fff;
+	border-bottom: 1px solid #f1f1f1;
 	width: 100%;
 	height: 40px;
 	position: fixed;
@@ -81,10 +84,13 @@ a
 
 	.heading-book 
 	{
-		font-size: $font-size-8;
-		color: $color-1;
-		text-align: center;
-		padding-top: 7px;
+		font-size: $font-size-small;
+		text-align: left;
+		padding-left: 5%;
+		padding-top: 10px;
+		margin: 0;
+		color: $color-8;
+		font-weight: normal;
 	}
 	.menu-gral
 	{
@@ -100,13 +106,13 @@ a
 .smart-back 
 {
 	color: $color-6;
-	font-size: $font-size-small;
+	font-size: $font-size-xsmall;
 	font-family: inherit;
 	text-shadow: 1px 1px 2px rgba(0,0,0, 0.4);
 	position: fixed;
-    top: 8%;
+    top: 9%;
     left: 5%;
-    //z-index: 1000;
+    z-index: 1000;
     cursor: pointer;
 
 	@media (max-width: $screen-sm-max) 
@@ -135,10 +141,10 @@ a
 	    height: 40px;
 	    width: 40px;
 	    position: fixed;
-	    top: 15px;
 	    right: 2%;
+	    /*top: 15px;
 	    background-color: rgba(255, 255, 255, 0.8);
-		border-radius: 20px;
+		border-radius: 20px;*/
 		-webkit-transition: width 500ms ease-out;
 		-moz-transition: width 500ms ease-out;
 		-ms-transition: width 500ms ease-out;
@@ -412,6 +418,8 @@ Main Components
 
     	nav 
     	{
+    		visibility: hidden;
+
     		ul 
     		{	
     			line-height: $line-height-text;
@@ -478,17 +486,22 @@ Main Components
 				width: 100%;
 				height: 12vh;
 				padding: 4% 10%;
+				font-size: $font-size-small;
 
 				li
 				{
 					&.item-prev {
 						float: left;
-						width: 45%;
+						width: 50%;
 						position: relative;
-						padding-left: 25px;
+						//padding-left: 25px;
 						line-height: $line-height-subtitle;
 
-						&:before 
+						.fa
+						{
+							float: left;
+						}
+						/*&:before 
 	        			{		
 	        			content: '\00AB';
 	        			position: absolute;
@@ -496,16 +509,20 @@ Main Components
 	      				left: 0;
 	      				margin-top: -10px;
 	      				color: $color-6;
-	        			}	
+	        			}*/	
 	        		}
 					&.item-next {
 						float: right;
-						width: 45%;
+						width: 50%;
 						position: relative;
-						padding-right: 25px;
+						//padding-right: 25px;
 						line-height: $line-height-subtitle;
-
-						&:after
+						
+						.fa
+						{
+							float: right;
+						}
+						/*&:after
 	        			{		
 	        			//content: url(".../images/arrow-right.png");	
 	        			content: '\00BB';
@@ -514,7 +531,7 @@ Main Components
 	      				right: 0;
 	      				margin-top: -10px;
 	      				color: $color-6;
-	        			}
+	        			}*/
 	        		}		        		
 					/*a 
 		    		{
@@ -832,7 +849,7 @@ Main Components
 
 					.fa
 					{
-						padding-right: 6px;
+						padding: 0 4px;
 					}
 					a 
 					{
@@ -843,18 +860,59 @@ Main Components
 							color: $color-2;
 						}
 					}
-					div
+					& ~ div
 					{
-						li
-						{
-							display: inline;
-						}
+						display: inline-block;
 					}
 				}
 			}
 		}
 	}
 }
+.chapters-container
+{
+	nav
+	{
+		&.breadcrumb
+		{
+			ul
+			{
+				display: inline;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				li
+				{
+					display: inline;
+					font-family: $article-font;
+					font-size: $font-size-xsmall;
+					color: $color-7;
+
+					.fa
+					{
+						padding: 0 4px;
+					}
+					a 
+					{
+						color: $color-7;
+
+						&:hover
+						{
+							color: $color-2;
+						}
+					}
+					& ~ div
+					{
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+}
+
+
 .article-container
 {
 	ul
@@ -1007,7 +1065,7 @@ Colors
 	background: $color-1;
 	//background-image: url("http://somosfuturo.com.ar/contenido/wp-content/uploads/2015/07/500.jpg");
 
-	section
+	/*section
 	{
 		> .article-items
 		{
@@ -1015,7 +1073,7 @@ Colors
 				color: $color-1;
 			}
 		}
-	}
+	}*/
 }
 .independencia_economica {
 	background: $color-2;
@@ -1025,6 +1083,16 @@ Colors
 }
 .tenemos_futuro {
 	background: $color-4;
+}
+.tenemos-futuro {
+
+	ul
+	{
+		&.navigation
+		{
+			display: none;
+		}
+	}
 }
 
 #soberania_politica, #independencia_economica, #justicial_social, #tenemos_futuro 
@@ -1036,14 +1104,47 @@ Colors
 
 #soberania_politica {
 	background-image: url("http://somosfuturo.com.ar/contenido/wp-content/uploads/2015/07/soberania-politica_2.jpg");
+	
+	#term 
+	{
+		.cd-title 
+		{
+			.title
+			{
+				background-color: $color-1;
+			}
+		}
+	}
 }
 
 #independencia_economica {
 	background-image: url("http://somosfuturo.com.ar/contenido/wp-content/uploads/2015/07/independecnia-economica_caratula.jpg");
+
+	#term 
+	{
+		.cd-title 
+		{
+			.title
+			{
+				background-color: $color-2;
+			}
+		}
+	}
 }
 
 #justicia_social {
 	background-image: url("http://somosfuturo.com.ar/contenido/wp-content/uploads/2015/07/justicia-social_caratula.jpg");
+
+	#term 
+	{
+		.cd-title 
+		{
+			.title
+			{
+				background-color: $color-3;
+			}
+		}
+	}
 }
 
 #tenemos_futuro 
@@ -1063,6 +1164,7 @@ Colors
     		}
     		
     	}
+
     }				
 }
 

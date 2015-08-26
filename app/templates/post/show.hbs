@@ -6,10 +6,16 @@
 				<ul>
 					<li class="heading-term">Tenemos Patria, Tenemos Proyecto, Tenemos Futuro</li>
 				</ul>
-			</nav>	
-		<h1 class="heading-primary">{{{model.post.title}}}</h1>		
+			</nav>
 
-		<ul class="navigation">{{post-navigate post=model.post posts=model.posts}}</ul>
+			<h1 class="heading-primary">{{{model.post.title}}}</h1>		
+			<!--<ul>
+				<li>{{#scroll-to href='#constr-pol-estado'}}CONSTRUCCIÓN POLÍTICA DE LA ECONOMÍA{{/scroll-to}}</li>
+				<li>CONSTRUCCIÓN POLÍTICA DEL ESTADO</li>
+				<li>IGUALDAD SOCIAL</li>
+			</ul>-->
+
+			<ul class="navigation">{{post-navigate post=model.post posts=model.posts}}</ul>
 
 		</div> <!-- .cd-title -->
 	</div>	
@@ -19,7 +25,7 @@
 	<nav class="breadcrumb">
 		<ul>
 			<li>{{#link-to 'index'}}{{fa-icon 'home'}}{{/link-to}}</li>
-			<li>{{show-terms post=model.post}}</li>
+			{{show-terms post=model.post}}
 		</ul>
 	</nav>	
 
