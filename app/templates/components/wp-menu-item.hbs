@@ -1,4 +1,4 @@
-{{#cp-panel}}
+{{#cp-panel is-open=isOpen}}
 	{{#if isCustom}}
 		<a {{bind-attr href=item.url }} target="_blank">{{item.title}}</a>
 	{{else}}
@@ -7,7 +7,7 @@
 
 	{{#if item.subItems}}
 		{{#cp-panel-toggle}}
-			{{t-add animation="minus"}}
+			{{t-add animation="minus" is-open=isOpen}}
 		{{/cp-panel-toggle}}
 
 		{{#cp-panel-body}}
