@@ -14,7 +14,8 @@
     "moment": "~2.8.1",
     "fontawesome": "~4.2.0",
     "ember-qunit-notifications": "0.0.7",
-    "qunit": "~1.17.1"
+    "qunit": "~1.17.1",
+    "localforage": "~1.2.1"
   },
   "devDependencies": {
     "jquery-highlight": "~3.3.0"

@@ -36,22 +36,16 @@ export default function(){
 	);
 
 	this.transition(
+		this.toModel(),
+		this.fromModel(),
+		this.use('toLeft',  {duration: 800, delay: 400, easing: [ 0.7,0,0.3,1 ]})
+	);
+
+	this.transition(
 		this.fromRoute('term.show'),
 		this.toRoute('post.show'),
 		this.use('toLeft',  {duration: 800, delay: 400, easing: [ 0.7,0,0.3,1 ]}),
 		this.reverse('toRight',  {duration: 800, delay: 400, easing: [ 0.7,0,0.3,1 ]})
-	);
-
-	this.transition(
-	  this.fromRoute('post.show'),
-	  this.toRoute('post.show'),
-	  this.use('fade', { duration: 3000 }),
-	  this.debug()
-	);
-
-	this.transition(
-	  this.withinRoute('term.show'),
-	  this.use('fade', { duration: 3000 })
 	);
 }
 

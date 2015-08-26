@@ -25,7 +25,13 @@
 	<nav class="breadcrumb">
 		<ul>
 			<li>{{#link-to 'index'}}{{fa-icon 'home'}}{{/link-to}}</li>
+<<<<<<< HEAD
 			{{show-terms post=model.post}}
+=======
+			<li>{{show-terms post=model.post}}</li>
+			{{facebook-feed data-desc=model.post.excerpt data-title=model.post.title data-image=model.post.featured_image.attachment_meta.sizes.medium.url data-caption=""}}
+
+>>>>>>> 361fbfd5da7246dee35b05ffbb7b409c95a39967
 		</ul>
 	</nav>	
 
