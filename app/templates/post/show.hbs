@@ -20,6 +20,8 @@
 		<ul>
 			<li>{{#link-to 'index'}}{{fa-icon 'home'}}{{/link-to}}</li>
 			<li>{{show-terms post=model.post}}</li>
+			{{facebook-feed data-desc=model.post.excerpt data-title=model.post.title data-image=model.post.featured_image.attachment_meta.sizes.medium.url data-caption=""}}
+
 		</ul>
 	</nav>	
 
