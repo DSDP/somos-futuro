@@ -6,7 +6,7 @@ export default Ember.Component.extend({
   tagName: 'div', 
   postToFeed: function (title, desc, url, image, caption) {
       var obj = {method: 'feed', link: url, picture: image, name: title, description: desc, caption: caption, redirect_uri: url, display: 'popup'};
-      function callback(response) { console.log(response) };
+      function callback(response) { console.log(response); }
 
       if (this.FB) {
         FB.ui(obj, callback);
@@ -23,6 +23,6 @@ export default Ember.Component.extend({
         url = window.location.href,
         caption = this.get('data-caption'),
         image = this.get('data-image');
-    this.postToFeed(title, desc, url, image);
+    this.postToFeed(title, desc, url, image, caption);
   }.on('click')
 });
