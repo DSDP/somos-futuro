@@ -26,13 +26,14 @@
 		<ul>
 			<li>{{#link-to 'index'}}{{fa-icon 'home'}}{{/link-to}}</li>
 			{{show-terms post=model.post}}
-			{{facebook-feed data-desc=model.post.excerpt data-title=model.post.title data-image=model.post.featured_image.attachment_meta.sizes.medium.url data-caption=""}}
 		</ul>
 	</nav>	
 
 <article class="type-system-slab ">
 
+			<li>{{facebook-feed data-desc=model.post.excerpt data-title=model.post.title data-image=model.post.featured_image.attachment_meta.sizes.medium.url data-caption=""}}</li>
  {{{model.post.content}}}
+
 
 </article>
 
