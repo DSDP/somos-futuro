@@ -24,6 +24,11 @@
 		-o-transition: width 500ms ease-out;
 		transition: width 500ms ease-out;
 
+	   	@media (max-width: $screen-sm-max) 
+	    {
+			padding: 10% 6%;
+	    }
+    
 		ul
 		{
 			opacity: 0;
@@ -50,6 +55,10 @@
     		width: 35vw;
 		    height: 100vh;
 
+		   	@media (max-width: $screen-sm-max) 
+		    {
+				width: 100vw;
+		    }
 		    ul 
 		    {	
 		    	&.politicas
