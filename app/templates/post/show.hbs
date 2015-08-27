@@ -9,12 +9,14 @@
 			</nav>
 
 			<h1 class="heading-primary">{{{model.post.title}}}</h1>		
-			<!--<ul>
-				<li>{{#scroll-to href='#constr-pol-estado'}}CONSTRUCCIÓN POLÍTICA DE LA ECONOMÍA{{/scroll-to}}</li>
-				<li>CONSTRUCCIÓN POLÍTICA DEL ESTADO</li>
-				<li>IGUALDAD SOCIAL</li>
-			</ul>-->
 
+			{{#if model.post.isSomosFuturo}}
+			<ul>
+				<li>{{deep-link href='constr-pol-economica' text="CONSTRUCCIÓN POLÍTICA DE LA ECONOMÍA" duration=20 target=".article-container" speed=2000}}</li>
+				<li>{{deep-link href='constr-pol-estado' text="CONSTRUCCIÓN POLÍTICA DEL ESTADO" duration=20 target=".article-container" speed=2000}}</li>
+				<li>{{deep-link href='igualdad-social' text="IGUALDAD SOCIAL" duration=200 target=".article-container" speed=2000}}</li>
+			</ul>
+			{{/if}}
 			<ul class="navigation">{{post-navigate post=model.post posts=model.posts}}</ul>
 		</div> <!-- .cd-title -->
 	</div>	
