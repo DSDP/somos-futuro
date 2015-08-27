@@ -26,10 +26,13 @@
 			<li>{{#link-to 'index'}}{{fa-icon 'home'}}{{/link-to}}</li>
 			<li>{{fa-icon 'angle-right'}}{{#link-to 'term.show' model.term.parent.ID}}{{model.term.parent.name}}{{/link-to}}</li>
 		</ul>
-	</nav>	
+	</nav>
+
 	<article class="type-system-slab ">
 	 {{{model.post.content}}}
-	 <div class="post-nav">
-	 </div>
+	 <div class="post-nav"></div>
 	</article>
+
+	<div class="share">{{facebook-feed data-desc=model.post.excerpt data-title=model.post.title data-image=model.post.featured_image.attachment_meta.sizes.medium.url data-caption=""}}</div>
+
 </div>
