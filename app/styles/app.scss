@@ -91,6 +91,11 @@ a
 		margin: 0;
 		color: $color-8;
 		font-weight: normal;
+
+		@media (max-width: $screen-sm-max) 
+	    {
+			padding-left: 10%;
+	    }
 	}
 	.menu-gral
 	{
@@ -117,7 +122,7 @@ a
 
 	@media (max-width: $screen-sm-max) 
     {
-		left: 80%;
+		left: 10%;
 		//top: 6%;
     }
 }
@@ -819,7 +824,7 @@ Main Components
     overflow-x: hidden;
     float: right;
     background: $color-6;
-    padding: 4% 3% 5% 3%;
+    padding: 4% 5% 1% 5%;
     //padding: 100px 80px 40px 80px;
     height: 100vh;
     -webkit-overflow-scrolling: touch;
@@ -938,7 +943,7 @@ Main Components
 					padding-left: 25px;
 					line-height: $line-height-subtitle;
 
-					&:before 
+					/*&:before 
 					{		
 					content: '\00AB';
 					position: absolute;
@@ -946,7 +951,7 @@ Main Components
 						left: 0;
 						margin-top: -10px;
 						color: $color-7;
-					}	
+					}*/	
 				}
 				&.item-next 
 				{
@@ -956,7 +961,7 @@ Main Components
 					padding-right: 25px;
 					line-height: $line-height-subtitle;
 
-					&:after
+					/*&:after
 					{		
 					content: '\00BB';
 					position: absolute;
@@ -964,7 +969,7 @@ Main Components
 						right: 0;
 						margin-top: -10px;
 						color: $color-7;
-					}
+					}*/
 				}
 				a
 				{
@@ -987,9 +992,50 @@ Main Components
 		}
 	}
 
+	div 
+	{
+
+		&.share
+		{
+			border-top: 1px solid $color-5;
+
+			ul
+			{
+				list-style: none;
+				font-size: $font-size-xsmall;
+			    display: inline-block;
+			    color: $color-7;
+			    margin: 25px 0;
+			    padding: 0;
+				
+				li
+				{
+					display: inline-block;
+
+					&:last-child
+					{
+    					margin-left: 5px;
+			
+						&:hover
+						{
+							color: #3b5998;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+
+			@media (max-width: $screen-sm-max) 
+		    {
+				border-top: 0;
+				margin-bottom: 40px;
+		    }	
+		}
+	}	
+
 	@media (max-width: $screen-sm-max)
 	{
-		padding: 5% 8%;
+		padding: 5% 10%;
 	}
 }
 
