@@ -8,4 +8,12 @@ export default PostModel.extend({
   		return true;
   	}
   }),
+
+  shareText: Ember.computed('acf', function () {
+  	if (this.get('acf.plain_excerpt')) {
+  		return this.get('acf.plain_excerpt');
+  	} else {
+  		return " ";
+  	}
+  }),
 });
