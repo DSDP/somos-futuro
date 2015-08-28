@@ -133,7 +133,7 @@ a
 	@media (max-width: $screen-sm-max) 
     {
 		left: 10%;
-		//top: 6%;
+		position: absolute;
     }
 }
 .smart-search 
@@ -416,6 +416,7 @@ Main Components
     		@media (max-width: $screen-sm-max)
 			{
 				height: 100%;
+				min-height: 40vh;
 			}
     }
     /*.opacity 
@@ -471,11 +472,11 @@ Main Components
 					@media (max-width: $screen-xs-max)
 					{
 						padding: 5% 10%; 
-						border-bottom: 1px dotted rgba(255, 255, 255, 0.4);
+						border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
 						&:first-child
 						{
-							border-top: 1px dotted rgba(255, 255, 255, 0.4);
+							border-top: 1px solid rgba(255, 255, 255, 0.3);
 						}
 
 						&:last-child 
@@ -827,29 +828,29 @@ Main Components
 				@media (max-width: $screen-sm-max) 
 			    {
 			    	border-right: 0;
-					border-bottom: 1px dotted #ADC1CE;
+					border-bottom: 1px solid #ADC1CE;
 					width: 100%;
-					height: 100vh/$-items;
+					height: 100vh/$items;
 					
-					&:nth-of-type(1)
+					/*&:nth-of-type(1)
 					{
-						left: 0;
-						top: 100vh/$-items;
-					}
+						top: 0;
+						top: 100vh/$items;
+					}*/
 					&:nth-of-type(2)
 					{
 						left: 0;
-						top: 100vh*2/$-items;
+						top: 100vh/$items;
 					}
 					&:nth-of-type(3)
 					{
 						left: 0;
-						top: 100vh*3/$-items;
-					}
-					&:nth-of-type(4)
-					{
-						left: 0;
-						top: 100vh*4/$-items;
+						top: 100vh*2/$items;
+
+						&:last-child
+						{
+							border-bottom: 0;
+						}
 					}
 				}
 			}
@@ -939,7 +940,7 @@ Main Components
 					}
 					& ~ div
 					{
-						display: inline-block;
+						display: inline;
 					}
 				}
 			}
@@ -990,7 +991,6 @@ Main Components
 	}
 	div 
 	{
-
 		&.share
 		{
 			border-top: 1px solid $color-5;
@@ -1054,7 +1054,7 @@ Main Components
 			border-top: 1px solid $color-5;
 			bottom: 0;
 			width: 100%;
-			padding: 2% 0;
+			padding: 4% 0;
 			left: 0;
 			margin-bottom: 0;
 			font-size: $font-size-small;
@@ -1110,9 +1110,19 @@ Main Components
 	    						{
 								    overflow: hidden;
 	    							max-width: 90%;
+
+	    							@media (max-width: $screen-xs-max)
+									{
+										max-width: 80%;
+									}
 	    						}    						
 	    					}
 	    				}	
+					}
+
+					@media (max-width: $screen-xs-max)
+					{
+						width: 48%;
 					}
         		}
 				&.item-next {
@@ -1145,7 +1155,12 @@ Main Components
 	    						{
 								    overflow: hidden;
 								    float: left;
-	    							max-width: 90%;
+	    							max-width: 90%;	    		
+
+	    							@media (max-width: $screen-xs-max)
+									{
+										max-width: 80%;
+									}
 	    						}
 		    					&:last-child
 	    						{
@@ -1157,6 +1172,11 @@ Main Components
 	    						}    						
 	    					}
 	    				}	
+					}
+
+					@media (max-width: $screen-xs-max)
+					{
+						width: 48%;
 					}
         		}		        		
 			}
@@ -1201,6 +1221,11 @@ Main Components
 					    {
 					    	color: $color-6;
 					    	padding-left: 6px;
+
+					    	@media (max-width: $screen-sm-max) 
+						    {
+								padding-left: 0px;
+						    }
 					    }
 			
 						&:hover
@@ -1216,6 +1241,7 @@ Main Components
 		    {
 				border-top: 0;
 				margin-bottom: 40px;
+				text-align: center;
 		    }	
 		}
 	}	
@@ -1524,6 +1550,12 @@ Galeria
 	width: 100%;
 	height: 100%;
 	top:0;
+
+	@media (max-width: $screen-sm-max)
+	{
+		height: 100%;
+		min-height: 40vh;
+	}
 }
 
 /* -------------------------------- 
@@ -1553,7 +1585,7 @@ Resultados de búsqueda
 
 			&:hover 
 			{
-				color: $color-1;
+				color: $color-2;
 			}
 		}
 	}	
@@ -1573,7 +1605,7 @@ Resultados de búsqueda
 
 			&:hover
 			{
-				opacity: 0.8;		
+				color: $color-2;		
 			}
 		}
 

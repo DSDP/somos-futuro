@@ -26,7 +26,7 @@
 
 	   	@media (max-width: $screen-sm-max) 
 	    {
-			padding: 10% 6%;
+			padding: 15% 6%;
 	    }
     
 		ul
@@ -44,7 +44,7 @@
 
  	&.show 
  	{
-	    background: rgba(0,0,0,0.6);
+	    background: rgba(0,0,0,0.3);
 	    height: 100%;
 	    z-index: 1;
 	    opacity: 1;
@@ -54,11 +54,13 @@
 		{
     		width: 35vw;
 		    height: 100vh;
+		    overflow: auto;
 
 		   	@media (max-width: $screen-sm-max) 
 		    {
 				width: 100vw;
-		    }
+				height: 100%;
+			}
 		    ul 
 		    {	
 		    	&.politicas
@@ -86,11 +88,17 @@
 				    	{
 				    		color: $color-6;
 				    		
+					    	&.active
+					    	{
+					    		color: $color-2;
+					    	}
+				    		
 				    		&:hover
 				    		{
 				    			color: $color-2;
 				    		}
 				    	}
+
 
 			    		ul
 			    		{

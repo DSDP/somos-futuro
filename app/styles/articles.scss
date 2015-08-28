@@ -4,6 +4,11 @@ article.type-system-slab
   text-align: left;
   margin: 19% 0 10% 0;
   
+  @media (max-width: $screen-sm-max) 
+  {
+  margin: 12% 0 10% 0;
+  } 
+
   h1, h2, h3, p 
   {
     //margin: 0;

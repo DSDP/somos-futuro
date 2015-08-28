@@ -2,6 +2,23 @@
 
 	background-size: cover;
 	background-position: center;
+
+	ul
+	{
+		&.indice-subpolitica
+		{
+			li
+			{
+				@include transition;
+
+				&:hover
+				{
+					opacity: 0.5;
+					padding-left: 15px;
+				}
+			}
+		}
+	}
 }
 
 

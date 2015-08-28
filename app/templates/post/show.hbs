@@ -11,10 +11,10 @@
 			<h1 class="heading-primary">{{{model.post.title}}}</h1>		
 
 			{{#if model.post.isSomosFuturo}}
-			<ul>
-				<li>{{deep-link href='constr-pol-economica' text="CONSTRUCCIÓN POLÍTICA DE LA ECONOMÍA" duration=20 target=".article-container" speed=2000}}</li>
-				<li>{{deep-link href='constr-pol-estado' text="CONSTRUCCIÓN POLÍTICA DEL ESTADO" duration=20 target=".article-container" speed=2000}}</li>
-				<li>{{deep-link href='igualdad-social' text="IGUALDAD SOCIAL" duration=200 target=".article-container" speed=2000}}</li>
+			<ul class="indice-subpolitica">
+				<li> {{fa-icon 'long-arrow-right'}}{{deep-link href='constr-pol-economica' text="Construcción política de la economía" duration=20 target=".article-container" speed=2000}}</li>
+				<li> {{fa-icon 'long-arrow-right'}}{{deep-link href='constr-pol-estado' text="Construcción política del estado" duration=20 target=".article-container" speed=2000}}</li>
+				<li> {{fa-icon 'long-arrow-right'}}{{deep-link href='igualdad-social' text="Igualdad social" duration=200 target=".article-container" speed=2000}}</li>
 			</ul>
 			{{/if}}
 			<ul class="navigation">{{post-navigate post=model.post posts=model.posts}}</ul>

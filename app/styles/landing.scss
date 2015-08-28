@@ -42,6 +42,12 @@
 								{
 									-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
 									transform: translate3d(0, -100%, 0) translate3d(0, -100px, 0);
+
+									@media (max-width: $screen-sm-max) 
+									{
+										-webkit-transform: translate3d(0,0%,0) translate3d(0,0px,0);
+										transform: translate3d(0, 0%, 0) translate3d(0, 0px, 0);
+									}
 									a
 									{
 										transition: all 0.5s ease;
@@ -61,7 +67,12 @@
 								opacity: 1;
 								-webkit-transform: translate3d(0,0,0);
 								transform: translate3d(0,0,0);
-							}	
+							
+								@media (max-width: $screen-sm-max) 
+							    {
+									display: none;
+							    }	
+							}
 						}
 					}
 					figcaption
@@ -89,6 +100,15 @@
 							-webkit-transform: translate3d(0,-50%,0);
 							transform: translate3d(0,-50%,0);
 							}
+
+							@media (max-width: $screen-sm-max) 
+			    			{
+			    				left: 10%;
+			    				-webkit-transition: -webkit-transform 0.35s;
+							transition: transform 0.35s;
+							-webkit-transform: translate3d(0,0%,0);
+							transform: translate3d(0,0%,0);
+			    			}	
 						}
 					}
 					ul
