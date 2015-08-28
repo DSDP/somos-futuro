@@ -64,12 +64,13 @@ body
 }
 a 
 {
-	//color: #0083ff;
 	text-decoration: none;
 	
 	&:hover, &:active, &:focus 
 	{
+		color: $color-2;
 		outline: 0;
+		@include transition;
 	}
 }
 #header
@@ -89,8 +90,17 @@ a
 		padding-left: 5%;
 		padding-top: 10px;
 		margin: 0;
-		color: $color-8;
 		font-weight: normal;
+
+		a
+		{
+			color: $color-8;
+
+			&:hover
+			{
+				color: $color-2;
+			}
+		}
 
 		@media (max-width: $screen-sm-max) 
 	    {
@@ -443,7 +453,6 @@ Main Components
 
     	ul
     	{
-
     		&.indice-subpolitica 
     		{	
 	    		font-size: $font-size-small;
@@ -484,8 +493,8 @@ Main Components
     		&.navigation
     		{
     			list-style: none;
-				border-top: 1px dotted $color-6;
-				background-color: rgba(0, 0, 0, 0.3);
+				border-top: 1px solid rgba(255, 255, 255, 0.3);
+				background-color: rgba(0, 0, 0, 0.2);
 				position: absolute;
 				bottom: 0;
 				width: 100%;
@@ -505,6 +514,37 @@ Main Components
 						.fa
 						{
 							float: left;
+						}
+						ul
+						{
+							list-style: none;
+
+							&.prev
+							{
+								margin: 0;
+								padding: 0;
+								overflow: hidden;
+		    					width: 100%;
+
+		    					li
+		    					{
+			    					display: block;
+			    					float: left;
+			    					
+			    					&:first-child
+		    						{
+									    overflow: hidden;
+									    max-width: 5%;
+									    margin-right: 15px;
+		    							box-sizing: border-box;
+		    						}
+			    					&:last-child
+		    						{
+									    overflow: hidden;
+		    							max-width: 90%;
+		    						}    						
+		    					}
+		    				}	
 						}
 						/*&:before 
 	        			{		
@@ -526,6 +566,38 @@ Main Components
 						.fa
 						{
 							float: right;
+						}
+						ul
+						{
+							list-style: none;
+
+							&.next
+							{
+								margin: 0;
+								padding: 0;
+								overflow: hidden;
+		    					width: 100%;
+
+		    					li
+		    					{
+			    					display: block;
+			    					
+			    					&:first-child
+		    						{
+									    overflow: hidden;
+									    float: left;
+		    							max-width: 90%;
+		    						}
+			    					&:last-child
+		    						{
+									    overflow: hidden;
+										float: right;
+									    max-width: 5%;
+									    margin-left: 15px;
+		    							box-sizing: border-box;
+		    						}    						
+		    					}
+		    				}	
 						}
 						/*&:after
 	        			{		
@@ -873,6 +945,7 @@ Main Components
 			}
 		}
 	}
+
 }
 .chapters-container
 {
@@ -915,8 +988,61 @@ Main Components
 			}
 		}
 	}
-}
+	div 
+	{
 
+		&.share
+		{
+			border-top: 1px solid $color-5;
+			width: 100%;
+    		float: left;
+    		margin-top: 30px;
+
+			ul
+			{
+				list-style: none;
+				font-size: $font-size-xsmall;
+			    display: inline-block;
+			    color: $color-7;
+			    margin: 25px 0;
+			    padding: 0;
+				
+				li
+				{
+					display: inline-block;
+
+					&:last-child
+					{
+					    margin-left: 5px;
+					    background-color: $color-7;
+					    border-radius: 50%;
+					    width: 25px;
+					    padding: 3px;
+					    height: 25px;
+
+					    .fa
+					    {
+					    	color: $color-6;
+					    	padding-left: 6px;
+					    }
+			
+						&:hover
+						{
+							background-color: #3b5998;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+
+			@media (max-width: $screen-sm-max) 
+		    {
+				border-top: 0;
+				margin-bottom: 40px;
+		    }	
+		}
+	}
+}
 
 .article-container
 {
@@ -932,59 +1058,109 @@ Main Components
 			left: 0;
 			margin-bottom: 0;
 			font-size: $font-size-small;
+			color: $color-7;
 
 			li
 			{
-				&.item-prev 
-				{
-					float: left;
-					width: 45%;
-					position: relative;
-					padding-left: 25px;
-					line-height: $line-height-subtitle;
-
-					/*&:before 
-					{		
-					content: '\00AB';
-					position: absolute;
-			    	top: 50%;
-						left: 0;
-						margin-top: -10px;
-						color: $color-7;
-					}*/	
-				}
-				&.item-next 
-				{
-					float: right;
-					width: 45%;
-					position: relative;
-					padding-right: 25px;
-					line-height: $line-height-subtitle;
-
-					/*&:after
-					{		
-					content: '\00BB';
-					position: absolute;
-			    	top: 50%;
-						right: 0;
-						margin-top: -10px;
-						color: $color-7;
-					}*/
-				}
 				a
 				{
-					color: #333;
+					color: inherit;
 
 					&:hover
 					{
-						color: $color-1;
+						color: $color-2;
 					}
 				}
-			}			        		
-				/*a 
-				{
-					display: block;
-				}*/	
+				&.item-prev {
+					float: left;
+					width: 50%;
+					position: relative;
+					//padding-left: 25px;
+					line-height: $line-height-subtitle;
+					
+					
+					.fa
+					{
+						float: left;
+					}
+					ul
+					{
+						list-style: none;
+
+						&.prev
+						{
+							margin: 0;
+							padding: 0;
+							overflow: hidden;
+	    					width: 100%;
+
+	    					li
+	    					{
+		    					display: block;
+		    					float: left;
+		    					
+		    					&:first-child
+	    						{
+								    overflow: hidden;
+								    max-width: 5%;
+								    margin-right: 15px;
+	    							box-sizing: border-box;
+	    						}
+		    					&:last-child
+	    						{
+								    overflow: hidden;
+	    							max-width: 90%;
+	    						}    						
+	    					}
+	    				}	
+					}
+        		}
+				&.item-next {
+					float: right;
+					width: 50%;
+					position: relative;
+					//padding-right: 25px;
+					line-height: $line-height-subtitle;
+					
+					.fa
+					{
+						float: right;
+					}
+					ul
+					{
+						list-style: none;
+
+						&.next
+						{
+							margin: 0;
+							padding: 0;
+							overflow: hidden;
+	    					width: 100%;
+
+	    					li
+	    					{
+		    					display: block;
+		    					
+		    					&:first-child
+	    						{
+								    overflow: hidden;
+								    float: left;
+	    							max-width: 90%;
+	    						}
+		    					&:last-child
+	    						{
+								    overflow: hidden;
+									float: right;
+								    max-width: 5%;
+								    margin-left: 15px;
+	    							box-sizing: border-box;
+	    						}    						
+	    					}
+	    				}	
+					}
+        		}		        		
+			}
+
 			@media (min-width: $screen-md-min)
 			{
 				display: none;
@@ -1014,16 +1190,27 @@ Main Components
 
 					&:last-child
 					{
-    					margin-left: 5px;
+					    margin-left: 5px;
+					    background-color: $color-7;
+					    border-radius: 50%;
+					    width: 25px;
+					    padding: 3px;
+					    height: 25px;
+
+					    .fa
+					    {
+					    	color: $color-6;
+					    	padding-left: 6px;
+					    }
 			
 						&:hover
 						{
-							color: #3b5998;
+							background-color: #3b5998;
 							cursor: pointer;
 						}
-					}
+					}	
 				}
-			}
+			}	
 
 			@media (max-width: $screen-sm-max) 
 		    {

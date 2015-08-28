@@ -1,16 +1,20 @@
 {{#if postBefore}}
 	<li class="item-prev">
 		{{#link-to 'post.show' postBefore.id}} 
-		{{fa-icon 'long-arrow-left'}}
-		{{postBefore.title}}
+		<ul class="prev">
+			<li>{{fa-icon 'long-arrow-left'}}</li>
+			<li>{{postBefore.title}}</li>
+		</ul>
 		{{/link-to}}
 	</li>
 {{/if}}
 {{#if postAfter}}
 	<li class="item-next">
 		{{#link-to 'post.show' postAfter.id}} 
-		{{postAfter.title}}
-		{{fa-icon 'long-arrow-right'}}
+		<ul class="next">
+			<li>{{postAfter.title}}</li>
+			<li>{{fa-icon 'long-arrow-right'}}</li>
+		</ul>
 		{{/link-to}}
 	</li>
 {{/if}}
