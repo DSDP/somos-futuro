@@ -204,11 +204,7 @@ export default Ember.Component.extend({
     if ($target.selector && $target.length) {
 
 
-      targetPosition = $target.offset();
-
-
-      targetPosition = targetPosition.top;
-
+      targetPosition = $target[0].offsetTop;
       // set the distance between here and there
       distance = Math.abs(currentPosition - targetPosition);
     }
