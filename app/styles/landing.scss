@@ -28,7 +28,7 @@
 					&:hover
 					{
 						figcaption {
-						
+					
 							&:before
 							{
 								opacity: 1;
@@ -48,19 +48,17 @@
 										-webkit-transform: translate3d(0,0%,0) translate3d(0,0px,0);
 										transform: translate3d(0, 0%, 0) translate3d(0, 0px, 0);
 									}
-									a
-									{
-										transition: all 0.5s ease;
 
-										&:hover
-										{
-											opacity: 0.7;
-										}
+									transition: all 0.5s ease;
+
+									&:hover
+									{
+										opacity: 0.6;
 									}
 								}
 							}
 						}	
-						ul
+						/*ul
 						{
 							&.bandera-menu
 							{
@@ -73,7 +71,32 @@
 									display: none;
 							    }	
 							}
-						}
+						}*/
+						p
+						{
+							&.descripcion
+							{
+								opacity: 1;
+								-webkit-transform: translate3d(0,0,0);
+								transform: translate3d(0,0,0);
+							
+								@media (max-width: $screen-sm-max) 
+							    {
+									display: none;
+							    }
+
+								transition: all 0.5s ease;
+
+								&:hover
+								{
+									opacity: 0.6;
+								}
+								.fa
+								{
+									margin-top: 20px;
+								}
+							}
+						}	    	
 					}
 					figcaption
 					{
@@ -103,7 +126,7 @@
 
 							@media (max-width: $screen-sm-max) 
 			    			{
-			    				left: 10%;
+			    			left: 10%;
 			    				-webkit-transition: -webkit-transform 0.35s;
 							transition: transform 0.35s;
 							-webkit-transform: translate3d(0,0%,0);
@@ -111,7 +134,7 @@
 			    			}	
 						}
 					}
-					ul
+					/*ul
 					{
 						&.bandera-menu
 						{
@@ -146,7 +169,33 @@
 								}
 							}
 						}
-					}
+					}*/
+						p
+						{
+							&.descripcion
+							{
+								list-style: none;
+								font-size: $font-size-8;
+								font-style: normal;
+					    		color: $color-6;
+					    		
+								position: absolute;
+								top: 37%;
+								left: 0;
+								padding: 5%;
+								width: 100%;
+								opacity: 0;
+								-webkit-transition: opacity 0.55s, -webkit-transform 0.35s;
+								transition: opacity 0.55s, transform 0.35s;
+								-webkit-transform: translate3d(100%,0,0);
+								transform: translate3d(100%,0,0);
+								
+								@media (max-width: $screen-md-max) 
+						    	{
+						    		font-size: $font-size-small;
+						    	}
+							}
+						}
 				}
 			}
 			figure.effect:hover figcaption::before ,

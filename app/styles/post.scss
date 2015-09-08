@@ -9,6 +9,12 @@
 		{
 			li
 			{
+				.fa
+				{
+					color: #FFF;
+					opacity: 0.6;
+				}
+				
 				@include transition;
 
 				&:hover

@@ -39,10 +39,10 @@
 
 			@media (max-width: $screen-sm-max)
 			{	
-				position: relative;
+				position: absolute;
 				background-color: transparent;
-				top: 0;
-				padding-bottom: 8%;
+				bottom: 10%;
+				padding-top: 5%;
 			}
 		}		
 	}

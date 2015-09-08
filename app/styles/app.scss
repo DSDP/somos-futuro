@@ -416,7 +416,7 @@ Main Components
     		@media (max-width: $screen-sm-max)
 			{
 				height: 100%;
-				min-height: 40vh;
+				min-height: 55vh;
 			}
     }
     /*.opacity 
@@ -542,7 +542,7 @@ Main Components
 			    					&:last-child
 		    						{
 									    overflow: hidden;
-		    							max-width: 90%;
+		    							max-width: 85%;
 		    						}    						
 		    					}
 		    				}	
@@ -1371,6 +1371,11 @@ Colors
 			.title
 			{
 				background-color: $color-1;
+
+				@media (max-width: $screen-sm-max)
+				{	
+					background-color: transparent;
+				}
 			}
 		}
 	}
@@ -1386,6 +1391,11 @@ Colors
 			.title
 			{
 				background-color: $color-2;
+
+				@media (max-width: $screen-sm-max)
+				{	
+					background-color: transparent;
+				}
 			}
 		}
 	}
@@ -1401,6 +1411,11 @@ Colors
 			.title
 			{
 				background-color: $color-3;
+
+				@media (max-width: $screen-sm-max)
+				{	
+					background-color: transparent;
+				}
 			}
 		}
 	}

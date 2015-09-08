@@ -135,7 +135,7 @@ article.type-system-slab
 
     &:first-child 
     {
-    padding-top: 20px;
+    padding-top: 10px;
     }
     p 
     {
@@ -151,15 +151,43 @@ article.type-system-slab
       left: 0;
       }
 
-      img 
+      /*div 
       {
-        padding-top: 10px;
+        &.chaubullet
+        {
+          padding-top: 10px;
+          position: relative;
+          
+          &:before 
+          {
+            position: absolute;
+            content: '';
+            background-color: #fff;
+            height: 10px;
+            width: 10px;
+            left: -17px;
+            margin-top: 5px;
+          }
+        }
+      }*/
+      img 
+      { 
+        padding-top: 5px;
+        position: relative;
+        margin-left: -15px;
+        display: block;
+
+        &::before
+        {
+          content: 'hola';
+          position: absolute;
+        }
       }
 
-      > a  
+      > a
       {
-      position: relative;
-      display: block;
+        position: relative;
+        display: block;
 
         //Chanchada para tapar bullet
         &:before 
@@ -205,6 +233,10 @@ article.type-system-slab
           display: block;
         }
       }
+    }
+    ol
+    {
+      padding-left: 15px;
     } 
     .heading-secondary 
     {
@@ -241,7 +273,8 @@ article.type-system-slab
     }
     .list-date 
     {
-      padding-left: 15px;
+      padding-left: 0px;
+      padding-bottom: 5px;
 
       p {
         padding-left: 0px;
@@ -257,7 +290,7 @@ article.type-system-slab
       list-style-type: none;
       font-size: inherit;
       position: relative;
-      padding-left: 20%;
+      padding-left: 23%;
       border-bottom: 1px dotted $color-1;
       padding-bottom: 10px;
         
@@ -281,6 +314,41 @@ article.type-system-slab
       .heading-sub-article 
       {
         margin: 0px 0 15px 0;
+      }
+    }
+    .list-img 
+    {
+      padding-left: 0px;
+      padding-bottom: 5px;
+
+      p {
+        padding-left: 0px;
+      
+        &:before 
+        {
+        content: '';
+        }
+      }
+        
+      li
+      {
+      list-style-type: none;
+      font-size: inherit;
+      position: relative;
+      border-bottom: 1px dotted $color-7;
+      padding-bottom: 10px;
+        
+        &:first-child 
+        {
+          padding-top: 10px; 
+          border-top: 1px dotted $color-7;
+        }
+        strong
+        {
+          font-size: $font-size-small;
+          text-transform: uppercase;
+          left: 0px;
+        }
       }
     }
   }
