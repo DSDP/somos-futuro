@@ -9,6 +9,9 @@
 			</nav>
 
 			<h1 class="heading-primary">{{model.term.name}}</h1>
+			<div class="bg-subterm">
+			<img {{bind-attr src=model.term.acf.imagen.url}} alt="">
+			</div>
 
 			<ul class="indice-subpolitica">
 				{{post-list posts=model.posts rootPost=model.post}}

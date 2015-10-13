@@ -32,9 +32,44 @@
 
 			&:hover 
 			{
-				opacity: 0.5;
+				opacity: 1;
 				padding-left: 15px;
+				font-weight: 600;
 			}
 		}
+	}
+
+	.indice-subpolitica li {
+
+		&:hover {
+
+		}
+	}
+
+	.bg-subterm {
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    right: 50%;
+	    bottom: 0;
+	    z-index: -1;
+	    background: #333;
+
+	    @media (max-width: $screen-sm-max)
+		    {
+		      right: 0;
+		    }
+
+	    img {
+	    	min-height: 100%;
+	    	width: 150%;
+    	    opacity: 0.5;
+
+	    	@media (max-width: $screen-sm-max)
+		    {
+		      width: 160%;
+		      min-height: auto;
+		    }
+	    }
 	}
 }
