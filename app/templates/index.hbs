@@ -1,3 +1,29 @@
+<div class="chapters-container">
+{{fa-icon 'search'}}	
+{{input type="text" value=query placeholder="Ingrese su búsqueda"}}
+
+
+{{#if searching}}
+	<div class="loading">
+		{{loading-spin color='#cccccc' size=50}}
+	</div>
+{{/if}}
+
+{{#if searched}}
+	{{#if posts}}
+		<ul>	
+			{{#each posts as |post|}}
+				{{post-brief post=post showCategory=true action='close' query=query highlighting=true}}
+			{{/each}}
+		</ul>
+	{{else}}
+		<div class="empty-data">
+			{{fa-icon 'search'}}
+			<i>No se han encontrado resultados.</i>
+		</div>
+	{{/if}}
+{{/if}}
+</div>
 <div id="landing" class="projects-container">
 	<ul>
 		<li class="cd-single-project soberania_politica">
