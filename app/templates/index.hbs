@@ -1,53 +1,9 @@
-<div class="chapters-container">
-{{fa-icon 'search'}}	
-{{input type="text" value=query placeholder="Ingrese su búsqueda"}}
-
-
-{{#if searching}}
-	<div class="loading">
-		{{loading-spin color='#cccccc' size=50}}
-	</div>
-{{/if}}
-
-{{#if searched}}
-	{{#if posts}}
-		<ul>	
-			{{#each posts as |post|}}
-				{{post-brief post=post showCategory=true action='close' query=query highlighting=true}}
-			{{/each}}
-		</ul>
-	{{else}}
-		<div class="empty-data">
-			{{fa-icon 'search'}}
-			<i>No se han encontrado resultados.</i>
-		</div>
-	{{/if}}
-{{/if}}
-</div>
 <div id="landing" class="projects-container">
 	<ul>
 		<li class="cd-single-project soberania_politica">
 			<div class="cd-title">
 				<figure class="effect">
-					<figcaption>
-					{{#link-to 'term.show' 1}}
-						<h2 class="heading-primary">Soberanía Política</h2>
-					{{/link-to}}
-
-						<!--<ul class="bandera-menu">
-							<li>{{#link-to 'sub-term.show' 2}}{{fa-icon 'long-arrow-right'}} Memoria, verdad y justicia{{/link-to}}</li>
-							<li>{{#link-to 'post.show' 347}}{{fa-icon 'long-arrow-right'}} Integración regional: América latina libre y unida{{/link-to}}</li>
-							<li>{{#link-to 'post.show' 347}}{{fa-icon 'long-arrow-right'}} Política exterior autónoma y agenda para el desarrollo{{/link-to}}</li>
-							<li>{{#link-to 'post.show' 347}}{{fa-icon 'long-arrow-right'}} Defensa irrenunciable de nuestra soberanía territorial{{/link-to}}</li>
-							<li>{{#link-to 'post.show' 347}}{{fa-icon 'long-arrow-right'}} Recuperación del relato histórico: la construcción cultural de nuestra identidad nacional{{/link-to}}</li>
-							<li>{{#link-to 'post.show' 347}}{{fa-icon 'long-arrow-right'}} Democratización de la comunicación{{/link-to}}</li>
-							<li>{{#link-to 'post.show' 347}}{{fa-icon 'long-arrow-right'}} Participación popular y democrática{{/link-to}}</li>
-							<li>{{#link-to 'post.show' 347}}{{fa-icon 'long-arrow-right'}} Democratización de la justicia{{/link-to}}</li>
-							<li>{{#link-to 'post.show' 347}}{{fa-icon 'long-arrow-right'}} Politica de defensa democratica para el desarrollo nacional{{/link-to}}</li>
-							<li>{{#link-to 'post.show' 347}}{{fa-icon 'long-arrow-right'}} Fuerzas de seguridad de la democracia{{/link-to}}</li>
-						</ul>-->
-						<h2 class="heading-primary">{{#link-to 'term.show' 1}}Soberanía Política{{/link-to}}</h2>
-					</figcaption>
+					<img src="/assets/images/titulo-libro.svg" class="tapa-libro" alt="">
 				</figure>
 			</div> <!-- .cd-title -->
 		</li>
@@ -55,48 +11,52 @@
 			<div class="cd-title">
 				<figure class="effect">
 					<figcaption>
-					{{#link-to 'term.show' 12}}
-						<h2 class="heading-primary">Independencia económica</h2>
-
-						<!--<ul class="bandera-menu">
-							<li>{{#link-to 'sub-term.show' 157}}{{fa-icon 'long-arrow-right'}} Desendeudamiento soberano{{/link-to}}</li>
-							<li>{{#link-to 'sub-term.show' 158}}{{fa-icon 'long-arrow-right'}} Gestión autónoma de la política económica{{/link-to}}</li>
-							<li>{{#link-to 'sub-term.show' 159}}{{fa-icon 'long-arrow-right'}} Consolidación de una nueva matriz productiva de desarrollo autonomo{{/link-to}}</li>
-							<li>{{#link-to 'sub-term.show' 160}}{{fa-icon 'long-arrow-right'}} Planificación energética para un desarrollo federal{{/link-to}}</li>
-							<li>{{#link-to 'sub-term.show' 161}}{{fa-icon 'long-arrow-right'}} Reforma integral del sistema de transporte nacional{{/link-to}}</li>
-							<li>{{#link-to 'sub-term.show' 162}}{{fa-icon 'long-arrow-right'}} El estado regula y promueve el crecimiento con inclusión{{/link-to}}</li>
-							<li>{{#link-to 'sub-term.show' 163}}{{fa-icon 'long-arrow-right'}} La ciencia y la tecnología: estrategia fundamental para el desarrollo{{/link-to}}</li>
-						</ul>-->
-					{{/link-to}}	
-
-						<h2 class="heading-primary">{{#link-to 'term.show' 12}}Independencia económica{{/link-to}}</h2>
+					<ul class="home-politicas">
+				{{#each model.items as |menuItem|}}
+					{{#unless menuItem.parent}}
+						{{wp-menu-item item=menuItem}}
+					{{/unless}}
+				{{/each}}
+				</ul>
 					</figcaption>
 				</figure>
 			</div> <!-- .cd-title -->
 		</li>
 		<li class="cd-single-project justicial_social" >
 			<div class="cd-title">
-				<figure class="effect">
-					<figcaption>
-					{{#link-to 'term.show' 13}}
-						<h2 class="heading-primary">Justicia Social</h2>
+				<figure class="effect buscador-home">
+						<fieldset>
+							{{input type="text" value=query placeholder="Ingrese su búsqueda"}}
+						</fieldset>
 
-						<!--<ul class="bandera-menu">
-							<li>{{#link-to 'sub-term.show' 150}}{{fa-icon 'long-arrow-right'}} El trabajo, pilar del proyecto nacional{{/link-to}}</li>
-							<li>{{#link-to 'sub-term.show' 151}}{{fa-icon 'long-arrow-right'}} Recuperación y ampliación de derechos{{/link-to}}</li>
-							<li>{{#link-to 'sub-term.show' 152}}{{fa-icon 'long-arrow-right'}} No a la trata{{/link-to}}</li>
-							<li>{{#link-to 'sub-term.show' 153}}{{fa-icon 'long-arrow-right'}} Educación pública para la igualdad de oportunidades{{/link-to}}</li>
-							<li>{{#link-to 'sub-term.show' 154}}{{fa-icon 'long-arrow-right'}} Acceso a la salud para todos y todas{{/link-to}}</li>
-							<li>{{#link-to 'sub-term.show' 155}}{{fa-icon 'long-arrow-right'}} Acceso a la vivienda y al hábitat{{/link-to}}</li>
-						</ul>-->
-					{{/link-to}}	
-					</figcaption>
+						{{#if searching}}
+							<div class="loading">
+								{{loading-spin color='#cccccc' size=50}}
+							</div>
+						{{/if}}
+
+						{{#if searched}}
+							{{#if posts}}
+								{{#perfect-scroll wheelSpeed=2}}
+								
+									{{#each posts as |post|}}
+										{{post-brief post=post showCategory=true action='close' query=query highlighting=true}}
+									{{/each}}
+								
+								{{/perfect-scroll}}
+							{{else}}
+								<div class="empty-data">
+									{{fa-icon 'search'}}
+									<i>No se han encontrado resultados.</i>
+								</div>
+							{{/if}}
+						{{/if}}
+					
 				</figure>
 			</div> <!-- .cd-title -->
 		</li>
 	</ul>
 	<video autoplay  poster="http://somosfuturo.com.ar/contenido/wp-content/uploads/2015/08/500-landing.jpg" id="bgvid" loop>
-		<source src="http://somosfuturo.com.ar/contenido/wp-content/uploads/NYC-1280.mp4" type="video/webm">
 		<source src="http://somosfuturo.com.ar/contenido/wp-content/uploads/NYC-1280.mp4" type="video/mp4">
 	</video>
 </div> <!-- .project-container -->

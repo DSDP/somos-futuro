@@ -202,3 +202,166 @@ padding: 20px;
 	}
 }
 
+.home-politicas
+{
+	opacity: 1;
+	list-style-type: none;
+	font-size: $font-size-8;
+	font-weight: 700;
+    position: relative;
+    z-index: 1000;
+    padding-top: 150px !important;
+
+
+    .cp-Panel {
+    	position: relative;
+
+    	.tcon {
+			position: absolute;
+			right: 0;
+			z-index: 2001;
+			top: -6px;
+		    -webkit-transform: scale(.4);
+    		transform: scale(.4);
+
+    	}
+
+		.tcon-plus::after, .tcon-plus::before {
+			background: #fff;
+		}
+    }
+
+	> li
+	{
+		padding: 10px 0;
+		text-transform: uppercase;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+		&:first-child
+		{
+			padding-top: 0px;
+		}
+		&:last-child
+		{
+			border-bottom: 0;
+		}
+		a
+    	{
+    		color: $color-6;
+    		
+	    	&.active
+	    	{
+	    		color: $color-2;
+	    	}
+    		
+    		&:hover
+    		{
+    			color: $color-2;
+    		}
+    	}
+
+
+		ul
+		{
+			&.sub-politicas
+			{
+				opacity: 1;
+				font-size: $font-size-xsmall;
+				font-weight: normal;
+				padding-top: 10px;
+
+				li
+				{
+					padding: 4px 0;
+				}
+			}
+		}
+	}
+}
+
+
+.buscador-home {
+    position: relative;
+    z-index: 2001;
+    top: 15vh;
+    max-height: 440px;
+    overflow: hidden;
+
+	.highlight {
+		background-color: #FFFF88;
+		color: #333;
+	}
+
+	fieldset {
+		border: none;
+		padding: 10px 0;
+
+		input {
+			width: 100%;
+			padding: 10px;
+		}
+	}
+
+	#search 
+{
+    list-style: none;
+	margin-top: 25px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #CCC;
+	padding-bottom: 15px;
+
+	small
+	{
+		display: block;
+		margin-bottom: 5px;
+
+		a 
+		{
+    	font-size: $font-size-small;	
+    	color: #fff;
+    	font-style: italic;
+
+			&:hover 
+			{
+				color: #fff;
+			}
+		}
+	}	
+	p 
+	{
+		font-size: $font-size-small;
+		line-height: 1.5;
+	    color: #fff;
+    	opacity: 1;
+	    padding: 0;
+	}
+	a 
+	{
+		&.title 
+		{
+			color: #fff;
+			font-size: $font-size-base;
+			font-weight: 700;
+			text-transform: uppercase;
+
+			&:hover
+			{
+				color: #fff	
+			}
+		}
+
+	}	
+	a 
+    {
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+
+      &.btn 
+      {
+        font-size: $font-size-xsmall;
+        color: #fff;
+      }
+    } 
+}    
+}

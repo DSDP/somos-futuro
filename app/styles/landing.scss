@@ -394,3 +394,12 @@ video {
   background-size: cover;
   transition: 1s opacity;
 }
+
+.tapa-libro {
+	height: 105%;
+    position: relative;
+    z-index: 2001;
+    left: 5vw;
+    width: 20vw;
+    top: 15vh;
+}

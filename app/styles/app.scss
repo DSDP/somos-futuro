@@ -7,7 +7,7 @@
 @import "articles";
 @import "cards";
 @import "landing";
-//@import "introduccion";
+@import "perfect-scroll";
 @import "menu";
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,700,700italic);
 @import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300italic,300,700,400italic,700italic);
@@ -120,15 +120,21 @@ a
 }
 .smart-back 
 {
-	color: $color-6;
-	font-size: $font-size-xsmall;
-	font-family: inherit;
-	text-shadow: 1px 1px 2px rgba(0,0,0, 0.4);
-	position: fixed;
-    top: 9%;
+
+    color: #FFFFFF;
+    font-size: 13px;
+    font-family: inherit;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 7%;
     left: 5%;
     z-index: 1000;
     cursor: pointer;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px 14px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
 
 	@media (max-width: $screen-sm-max) 
     {
@@ -136,6 +142,21 @@ a
 		position: absolute;
     }
 }
+
+.show-subterm {
+    float: right;
+    padding: 10px;
+    font-size: 17px;
+    width: 120px;
+    text-align: left;
+    cursor: pointer;
+    margin: 5px;
+
+    i {
+	    margin-left: 8px;
+    }
+}
+
 .smart-search 
 {
 	position: fixed;
@@ -632,7 +653,7 @@ Main Components
 
 			&:before 
 			{
-			background-color: $color-6;
+			//background-color: $color-6;
 			content: "";
 			position: absolute;
 			top: 0px;
@@ -1308,13 +1329,25 @@ Colors
 #landing
 {
 	.soberania_politica {
-		background-color: transparent;
+		background-color: rgba(0, 95, 162, 0.4);
+
+		&:hover {
+			background-color: rgba(0, 95, 162, 0.9);			
+		}
 	}
 	.independencia_economica {
-		background-color: transparent;
+		background-color: rgba(0, 95, 162, 0.4);
+
+		&:hover {
+			background-color: rgba(0, 95, 162, 0.9);			
+		}
 	}
 	.justicial_social {
-		background-color: transparent;
+		background-color: rgba(0, 162, 224, 0.4);
+
+		&:hover {
+			background-color: rgba(0, 162, 224, 0.98);			
+		}
 	}
 	.tenemos_futuro {
 		background-color: transparent;

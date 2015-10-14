@@ -1,0 +1,9 @@
+.ps-container {
+	height: calc(100vh - 60px);
+	position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+
+.ps-container .ps-scrollbar-y {
+	backgrund: #fff;
+}

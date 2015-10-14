@@ -40,6 +40,7 @@
     "ember-collapsible-panel": "0.1.1",
     "ember-data": "1.0.0-beta.18",
     "ember-export-application-global": "^1.0.2",
+    "ember-perfectscroll": "0.0.8",
     "ember-scroll-to": "0.2.0",
     "ember-smart-go-back": "1.0.0",
     "ember-wormhole": "0.3.1",

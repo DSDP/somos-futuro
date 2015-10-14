@@ -3,10 +3,9 @@
 		{{fa-icon 'long-arrow-left'}}
 		Volver	
 	</a>
+	{{wp-menu items=model.items show=isShowMenu iShowMenu=isShowMenu}}
+	
+	{{search-tool class="smart-search" show=isShowSearch iShowMenu=isShowSearch}}
 {{/unless}}
-
-{{wp-menu items=model.items show=isShowMenu iShowMenu=isShowMenu}}
-
-{{search-tool class="smart-search" show=isShowSearch iShowMenu=isShowSearch}}
 
 {{liquid-outlet class="container"}}
