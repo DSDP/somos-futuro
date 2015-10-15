@@ -249,6 +249,11 @@
 				{
 					&.effect
 					{
+
+						display: flex;
+						align-items: center;
+						justify-content: center;
+    
 						&:hover
 						{
 							figcaption 
@@ -396,10 +401,13 @@ video {
 }
 
 .tapa-libro {
-	height: 105%;
-    position: relative;
-    z-index: 2001;
-    left: 5vw;
-    width: 20vw;
-    top: 15vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 2001;
+
+	img {
+
+	}
 }

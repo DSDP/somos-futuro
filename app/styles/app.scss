@@ -73,6 +73,22 @@ a
 		@include transition;
 	}
 }
+
+.-home {
+
+	.heading-book {
+		opacity: 0;
+	}
+
+	#header {
+		opacity: 0;
+
+		@media (max-width: $screen-sm-max) {
+		opacity: 1;
+	}
+	}
+}
+
 #header
 {
 	background-color: #fff;
@@ -82,6 +98,17 @@ a
 	position: fixed;
 	top: 0;
 	left: 0;
+	opacity: 1;
+	-webkit-transition: all 500ms ease-out;
+	-moz-transition: all 500ms ease-out;
+	-ms-transition: all 500ms ease-out;
+	-o-transition: all 500ms ease-out;
+	transition: all 500ms ease-out;
+
+	@media (max-width: $screen-sm-max) {
+		opacity: 1;
+	}
+
 
 	.heading-book 
 	{
@@ -144,13 +171,15 @@ a
 }
 
 .show-subterm {
-    float: right;
+	position: absolute;
     padding: 10px;
     font-size: 17px;
-    width: 120px;
+    width: 15px;
     text-align: left;
     cursor: pointer;
     margin: 5px;
+    bottom: 0;
+    right: 0;
 
     i {
 	    margin-left: 8px;
@@ -170,6 +199,21 @@ a
 	height: 56px;
 	border-bottom: 1px solid #f2f2f2;*/
 
+	&.-home {
+		.search {
+			background: #fff;
+			border-radius: 50px;
+			top: 25px;
+
+			@media (max-width: $screen-sm-max) {
+				background: none;
+				border-radius: 0;
+				top: 0;
+			}	
+		}
+
+	}
+
     .search 
     {
 	    line-height: 33px;
@@ -186,6 +230,9 @@ a
 		-ms-transition: width 500ms ease-out;
 		-o-transition: width 500ms ease-out;
 		transition: width 500ms ease-out;
+		
+
+			
  
 	    .empty-data 
 	    {
@@ -714,7 +761,8 @@ Main Components
 				position: absolute;
 				top: 0;
 				left: 0;
-				width: 100vw/$items;
+				//width: 100vw/$items;
+				width: 50vw;
 				height: 100%;
 			    overflow: hidden;
 			    opacity: 1;
@@ -726,7 +774,8 @@ Main Components
 				&:nth-of-type(2) 
 				{
 					top: 0;
-					left: 100vw/$items;
+					//left: 100vw/$items;
+					left: 50vw;
 				}
 				&:nth-of-type(3) 
 				{
@@ -800,7 +849,12 @@ Main Components
 					    	background-color:rgba(0, 0, 0, 0);
 							transition: all 0.4s ease-in-out;
 					    }*/	
+						
+						&:hover {
+							color: #005FA2;
+						}
 					}    
+
 		    		.heading-primary 
 		    		{
 						font-size: $font-size-2;
@@ -851,7 +905,8 @@ Main Components
 			    	border-right: 0;
 					border-bottom: 1px solid #ADC1CE;
 					width: 100%;
-					height: 100vh/$items;
+					//height: 100vh/$items;
+					height: 100vh;
 					
 					/*&:nth-of-type(1)
 					{
@@ -861,7 +916,8 @@ Main Components
 					&:nth-of-type(2)
 					{
 						left: 0;
-						top: 100vh/$items;
+						//top: 100vh/$items;
+						top: 100vh;
 					}
 					&:nth-of-type(3)
 					{

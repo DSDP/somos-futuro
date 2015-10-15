@@ -8,7 +8,8 @@ export default Ember.Component.extend({
 	interval: null,
 	show: false,
 	isShowMenu: false,
-
+	classNameBindings: [':smart-search', 'isHome:-home'],
+	isHome: false,
 
 
 	actions: {

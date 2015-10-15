@@ -2,8 +2,8 @@
 	<ul>
 		<li class="cd-single-project soberania_politica">
 			<div class="cd-title">
-				<figure class="effect">
-					<img src="/assets/images/titulo-libro.svg" class="tapa-libro" alt="">
+				<figure class="effect tapa-libro">
+					<img src="/assets/images/titulo-libro.svg" alt="">
 				</figure>
 			</div> <!-- .cd-title -->
 		</li>
@@ -19,39 +19,6 @@
 				{{/each}}
 				</ul>
 					</figcaption>
-				</figure>
-			</div> <!-- .cd-title -->
-		</li>
-		<li class="cd-single-project justicial_social" >
-			<div class="cd-title">
-				<figure class="effect buscador-home">
-						<fieldset>
-							{{input type="text" value=query placeholder="Ingrese su búsqueda"}}
-						</fieldset>
-
-						{{#if searching}}
-							<div class="loading">
-								{{loading-spin color='#cccccc' size=50}}
-							</div>
-						{{/if}}
-
-						{{#if searched}}
-							{{#if posts}}
-								{{#perfect-scroll wheelSpeed=2}}
-								
-									{{#each posts as |post|}}
-										{{post-brief post=post showCategory=true action='close' query=query highlighting=true}}
-									{{/each}}
-								
-								{{/perfect-scroll}}
-							{{else}}
-								<div class="empty-data">
-									{{fa-icon 'search'}}
-									<i>No se han encontrado resultados.</i>
-								</div>
-							{{/if}}
-						{{/if}}
-					
 				</figure>
 			</div> <!-- .cd-title -->
 		</li>

@@ -2,10 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   tagName: 'ul',
-  classNames: 'menu-wp',
+  classNameBindings: [':menu-wp', 'isHome:-home'],
 
   isShowMenu: false,
   show: false,
+  isHome: false,
   
   actions: {
     toggle: function () {
