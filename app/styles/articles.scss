@@ -27,6 +27,9 @@ article.type-system-slab
     font-size: $font-size-base;
     color: $dark-gray;
     line-height: $line-height-text; //no me toma la variable
+    
+
+
   }
   a 
   {
@@ -62,9 +65,14 @@ article.type-system-slab
       font-weight: 400;
       font-family: $article-font;
       text-align: left;
-      font-size: $font-size-small;
+      //font-size: $font-size-small;
+      font-size: 16px;
       opacity: 0.8;
       line-height: 1.7em;
+      margin-right: 145px;
+    border-left: 1px solid #ddd;
+    padding-left: 24px;
+
 
       strong 
       {
@@ -78,6 +86,7 @@ article.type-system-slab
   section 
   {
     margin: 10px 0px;
+
 
     img 
     {

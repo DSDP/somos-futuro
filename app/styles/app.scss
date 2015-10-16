@@ -78,6 +78,10 @@ a
 
 	.heading-book {
 		opacity: 0;
+
+		
+
+		
 	}
 
 	#header {
@@ -88,6 +92,8 @@ a
 	}
 	}
 }
+
+
 
 #header
 {
@@ -131,8 +137,15 @@ a
 
 		@media (max-width: $screen-sm-max) 
 	    {
-			padding-left: 10%;
+			text-align: center;
 	    }
+	
+		@media (max-width: $screen-xs-max) {
+			span {
+				display: none;
+			}
+		}
+
 	}
 	.menu-gral
 	{
@@ -153,7 +166,7 @@ a
     font-family: inherit;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
     position: fixed;
-    top: 7%;
+    top: 70px;
     left: 5%;
     z-index: 1000;
     cursor: pointer;
@@ -974,7 +987,7 @@ Main Components
     overflow-x: hidden;
     float: right;
     background: $color-6;
-    padding: 4% 5% 1% 5%;
+    padding: 5% 2% 1% 2%;
     //padding: 100px 80px 40px 80px;
     height: 100vh;
     -webkit-overflow-scrolling: touch;
@@ -983,7 +996,10 @@ Main Components
 	{
 		height: auto;
 		width: 100vw;		
+	    padding: 0
 	}
+
+	
 	nav
 	{
 		&.breadcrumb
@@ -1074,6 +1090,7 @@ Main Components
 			width: 100%;
     		float: left;
     		margin-top: 30px;
+    		text-align: center;
 
 			ul
 			{
@@ -1100,7 +1117,7 @@ Main Components
 					    .fa
 					    {
 					    	color: $color-6;
-					    	padding-left: 6px;
+					    	padding-left: 0;
 					    }
 			
 						&:hover
