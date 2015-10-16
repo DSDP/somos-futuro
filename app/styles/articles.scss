@@ -73,6 +73,11 @@ article.type-system-slab
     border-left: 1px solid #ddd;
     padding-left: 24px;
 
+    @media (max-width: $screen-sm-max)
+    {
+      margin: 0; 
+    }
+
 
       strong 
       {
