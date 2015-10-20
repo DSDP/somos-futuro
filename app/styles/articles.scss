@@ -228,6 +228,16 @@ article.type-system-slab
           & ~ br {
             display: none;
           }
+
+          &:before {
+          content: '';
+          background-color: white;
+          position: absolute;
+          top: 6px;
+          left: 0;
+          width: 10px;
+          height: 10px;
+          }
         }  
       }
     }  

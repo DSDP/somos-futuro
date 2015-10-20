@@ -162,17 +162,17 @@ a
 {
 
     color: #FFFFFF;
-    font-size: 13px;
+    font-size: 12px;
     font-family: inherit;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); */
     position: fixed;
     top: 70px;
     left: 5%;
     z-index: 1000;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.3);
-    padding: 10px 14px;
-    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 15px;
+    border-radius: 5px;
     font-weight: 600;
     text-transform: uppercase;
 
@@ -987,7 +987,7 @@ Main Components
     overflow-x: hidden;
     float: right;
     background: $color-6;
-    padding: 5% 2% 1% 2%;
+    padding: 5% 4% 1% 4%;
     //padding: 100px 80px 40px 80px;
     height: 100vh;
     -webkit-overflow-scrolling: touch;
