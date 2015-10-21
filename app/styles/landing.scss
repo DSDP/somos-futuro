@@ -63,54 +63,6 @@
 			}
 		}
 	}
-	/*.home-intro 
-	{
-		position: fixed;
-		left: 42.5%;
-		bottom: 15px;
-		z-index: 500;
-		width: 15%;
-		text-align: center;
-
-		@media (max-width: $screen-md-max) 
-    	{
-			width: 25%;
-			left: 37.5%;
-    	}
-		@media (max-width: $screen-sm-max) 
-    	{
-			width: 45%;
-			left: 27.5%;
-			top: 2%;
-    	}		
-	    a {
-	    	display: block;
-	    	background-color: transparentize($color-1, 0.2);
-	    	font-size: $font-size-7;
-	    	font-weight: 400;
-	    	color: transparentize($color-6, 0.3);
-	    	border-radius: 5px;
-	    	padding: 10px 10px;
-	    	text-align: center;
-
-			@media (max-width: $screen-md-max) 
-	    	{
-				font-size: $font-size-small;
-				background-color: $color-1;
-	    	} 
-
-	    	&:hover 
-	    	{
-	    	background-color: $color-3;
-	    	color: $color-6;
-
-				@media (max-width: $screen-md-max) 
-		    	{
-		    		background-color: $color-3;
-		    	}
-	    	}
-	    }
-	}*/
 }
 video 
 { 
