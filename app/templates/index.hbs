@@ -1,29 +1,23 @@
 <div id="landing" class="projects-container">
 	<ul>
-		<li class="cd-single-project soberania_politica">
+		<li id="book-cover" class="cd-single-project">
 			<div class="cd-title">
-				<figure class="effect tapa-libro">
-					<img src="/assets/images/titulo-libro.svg" alt="">
-				</figure>
+				<img src="/assets/images/titulo-libro.svg" alt="Tenemos Patria, Tenemos Proyecto, Somos Futuro">
 			</div> <!-- .cd-title -->
 		</li>
-		<li class="cd-single-project independencia_economica">
+		<li id="book-menu" class="cd-single-project effect">
 			<div class="cd-title">
-				<figure class="effect">
-					<figcaption>
-					<ul class="home-politicas">
+				<ul class="home-politicas">
 				{{#each model.items as |menuItem|}}
 					{{#unless menuItem.parent}}
 						{{wp-menu-item item=menuItem}}
 					{{/unless}}
 				{{/each}}
 				</ul>
-					</figcaption>
-				</figure>
 			</div> <!-- .cd-title -->
 		</li>
 	</ul>
-	<video autoplay  poster="http://somosfuturo.com.ar/contenido/wp-content/uploads/2015/08/500-landing.jpg" id="bgvid" loop>
+	<video autoplay poster="http://somosfuturo.com.ar/contenido/wp-content/uploads/2015/08/500-landing.jpg" id="bgvid" loop>
 		<source src="http://somosfuturo.com.ar/contenido/wp-content/uploads/NYC-1280.mp4" type="video/mp4">
 	</video>
 </div> <!-- .project-container -->
