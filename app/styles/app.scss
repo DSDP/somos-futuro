@@ -9,6 +9,7 @@
 @import "landing";
 @import "perfect-scroll";
 @import "menu";
+@import "social-media";
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,700,700italic);
 @import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300italic,300,700,400italic,700italic);
 
@@ -1047,6 +1048,7 @@ Main Components
     		float: left;
     		margin-top: 30px;
     		text-align: center;
+		    padding: 55px 0;
 
 			ul
 			{
@@ -1244,6 +1246,7 @@ Main Components
 		&.share
 		{
 			border-top: 1px solid $color-5;
+		    padding: 55px 0;
 
 			ul
 			{
